@@ -1,0 +1,44 @@
+<script setup lang="ts"></script>
+
+<template>
+  <div class="d-flex flex-column px-5 py-3 polo">
+    <span class="text-white text-body-2 text-md-body-1 font-weight-regular mb-2">
+      Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte
+    </span>
+    <span class="text-white text-h6 text-md-h5 font-weight-bold"> Polo de Inovação do IFRN </span>
+  </div>
+
+  <div class="nav-bar d-flex justify-center align-center">
+    <nav>
+      <ul class="d-flex flex-column flex-md-row align-center pa-0 ma-0">
+        <li class="links pa-0"><a href="#" class="d-block w-100 h-100 py-2 px-5 text-body-2 text-md-body-1">Início</a></li>
+        <li class="links pa-0"><a href="#" class="d-block w-100 h-100 py-2 px-5 text-body-2 text-md-body-1">Sobre</a></li>
+        <li class="links pa-0"><a href="#" class="d-block w-100 h-100 py-2 px-5 text-body-2 text-md-body-1">Integrantes</a></li>
+        <li class="links pa-0"><a href="#" class="d-block w-100 h-100 py-2 px-5 text-body-2 text-md-body-1">Nossos serviços</a></li>
+        <li class="links pa-0"><a href="#" class="d-block w-100 h-100 py-2 px-5 text-body-2 text-md-body-1">Projetos</a></li>
+        <li class="links pa-0"><a href="#" class="d-block w-100 h-100 py-2 px-5 text-body-2 text-md-body-1">Notícias</a></li>
+      </ul>
+    </nav>
+  </div>
+</template>
+
+<style scoped>
+.polo {
+  background-color: #E48020;
+}
+
+.nav-bar {
+  background-color: #0E544A;
+}
+
+li, a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+
+li:hover {
+  background-color: #107465;
+  transition: 0.3s ease;
+}
+</style>
