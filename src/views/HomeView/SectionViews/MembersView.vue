@@ -15,6 +15,7 @@
     <v-row>
       <v-col cols="12" class="d-flex flex-column ga-2 text-white">
         <TitleSectionComponent icon-props="mdi-menu-right" title-props="Integrantes" subtitle-props="Descubra quem compõe o CT Mineral e leva a inovação até você"/>
+        <hr class="text-white">
       </v-col>
 
       <v-col cols="12">
@@ -23,6 +24,7 @@
             <v-container class="d-flex justify-center ga-5 ga-md-12 px-0" fluid>
               <div v-for="i in informationsCards" :key="i.id">
                 <CardSectionComponent
+                  class="text-white"
                   :title-props="i.title"
                   :description-props="i.description"
                   :image-props="i.image"

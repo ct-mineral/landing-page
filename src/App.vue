@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import HeaderComponent from './components/HeaderComponent.vue';
-  import HomeView from './views/HomeView.vue';
+  import HomeView from './views/HomeView/HomeView.vue';
 </script>
 
 <template>
