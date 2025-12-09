@@ -30,7 +30,7 @@ const servicosMenu = ref(false)
                 class="d-flex align-center w-100 h-100 py-2 px-5 text-body-2 text-md-body-1"
               >
                 Integrantes
-                <span class="arrow px-2">⌄</span>
+                <v-icon icon="mdi-menu-down"/>
               </a>
             </template>
             <v-list class="menu-dropdown">
@@ -57,7 +57,7 @@ const servicosMenu = ref(false)
                 class="d-flex align-center w-100 h-100 py-2 px-5 text-body-2 text-md-body-1"
               >
                 Nossos serviços
-                <span class="arrow px-2">⌄</span>
+                <v-icon icon="mdi-menu-down"/>
               </a>
             </template>
             <v-list class="menu-dropdown">
