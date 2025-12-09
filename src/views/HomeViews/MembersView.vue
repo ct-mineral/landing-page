@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import CardSectionComponent from '@/components/CardSectionComponent.vue';
+  import TitleSectionComponent from '@/components/TitleSectionComponent.vue';
   import diretoresPng from '@/assets/images/diretores.png';
 
   const informationsCards = [
@@ -13,12 +14,7 @@
   <v-container fluid class="members-container">
     <v-row>
       <v-col cols="12" class="d-flex flex-column ga-2 text-white">
-        <div class="d-flex align-center ga-3">
-          <v-icon icon="mdi-menu-right"/>
-          <span class="text-h6 text-md-h5 font-weight-bold">Integrantes</span>
-        </div>
-        <span class="text-subtitle-2 text-md-subtitle-1">Descubra quem compõe o CT Mineral e leva a inovação até você</span>
-        <hr class="text-white">
+        <TitleSectionComponent icon-props="mdi-menu-right" title-props="Integrantes" subtitle-props="Descubra quem compõe o CT Mineral e leva a inovação até você"/>
       </v-col>
 
       <v-col cols="12">
