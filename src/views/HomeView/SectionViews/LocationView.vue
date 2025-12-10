@@ -1,7 +1,33 @@
 <script setup lang="ts">
 import TitleSectionComponent from '@/components/TitleSectionComponent.vue'
+import logoIcon from '@/assets/images/logo.png'
 
-const iframeUrl = `https://maps.google.com/maps?q=${-6.2528602},${-36.5366794}&hl=pt-BR&z=15&output=embed`
+import leaflet from 'leaflet'
+import 'leaflet/dist/leaflet.css'
+import { onMounted } from 'vue'
+
+let map: leaflet.Map
+let marker: leaflet.Marker
+
+const myIcon = leaflet.icon({
+  iconUrl: logoIcon,
+  iconSize: [43, 40],
+  iconAnchor: [15, 20],
+})
+
+const latitude = -6.251312399481678
+const longitude = -36.53463290015861
+
+onMounted(() => {
+  map = leaflet.map('map').setView([latitude, longitude], 17)
+  marker = leaflet.marker([latitude, longitude], { icon: myIcon }).addTo(map).bindPopup('Centro de Tecnologia Mineral').openPopup()
+
+  leaflet.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map)
+})
+
 </script>
 <template>
   <v-container class="location-container" fluid>
@@ -12,23 +38,12 @@ const iframeUrl = `https://maps.google.com/maps?q=${-6.2528602},${-36.5366794}&h
           title-props="Localização"
           subtitle-props="Veja onde estamos localizados"
         />
-        <hr />
+        <hr class="text-white"/>
       </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" md="8" class="mx-auto">
-        <div class="map-wrapper">
-          <iframe
-            :src="iframeUrl"
-            width="100%"
-            height="450"
-            style="border: 0; border-radius: 8px"
-            allowfullscreen
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Mapa de localização do IFRN Polo de Inovação"
-          ></iframe>
-        </div>
+      <v-col cols="12">
+        <v-container fluid>
+          <div id="map" class="rounded-lg"></div>
+        </v-container>
       </v-col>
     </v-row>
   </v-container>
@@ -36,5 +51,10 @@ const iframeUrl = `https://maps.google.com/maps?q=${-6.2528602},${-36.5366794}&h
 <style scoped>
 .location-container {
   background: linear-gradient(135deg, rgba(14, 84, 74, 1) 0%, rgba(13, 141, 123, 1) 75%);
+}
+
+#map {
+  height: 400px;
+  width: 100%;
 }
 </style>
