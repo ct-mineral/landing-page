@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import TitleSectionComponent from '@/components/TitleSectionComponent.vue'
-import logoIcon from '@/assets/images/logo.png'
 
 import leaflet from 'leaflet'
 import 'leaflet/dist/leaflet.css'
@@ -10,7 +9,7 @@ let map: leaflet.Map
 let marker: leaflet.Marker
 
 const myIcon = leaflet.icon({
-  iconUrl: logoIcon,
+  iconUrl: 'images/logo.png',
   iconSize: [43, 40],
   iconAnchor: [15, 20],
 })

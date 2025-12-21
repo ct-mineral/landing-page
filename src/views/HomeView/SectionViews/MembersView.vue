@@ -1,12 +1,11 @@
 <script setup lang="ts">
   import CardSectionComponent from '@/components/CardSectionComponent.vue';
   import TitleSectionComponent from '@/components/TitleSectionComponent.vue';
-  import diretoresPng from '@/assets/images/diretores.png';
 
   const informationsCards = [
-    { id: 1, title: 'Diretores(as)', description: 'lorem impsum', image: diretoresPng },
-    { id: 2, title: 'Pesquisadores(as)', description: 'lorem impsum', image: diretoresPng },
-    { id: 3, title: 'Equipe Técnica', description: 'lorem impsum', image: diretoresPng },
+    { id: 1, title: 'Diretores(as)', description: 'lorem impsum', image: 'images/diretores.png' },
+    { id: 2, title: 'Pesquisadores(as)', description: 'lorem impsum', image: 'images/diretores.png' },
+    { id: 3, title: 'Equipe Técnica', description: 'lorem impsum', image: 'images/diretores.png' },
   ]
 </script>
 

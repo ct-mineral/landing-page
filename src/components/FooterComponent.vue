@@ -1,12 +1,10 @@
-<script setup lang="ts">
-import logobranco from '@/assets/images/logo_branco.png'
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <v-container fluid class="container-footer">
     <v-row class="d-flex align-center py-4">
       <v-col cols="12" md="auto" class="d-flex flex-column align-center ga-8 px-md-8">
-        <v-img :src="logobranco" class="w-25 w-md-50" alt="CT Mineral Logo" />
+        <v-img src="images/logo_branco.png" class="w-25 w-md-50" alt="CT Mineral Logo" />
         <div class="d-flex flex-column align-center align-md-start ga-3 w-100">
           <span class="text-h6 text-white font-weight-bold">Nos siga:</span>
           <div class="d-flex align-center ga-8 ga-md-4">

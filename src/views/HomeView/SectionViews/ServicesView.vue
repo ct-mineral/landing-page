@@ -1,15 +1,14 @@
 <script setup lang="ts">
   import TitleSectionComponent from '@/components/TitleSectionComponent.vue';
   import CardSectionComponent from '@/components/CardSectionComponent.vue';
-  import diretoresPng from '@/assets/images/diretores.png';
 
   const informationsCards = [
-    { id: 1, title: 'Administração de Amostras', description: 'lorem impsum', image: diretoresPng },
-    { id: 2, title: 'Análises', description: 'lorem impsum', image: diretoresPng },
-    { id: 3, title: 'Preparação de Amostras', description: 'lorem impsum', image: diretoresPng },
-    { id: 4, title: 'Testes Físicos', description: 'lorem impsum', image: diretoresPng },
-    { id: 5, title: 'Serviços Metalúrgicos', description: 'lorem impsum', image: diretoresPng },
-    { id: 6, title: 'Serviços no Local', description: 'lorem impsum', image: diretoresPng },
+    { id: 1, title: 'Administração de Amostras', description: 'lorem impsum', image: 'images/diretores.png' },
+    { id: 2, title: 'Análises', description: 'lorem impsum', image: 'images/diretores.png' },
+    { id: 3, title: 'Preparação de Amostras', description: 'lorem impsum', image: 'images/diretores.png' },
+    { id: 4, title: 'Testes Físicos', description: 'lorem impsum', image: 'images/diretores.png' },
+    { id: 5, title: 'Serviços Metalúrgicos', description: 'lorem impsum', image: 'images/diretores.png' },
+    { id: 6, title: 'Serviços no Local', description: 'lorem impsum', image: 'images/diretores.png' },
   ]
 </script>
 
