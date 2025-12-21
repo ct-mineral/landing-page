@@ -3,39 +3,33 @@ import logobranco from '@/assets/images/logo_branco.png'
 </script>
 
 <template>
-  <v-container fluid class="container-footer pa-10">
-    <v-row class="d-flex align-center">
-      <v-col cols="12" md="auto" class="d-flex flex-column align-center">
-        <v-img :src="logobranco" width="150" height="179" class="mb-8" alt="CT Mineral Logo" />
-        <div class="d-flex flex-column align-stretch w-100">
-          <span class="text-h6 text-white font-weight-bold mb-6">Nos siga:</span>
-          <div class="d-flex align-center ga-4">
-            <v-avatar size="50" color="white">
-              <v-icon color="#E48020" size="25">mdi-instagram</v-icon>
-            </v-avatar>
-            <v-avatar size="50" color="white">
-              <v-icon color="#E48020" size="25">mdi-facebook</v-icon>
-            </v-avatar>
-            <v-avatar size="50" color="white">
-              <v-icon color="#E48020" size="25">mdi-linkedin</v-icon>
-            </v-avatar>
+  <v-container fluid class="container-footer">
+    <v-row class="d-flex align-center py-4">
+      <v-col cols="12" md="auto" class="d-flex flex-column align-center ga-8 px-md-8">
+        <v-img :src="logobranco" class="w-25 w-md-50" alt="CT Mineral Logo" />
+        <div class="d-flex flex-column align-center align-md-start ga-3 w-100">
+          <span class="text-h6 text-white font-weight-bold">Nos siga:</span>
+          <div class="d-flex align-center ga-8 ga-md-4">
+            <v-btn icon="mdi-instagram" class="btn-color" density="comfortable"/>
+            <v-btn icon="mdi-facebook" class="btn-color" density="comfortable" />
+            <v-btn icon="mdi-linkedin" class="btn-color" density="comfortable"/>
           </div>
         </div>
       </v-col>
 
-      <v-divider vertical class="mx-8 my-0 footer-divider d-none d-md-flex" />
+      <v-divider vertical class="divider d-none d-md-flex"/>
 
       <!-- Coluna: Informações -->
-      <v-col cols="12" md class="d-flex flex-column mt-8 mt-md-0">
+      <v-col cols="12" md class="d-flex flex-column mt-4 mt-md-0 px-8">
         <!-- Título + linha -->
-        <div class="d-flex flex-column mb-8">
-          <span class="text-h6 text-white font-weight-bold mb-4">MAPA DO SITE</span>
-          <v-divider class="divider-white" />
+        <div class="d-flex flex-column mb-4">
+          <span class="text-subtitle-1 text-md-h6 text-white font-weight-bold mb-2">MAPA DO SITE</span>
+          <v-divider class="divider" />
         </div>
         <!-- Links e Contatos -->
-        <v-row no-gutters class="d-flex flex-column flex-md-row ga-8 justify-space-between">
+        <v-row no-gutters class="d-flex flex-column flex-md-row  justify-space-between">
           <!-- Links -->
-          <v-col cols="12" md="auto" class="d-flex flex-column flex-md-row ga-8">
+          <v-col cols="12" md="auto" class="d-flex flex-column flex-md-row ga-6 ga-md-12">
             <!-- IFRN -->
             <div class="d-flex flex-column ga-4">
               <span class="text-subtitle-2 text-white font-weight-bold">IFRN</span>
@@ -51,16 +45,16 @@ import logobranco from '@/assets/images/logo_branco.png'
             </div>
           </v-col>
           <!-- Contatos -->
-          <v-col cols="12" md="auto" class="d-flex flex-column ga-6 pr-10">
+          <v-col cols="12" md="auto" class="d-flex flex-column ga-6 ga-md-8 mt-6 mt-md-0">
             <!-- E-mail -->
-            <div class="d-flex flex-column ga-2">
+            <div class="d-flex flex-column ga-4">
               <span class="text-subtitle-2 text-white font-weight-bold">E-mail:</span>
-              <span class="text-body-2 text-white">ctmineral@email.com</span>
+              <a href="#" class="text-body-2 text-white">ctmineral@email.com</a>
             </div>
             <!-- Telefone -->
-            <div class="d-flex flex-column ga-2">
+            <div class="d-flex flex-column ga-4">
               <span class="text-subtitle-2 text-white font-weight-bold">Telefone:</span>
-              <span class="text-body-2 text-white">+55 (84) 9 9999-9999</span>
+              <a href="#" class="text-body-2 text-white">+55 (84) 9 9999-9999</a>
             </div>
           </v-col>
         </v-row>
@@ -74,13 +68,11 @@ import logobranco from '@/assets/images/logo_branco.png'
   background: #e48020;
 }
 
-.footer-divider {
-  height: 300px;
-  border-color: white;
-  opacity: 1;
+.btn-color {
+  color: #E48020;
 }
 
-.divider-white {
+.divider {
   border-color: white;
   opacity: 1;
 }
