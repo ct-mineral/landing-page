@@ -17,10 +17,14 @@ const servicosMenu = ref(false)
     <nav>
       <ul class="d-flex flex-column flex-md-row align-center pa-0 ma-0">
         <li class="links pa-0">
-          <a href="#" class="d-block w-100 h-100 py-2 px-5 text-body-2 text-md-body-1">Início</a>
+          <router-link to="/" class="d-block w-100 h-100 py-2 px-5 text-body-2 text-md-body-1"
+            >Início</router-link
+          >
         </li>
         <li class="links pa-0">
-          <a href="#" class="d-block w-100 h-100 py-2 px-5 text-body-2 text-md-body-1">Sobre</a>
+          <router-link to="/sobre" class="d-block w-100 h-100 py-2 px-5 text-body-2 text-md-body-1"
+            >Sobre</router-link
+          >
         </li>
         <li class="links pa-0">
           <v-menu v-model="integrantesMenu" offset-y>
@@ -30,7 +34,7 @@ const servicosMenu = ref(false)
                 class="d-flex align-center w-100 h-100 py-2 px-5 text-body-2 text-md-body-1"
               >
                 Integrantes
-                <v-icon icon="mdi-menu-down"/>
+                <v-icon icon="mdi-menu-down" />
               </a>
             </template>
             <v-list class="menu-dropdown">
@@ -57,7 +61,7 @@ const servicosMenu = ref(false)
                 class="d-flex align-center w-100 h-100 py-2 px-5 text-body-2 text-md-body-1"
               >
                 Nossos serviços
-                <v-icon icon="mdi-menu-down"/>
+                <v-icon icon="mdi-menu-down" />
               </a>
             </template>
             <v-list class="menu-dropdown">
@@ -94,10 +98,16 @@ const servicosMenu = ref(false)
 }
 
 li,
-a {
+a,
+.router-link-active,
+.router-link-exact-active {
   list-style: none;
   text-decoration: none;
   color: white;
+}
+
+.router-link-active {
+  background-color: #107465;
 }
 
 li:hover {
