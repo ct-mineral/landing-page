@@ -32,7 +32,7 @@
             </p>
           </div>
 
-          <v-btn class="text-caption text-md-subtitle-1 text-white mt-4 button-about w-75" large rounded>
+          <v-btn class="text-caption text-md-subtitle-1 text-white mt-4 button-about w-75" to="/sobre" large rounded>
             Conheça mais sobre o CT Mineral
           </v-btn>
 
