@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const integrantesMenu = ref(false)
 const servicosMenu = ref(false)
 </script>
 
@@ -27,31 +26,9 @@ const servicosMenu = ref(false)
           >
         </li>
         <li class="links pa-0">
-          <v-menu v-model="integrantesMenu" offset-y>
-            <template v-slot:activator="{ props }">
-              <a
-                v-bind="props"
-                class="d-flex align-center w-100 h-100 py-2 px-5 text-body-2 text-md-body-1"
-              >
-                Integrantes
-                <v-icon icon="mdi-menu-down" />
-              </a>
-            </template>
-            <v-list class="menu-dropdown">
-              <v-list-item @click="integrantesMenu = false">
-                <a href="#" class="dropdown-link">Pesquisadores</a>
-              </v-list-item>
-              <v-list-item @click="integrantesMenu = false">
-                <a href="#" class="dropdown-link">Diretores</a>
-              </v-list-item>
-              <v-list-item @click="integrantesMenu = false">
-                <a href="#" class="dropdown-link">Bolsistas</a>
-              </v-list-item>
-              <v-list-item @click="integrantesMenu = false">
-                <a href="#" class="dropdown-link">Técnicos</a>
-              </v-list-item>
-            </v-list>
-          </v-menu>
+          <router-link to="/integrantes" class="d-block w-100 h-100 py-2 px-5 text-body-2 text-md-body-1"
+            >Integrantes</router-link
+          >
         </li>
         <li class="links pa-0">
           <v-menu v-model="servicosMenu" offset-y>
