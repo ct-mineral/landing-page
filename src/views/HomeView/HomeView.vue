@@ -3,6 +3,7 @@
   import MembersView from './SectionViews/MembersView.vue';
   import ServicesView from './SectionViews/ServicesView.vue';
   import LocationView from './SectionViews/LocationView.vue';
+  import CompaniesView from './SectionViews/CompaniesView.vue';
 </script>
 
 <template>
@@ -10,6 +11,7 @@
   <MembersView />
   <ServicesView />
   <LocationView />
+  <CompaniesView />
 </template>
 
 <style scoped></style>
