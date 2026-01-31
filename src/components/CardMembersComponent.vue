@@ -23,7 +23,7 @@
           {{ positionMember }}
         </v-card-subtitle>
 
-        <v-card-text class="text-body-1">
+        <v-card-text class="text-body-1 text-justify">
           {{ descriptionMember }}
         </v-card-text>
 
