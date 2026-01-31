@@ -42,8 +42,8 @@ const informationsCards = [
       <v-col cols="12">
         <v-slide-group>
           <v-slide-group-item>
-            <v-container class="d-flex justify-center ga-5 ga-md-12 px-0" fluid>
-              <div v-for="i in informationsCards" :key="i.id">
+            <v-container v-for="i in informationsCards" :key="i.id" fluid>
+              <div class="d-flex justify-center ga-5 ga-md-12 px-0">
                 <CardSectionComponent
                   class="text-white"
                   :title-props="i.title"
