@@ -18,6 +18,26 @@ const router = createRouter({
       name: 'members',
       component: () => import('@/views/MembersView/MembersView.vue'),
     },
+    {
+      path: '/servicos/administracao-de-amostras',
+      name: 'sample-administration',
+      component: () => import('@/views/ServicesView/SampleAdministrationView.vue'),
+    },
+    {
+      path: '/servicos/analises',
+      name: 'analyses',
+      component: () => import('@/views/ServicesView/AnalysesView.vue'),
+    },
+    {
+      path: '/servicos/preparacao-de-amostras',
+      name: 'sample-preparation',
+      component: () => import('@/views/ServicesView/SamplePreparationView.vue'),
+    },
+    {
+      path: '/servicos/testes-fisicos',
+      name: 'physical-tests',
+      component: () => import('@/views/ServicesView/PhysicalTestsView.vue'),
+    }
   ],
 })
 
