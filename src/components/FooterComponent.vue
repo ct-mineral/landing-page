@@ -36,9 +36,9 @@
             <!-- CT Mineral -->
             <div class="d-flex flex-column ga-4">
               <span class="text-subtitle-2 text-white font-weight-bold">CT Mineral</span>
-              <a href="#" class="text-body-2 text-white">Sobre</a>
-              <a href="#" class="text-body-2 text-white">Integrantes</a>
-              <a href="#" class="text-body-2 text-white">Notícias</a>
+              <a href="/sobre"  class="text-body-2 text-white">Sobre</a>
+              <a href="/integrantes" class="text-body-2 text-white">Integrantes</a>
+              <a href="https://portal.ifrn.edu.br/institucional/polo-de-inovacao-currais-novos/noticias/" class="text-body-2 text-white" target="_blank" rel="noopener noreferrer">Notícias</a>
               <a href="#" class="text-body-2 text-white">Projetos</a>
             </div>
           </v-col>
