@@ -1,20 +1,42 @@
 <script setup lang="ts">
-  import CardSectionComponent from '@/components/CardSectionComponent.vue';
-  import TitleSectionComponent from '@/components/TitleSectionComponent.vue';
+import CardSectionComponent from '@/components/CardSectionComponent.vue'
+import TitleSectionComponent from '@/components/TitleSectionComponent.vue'
 
-  const informationsCards = [
-    { id: 1, title: 'Diretores(as)', description: 'lorem impsum', image: 'images/diretores.png' },
-    { id: 2, title: 'Pesquisadores(as)', description: 'lorem impsum', image: 'images/diretores.png' },
-    { id: 3, title: 'Equipe Técnica', description: 'lorem impsum', image: 'images/diretores.png' },
-  ]
+const informationsCards = [
+  {
+    id: 1,
+    title: 'Diretores(as)',
+    description: 'lorem impsum',
+    image: 'images/diretores.png',
+    link: '/integrantes?tab=diretores',
+  },
+  {
+    id: 2,
+    title: 'Pesquisadores(as)',
+    description: 'lorem impsum',
+    image: 'images/diretores.png',
+    link: '/integrantes?tab=pesquisadores',
+  },
+  {
+    id: 3,
+    title: 'Equipe Técnica',
+    description: 'lorem impsum',
+    image: 'images/diretores.png',
+    link: '/integrantes?tab=tecnicos',
+  },
+]
 </script>
 
 <template>
   <v-container fluid class="members-container">
     <v-row>
       <v-col cols="12" class="d-flex flex-column ga-2 text-white">
-        <TitleSectionComponent icon-props="mdi-menu-right" title-props="Integrantes" subtitle-props="Descubra quem compõe o CT Mineral e leva a inovação até você"/>
-        <hr class="text-white">
+        <TitleSectionComponent
+          icon-props="mdi-menu-right"
+          title-props="Integrantes"
+          subtitle-props="Descubra quem compõe o CT Mineral e leva a inovação até você"
+        />
+        <hr class="text-white" />
       </v-col>
 
       <v-col cols="12">
@@ -27,6 +49,7 @@
                   :title-props="i.title"
                   :description-props="i.description"
                   :image-props="i.image"
+                  :link-props="i.link"
                 />
               </div>
             </v-container>
