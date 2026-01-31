@@ -8,7 +8,7 @@
         <div class="d-flex flex-column align-center align-md-start ga-3 w-100">
           <span class="text-h6 text-white font-weight-bold">Nos siga:</span>
           <div class="d-flex align-center ga-8 ga-md-4">
-            <v-btn icon="mdi-instagram" class="btn-color" density="comfortable"/>
+            <v-btn icon="mdi-instagram" class="btn-color" density="comfortable" href="https://www.instagram.com/ctmineral.ifrn/" target="_blank" rel="noopener noreferrer"/>
             <v-btn icon="mdi-facebook" class="btn-color" density="comfortable" />
             <v-btn icon="mdi-linkedin" class="btn-color" density="comfortable"/>
           </div>
@@ -31,7 +31,7 @@
             <!-- IFRN -->
             <div class="d-flex flex-column ga-4">
               <span class="text-subtitle-2 text-white font-weight-bold">IFRN</span>
-              <a href="#" class="text-body-2 text-white">Site</a>
+              <a href="https://portal.ifrn.edu.br/" class="text-body-2 text-white" target="_blank" rel="noopener noreferrer">Site</a>
             </div>
             <!-- CT Mineral -->
             <div class="d-flex flex-column ga-4">
