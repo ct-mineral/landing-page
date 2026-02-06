@@ -29,23 +29,25 @@ onMounted(() => {
 
 </script>
 <template>
-  <v-container class="location-container" fluid>
-    <v-row>
-      <v-col cols="12" class="d-flex flex-column ga-2 text-white">
-        <TitleSectionComponent
-          icon-props="mdi-map-marker"
-          title-props="Localização"
-          subtitle-props="Veja onde estamos localizados"
-        />
-        <hr class="text-white"/>
-      </v-col>
-      <v-col cols="12">
-        <v-container fluid>
-          <div id="map" class="rounded-lg"></div>
-        </v-container>
-      </v-col>
-    </v-row>
-  </v-container>
+  <div class="location-container">
+    <v-container>
+      <v-row>
+        <v-col cols="12" class="d-flex flex-column ga-2 text-white">
+          <TitleSectionComponent
+            icon-props="mdi-map-marker"
+            title-props="Localização"
+            subtitle-props="Veja onde estamos localizados"
+          />
+          <hr class="text-white"/>
+        </v-col>
+        <v-col cols="12">
+          <v-container fluid>
+            <div id="map" class="rounded-lg"></div>
+          </v-container>
+        </v-col>
+      </v-row>
+    </v-container>
+  </div>
 </template>
 <style scoped>
 .location-container {

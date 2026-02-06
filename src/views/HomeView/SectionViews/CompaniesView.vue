@@ -9,7 +9,7 @@ const empresas = [
 </script>
 
 <template>
-  <v-container fluid>
+  <v-container>
     <v-row>
       <v-col cols="12" class="d-flex flex-column ga-2">
         <TitleSectionComponent icon-props="mdi-home-city" title-props="Empresas Contratantes" subtitle-props="Algumas das empresas que confiam no nosso trabalho"/>

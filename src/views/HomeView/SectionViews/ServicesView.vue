@@ -11,7 +11,7 @@
 </script>
 
 <template>
-  <v-container fluid>
+  <v-container>
     <v-row>
       <v-col cols="12" class="d-flex flex-column ga-2">
         <TitleSectionComponent icon-props="mdi-briefcase" title-props="Nossos serviços" subtitle-props="Alguns dos serviços que ofertamos no nosso Polo de Inovação"/>

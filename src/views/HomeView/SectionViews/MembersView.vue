@@ -28,36 +28,38 @@ const informationsCards = [
 </script>
 
 <template>
-  <v-container fluid class="members-container">
-    <v-row>
-      <v-col cols="12" class="d-flex flex-column ga-2 text-white">
-        <TitleSectionComponent
-          icon-props="mdi-menu-right"
-          title-props="Integrantes"
-          subtitle-props="Descubra quem compõe o CT Mineral e leva a inovação até você"
-        />
-        <hr class="text-white" />
-      </v-col>
+  <div class="members-container">
+    <v-container>
+      <v-row>
+        <v-col cols="12" class="d-flex flex-column ga-2 text-white">
+          <TitleSectionComponent
+            icon-props="mdi-menu-right"
+            title-props="Integrantes"
+            subtitle-props="Descubra quem compõe o CT Mineral e leva a inovação até você"
+          />
+          <hr class="text-white" />
+        </v-col>
 
-      <v-col cols="12">
-        <v-slide-group>
-          <v-slide-group-item>
-            <v-container v-for="i in informationsCards" :key="i.id" fluid>
-              <div class="d-flex justify-center ga-5 ga-md-12 px-0">
-                <CardSectionComponent
-                  class="text-white"
-                  :title-props="i.title"
-                  :description-props="i.description"
-                  :image-props="i.image"
-                  :link-props="i.link"
-                />
-              </div>
-            </v-container>
-          </v-slide-group-item>
-        </v-slide-group>
-      </v-col>
-    </v-row>
-  </v-container>
+        <v-col cols="12">
+          <v-slide-group>
+            <v-slide-group-item>
+              <v-container v-for="i in informationsCards" :key="i.id">
+                <div class="d-flex justify-center ga-5 ga-md-12 px-0">
+                  <CardSectionComponent
+                    class="text-white"
+                    :title-props="i.title"
+                    :description-props="i.description"
+                    :image-props="i.image"
+                    :link-props="i.link"
+                  />
+                </div>
+              </v-container>
+            </v-slide-group-item>
+          </v-slide-group>
+        </v-col>
+      </v-row>
+    </v-container>
+  </div>
 </template>
 
 <style scoped>
