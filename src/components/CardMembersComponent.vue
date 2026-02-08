@@ -15,7 +15,7 @@
       <v-avatar size="180" rounded="0" color="grey-lighten-1" class="ma-3" :image="imageMember" :alt="nameMember" />
 
       <div>
-        <v-card-title class="text-teal-darken-3 font-weight-bold">
+        <v-card-title class="text-teal-darken-3 font-weight-bold text-wrap">
           {{ nameMember }}
         </v-card-title>
 
