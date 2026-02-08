@@ -56,7 +56,9 @@ const servicos = [
           </v-menu>
         </li>
         <li class="pa-0">
-          <a href="#" class="d-block w-100 h-100 py-2 px-5 text-body-2 text-md-body-1">Projetos</a>
+          <router-link to="/projetos" class="d-block w-100 h-100 py-2 px-5 text-body-2 text-md-body-1"
+            >Projetos</router-link
+          >
         </li>
         <li class="pa-0">
           <a href="https://portal.ifrn.edu.br/institucional/polo-de-inovacao-currais-novos/noticias/" class="d-block w-100 h-100 py-2 px-5 text-body-2 text-md-body-1" target="_blank" rel="noopener noreferrer ">Notícias</a>

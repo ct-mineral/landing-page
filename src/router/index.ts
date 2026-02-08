@@ -37,7 +37,12 @@ const router = createRouter({
       path: '/servicos/testes-fisicos',
       name: 'physical-tests',
       component: () => import('@/views/ServicesView/PhysicalTestsView.vue'),
-    }
+    },
+    {
+      path: '/projetos',
+      name: 'projects',
+      component: () => import('@/views/ProjectsView/ProjectsView.vue'),
+    },
   ],
 })
 
