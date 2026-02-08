@@ -9,7 +9,7 @@
 <template>
   <v-card variant="outlined" class="pa-4 mb-4 border-sm rounded-lg">
     <div class="d-flex flex-no-wrap flex-column flex-sm-row">
-      <v-avatar size="180" rounded="0" color="grey-lighten-1" class="ma-3" :image="imageService"/>
+      <v-avatar size="180" rounded="0" color="grey-lighten-1" class="ma-3" :image="imageService" :alt="nameService" />
 
       <div>
         <v-card-title class="text-teal-darken-3 font-weight-bold">

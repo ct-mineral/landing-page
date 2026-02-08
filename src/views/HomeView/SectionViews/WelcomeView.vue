@@ -21,9 +21,9 @@
           <img src="/images/logo.png" alt="CT Mineral Logo" class="mb-2 logo"/>
 
           <div class="d-flex flex-column ga-2">
-            <span class="text-body-1 text-md-h6">Bem-vindos ao</span>
-            <span class="text-h4 text-md-h3 font-weight-bold">CT Mineral</span>
-            <span class="text-body-1 text-md-h6">Centro de Referência em Tecnologia Mineral do IFRN</span>
+            <h1 class="text-body-1 text-md-h6">Bem-vindos ao</h1>
+            <h2 class="text-h4 text-md-h3 font-weight-bold">CT Mineral</h2>
+            <h3 class="text-body-1 text-md-h6">Centro de Referência em Tecnologia Mineral do IFRN</h3>
             <p class="text-caption text-md-body-2">
               Lorem ipsum dolor sit amet. Aut eaque mollitia et earum vero qui maiores voluptas et
               quisquam facilis. Aut facere dolores sit suscipit reprehenderit sit asperiores ipsa qui

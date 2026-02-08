@@ -10,7 +10,7 @@
 <template>
   <v-card class="pa-4 rounded-lg">
     <div>
-      <v-img :src="imageProject" height="200" class="rounded-lg" cover/>
+      <v-img :src="imageProject" :alt="descriptionProject" height="200" class="rounded-lg" cover/>
 
       <div>
         <v-card-text class="text-body-1 text-wrap">

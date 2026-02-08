@@ -50,7 +50,7 @@ const servicos = [
             </template>
             <v-list class="menu-dropdown pa-0 rounded-0">
               <v-list-item v-for="servico in servicos" :key="servico.id" @click="servicosMenu = false" class="pa-0">
-                <a :href="servico.link" class="dropdown-link d-flex px-3 py-2">{{ servico.name }}</a>
+                <router-link :to="servico.link" class="dropdown-link d-flex px-3 py-2">{{ servico.name }}</router-link>
               </v-list-item>
             </v-list>
           </v-menu>
@@ -78,16 +78,10 @@ const servicos = [
 }
 
 li,
-a,
-.router-link-active,
-.router-link-exact-active {
+a {
   list-style: none;
   text-decoration: none;
   color: white;
-}
-
-.router-link-active {
-  background-color: #107465;
 }
 
 li:hover {

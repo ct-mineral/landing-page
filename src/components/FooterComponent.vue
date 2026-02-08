@@ -9,9 +9,9 @@
           <div class="d-flex flex-column align-center align-md-start ga-3 w-100">
             <span class="text-h6 text-white font-weight-bold">Nos siga:</span>
             <div class="d-flex align-center ga-8 ga-md-4">
-              <v-btn icon="mdi-instagram" class="btn-color" density="comfortable" href="https://www.instagram.com/ctmineral.ifrn/" target="_blank" rel="noopener noreferrer"/>
-              <v-btn icon="mdi-facebook" class="btn-color" density="comfortable" />
-              <v-btn icon="mdi-linkedin" class="btn-color" density="comfortable"/>
+              <v-btn icon="mdi-instagram" class="btn-color" density="comfortable" href="https://www.instagram.com/ctmineral.ifrn/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"/>
+              <v-btn icon="mdi-facebook" class="btn-color" density="comfortable" href="#" aria-label="Facebook"/>
+              <v-btn icon="mdi-linkedin" class="btn-color" density="comfortable" href="#" aria-label="LinkedIn"/>
             </div>
           </div>
         </v-col>
@@ -37,10 +37,10 @@
               <!-- CT Mineral -->
               <div class="d-flex flex-column ga-4">
                 <span class="text-subtitle-2 text-white font-weight-bold">CT Mineral</span>
-                <a href="/sobre"  class="text-body-2 text-white">Sobre</a>
-                <a href="/integrantes" class="text-body-2 text-white">Integrantes</a>
+                <router-link to="/sobre"  class="text-body-2 text-white">Sobre</router-link>
+                <router-link to="/integrantes" class="text-body-2 text-white">Integrantes</router-link>
                 <a href="https://portal.ifrn.edu.br/institucional/polo-de-inovacao-currais-novos/noticias/" class="text-body-2 text-white" target="_blank" rel="noopener noreferrer">Notícias</a>
-                <a href="#" class="text-body-2 text-white">Projetos</a>
+                <router-link to="/projetos" class="text-body-2 text-white">Projetos</router-link>
               </div>
             </v-col>
             <!-- Contatos -->
