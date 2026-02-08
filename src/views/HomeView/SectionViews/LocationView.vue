@@ -6,7 +6,6 @@ import 'leaflet/dist/leaflet.css'
 import { onMounted } from 'vue'
 
 let map: leaflet.Map
-let marker: leaflet.Marker
 
 const myIcon = leaflet.icon({
   iconUrl: 'images/logo.png',
@@ -19,7 +18,7 @@ const longitude = -36.53463290015861
 
 onMounted(() => {
   map = leaflet.map('map').setView([latitude, longitude], 17)
-  marker = leaflet.marker([latitude, longitude], { icon: myIcon }).addTo(map).bindPopup('Centro de Tecnologia Mineral').openPopup()
+  leaflet.marker([latitude, longitude], { icon: myIcon }).addTo(map).bindPopup('Centro de Tecnologia Mineral').openPopup()
 
   leaflet.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
