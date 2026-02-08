@@ -3,10 +3,10 @@
   import CardSectionComponent from '@/components/CardSectionComponent.vue';
 
   const informationsCards = [
-    { id: 1, title: 'Administração de Amostras', description: 'lorem impsum', image: 'images/diretores.png', link: '/servicos/administracao-de-amostras' },
-    { id: 2, title: 'Análises', description: 'lorem impsum', image: 'images/diretores.png', link: '/servicos/analises' },
-    { id: 3, title: 'Preparação de Amostras', description: 'lorem impsum', image: 'images/diretores.png', link: '/servicos/preparacao-de-amostras' },
-    { id: 4, title: 'Testes Físicos', description: 'lorem impsum', image: 'images/diretores.png', link: '/servicos/testes-fisicos' },
+    { id: 1, title: 'Administração de Amostras', description: 'lorem impsum', image: '/images/diretores.png', link: '/servicos/administracao-de-amostras' },
+    { id: 2, title: 'Análises', description: 'lorem impsum', image: '/images/diretores.png', link: '/servicos/analises' },
+    { id: 3, title: 'Preparação de Amostras', description: 'lorem impsum', image: '/images/diretores.png', link: '/servicos/preparacao-de-amostras' },
+    { id: 4, title: 'Testes Físicos', description: 'lorem impsum', image: '/images/diretores.png', link: '/servicos/testes-fisicos' },
   ]
 </script>
 

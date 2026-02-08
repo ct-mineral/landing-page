@@ -5,7 +5,13 @@
     <v-container>
       <v-row class="d-flex align-center py-4">
         <v-col cols="12" md="auto" class="d-flex flex-column align-center ga-8 px-md-8">
-          <v-img src="images/logo_branco.png" class="w-25 w-md-50" alt="CT Mineral Logo" />
+          <v-img
+            src="/images/logo_branco.png"
+            class="w-25 w-md-50"
+            alt="CT Mineral Logo"
+            loading="lazy"
+            decoding="async"
+          />
           <div class="d-flex flex-column align-center align-md-start ga-3 w-100">
             <span class="text-h6 text-white font-weight-bold">Nos siga:</span>
             <div class="d-flex align-center ga-8 ga-md-4">

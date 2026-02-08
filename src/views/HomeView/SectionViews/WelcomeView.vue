@@ -18,7 +18,15 @@
     <v-row>
       <v-col cols="12" md="6">
         <div class="d-flex flex-column">
-          <img src="/images/logo.png" alt="CT Mineral Logo" class="mb-2 logo"/>
+          <img
+            src="/images/logo.png"
+            alt="CT Mineral Logo"
+            class="mb-2 logo"
+            width="80"
+            height="80"
+            decoding="async"
+            fetchpriority="high"
+          />
 
           <div class="d-flex flex-column ga-2">
             <h1 class="text-body-1 text-md-h6">Bem-vindos ao</h1>
@@ -36,7 +44,13 @@
             Conheça mais sobre o CT Mineral
           </v-btn>
 
-          <img class="mt-2 parceiras" src="/images/main-images.svg" alt="Empresas parceiras" />
+          <img
+            class="mt-2 parceiras"
+            src="/images/main-images.svg"
+            alt="Empresas parceiras"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </v-col>
 
