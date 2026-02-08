@@ -10,16 +10,16 @@
 <template>
   <v-card class="pa-4 rounded-lg">
     <div>
-      <v-img :src="imageProject" class="rounded-lg" cover/>
+      <v-img :src="imageProject" height="200" class="rounded-lg" cover/>
 
       <div>
-        <v-card-text class="text-body-1">
+        <v-card-text class="text-body-1 text-wrap">
           {{ descriptionProject }}
         </v-card-text>
 
         <v-divider class="mx-4"></v-divider>
 
-        <v-card-title class="d-flex align-center ga-2 text-teal-darken-3 font-weight-bold">
+        <v-card-title class="d-flex align-center ga-2 text-teal-darken-3 font-weight-bold text-body-1 text-wrap">
           <v-icon icon="mdi-home-city" size="x-small"/>
           {{ nameCompanie }}
         </v-card-title>
