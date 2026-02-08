@@ -1,13 +1,13 @@
 <script lang="ts" setup>
-  import { computed } from 'vue'
+import { computed } from 'vue'
 
-  const props = defineProps({
-    nameService: String,
-    descriptionService: String,
-    imageService: String,
-  })
+const props = defineProps({
+  nameService: String,
+  descriptionService: String,
+  imageService: String,
+})
 
-  const hasImage = computed(() => !!props.imageService && props.imageService !== '#')
+const hasImage = computed(() => !!props.imageService && props.imageService !== '#')
 </script>
 
 <template>
@@ -38,6 +38,6 @@
 
 <style scoped>
 .color-button {
-  color: #E48020;
+  color: #e48020;
 }
 </style>

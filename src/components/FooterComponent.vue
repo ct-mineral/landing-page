@@ -15,37 +15,73 @@
           <div class="d-flex flex-column align-center align-md-start ga-3 w-100">
             <span class="text-h6 text-white font-weight-bold">Nos siga:</span>
             <div class="d-flex align-center ga-8 ga-md-4">
-              <v-btn icon="mdi-instagram" class="btn-color" density="comfortable" href="https://www.instagram.com/ctmineral.ifrn/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"/>
-              <v-btn icon="mdi-facebook" class="btn-color" density="comfortable" href="#" aria-label="Facebook"/>
-              <v-btn icon="mdi-linkedin" class="btn-color" density="comfortable" href="#" aria-label="LinkedIn"/>
+              <v-btn
+                icon="mdi-instagram"
+                class="btn-color"
+                density="comfortable"
+                href="https://www.instagram.com/ctmineral.ifrn/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              />
+              <v-btn
+                icon="mdi-facebook"
+                class="btn-color"
+                density="comfortable"
+                href="#"
+                aria-label="Facebook"
+              />
+              <v-btn
+                icon="mdi-linkedin"
+                class="btn-color"
+                density="comfortable"
+                href="#"
+                aria-label="LinkedIn"
+              />
             </div>
           </div>
         </v-col>
 
-        <v-divider vertical class="divider d-none d-md-flex"/>
+        <v-divider vertical class="divider d-none d-md-flex" />
 
         <!-- Coluna: Informações -->
         <v-col cols="12" md class="d-flex flex-column mt-4 mt-md-0 px-8">
           <!-- Título + linha -->
           <div class="d-flex flex-column mb-4">
-            <span class="text-subtitle-1 text-md-h6 text-white font-weight-bold mb-2">MAPA DO SITE</span>
+            <span class="text-subtitle-1 text-md-h6 text-white font-weight-bold mb-2"
+              >MAPA DO SITE</span
+            >
             <v-divider class="divider" />
           </div>
           <!-- Links e Contatos -->
-          <v-row no-gutters class="d-flex flex-column flex-md-row  justify-space-between">
+          <v-row no-gutters class="d-flex flex-column flex-md-row justify-space-between">
             <!-- Links -->
             <v-col cols="12" md="auto" class="d-flex flex-column flex-md-row ga-6 ga-md-12">
               <!-- IFRN -->
               <div class="d-flex flex-column ga-4">
                 <span class="text-subtitle-2 text-white font-weight-bold">IFRN</span>
-                <a href="https://portal.ifrn.edu.br/" class="text-body-2 text-white" target="_blank" rel="noopener noreferrer">Site</a>
+                <a
+                  href="https://portal.ifrn.edu.br/"
+                  class="text-body-2 text-white"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Site</a
+                >
               </div>
               <!-- CT Mineral -->
               <div class="d-flex flex-column ga-4">
                 <span class="text-subtitle-2 text-white font-weight-bold">CT Mineral</span>
-                <router-link to="/sobre"  class="text-body-2 text-white">Sobre</router-link>
-                <router-link to="/integrantes" class="text-body-2 text-white">Integrantes</router-link>
-                <a href="https://portal.ifrn.edu.br/institucional/polo-de-inovacao-currais-novos/noticias/" class="text-body-2 text-white" target="_blank" rel="noopener noreferrer">Notícias</a>
+                <router-link to="/sobre" class="text-body-2 text-white">Sobre</router-link>
+                <router-link to="/integrantes" class="text-body-2 text-white"
+                  >Integrantes</router-link
+                >
+                <a
+                  href="https://portal.ifrn.edu.br/institucional/polo-de-inovacao-currais-novos/noticias/"
+                  class="text-body-2 text-white"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Notícias</a
+                >
                 <router-link to="/projetos" class="text-body-2 text-white">Projetos</router-link>
               </div>
             </v-col>
@@ -75,7 +111,7 @@
 }
 
 .btn-color {
-  color: #E48020;
+  color: #e48020;
 }
 
 .divider {

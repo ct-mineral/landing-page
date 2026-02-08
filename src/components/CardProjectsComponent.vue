@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-  defineProps({
-    nameCompanie: String,
-    descriptionProject: String,
-    imageProject: String,
-    locationCompanie: String,
-  })
+defineProps({
+  nameCompanie: String,
+  descriptionProject: String,
+  imageProject: String,
+  locationCompanie: String,
+})
 </script>
 
 <template>
@@ -27,13 +27,15 @@
 
         <v-divider class="mx-4"></v-divider>
 
-        <v-card-title class="d-flex align-center ga-2 text-teal-darken-3 font-weight-bold text-body-1 text-wrap">
-          <v-icon icon="mdi-home-city" size="x-small"/>
+        <v-card-title
+          class="d-flex align-center ga-2 text-teal-darken-3 font-weight-bold text-body-1 text-wrap"
+        >
+          <v-icon icon="mdi-home-city" size="x-small" />
           {{ nameCompanie }}
         </v-card-title>
 
         <v-card-subtitle class="d-flex align-center ga-2 text-body-1 text-color">
-          <v-icon icon="mdi-map-marker" size="x-small"/>
+          <v-icon icon="mdi-map-marker" size="x-small" />
           {{ locationCompanie }}
         </v-card-subtitle>
       </div>
@@ -43,6 +45,6 @@
 
 <style scoped>
 .color-button {
-  color: #E48020;
+  color: #e48020;
 }
 </style>
