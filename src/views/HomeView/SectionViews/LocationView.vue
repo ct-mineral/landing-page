@@ -20,7 +20,7 @@ const loadMap = async () => {
   ])
 
   const myIcon = leaflet.icon({
-    iconUrl: 'images/logo.png',
+    iconUrl: 'images/logos/logo_ctm.svg',
     iconSize: [43, 40],
     iconAnchor: [15, 20],
   })
