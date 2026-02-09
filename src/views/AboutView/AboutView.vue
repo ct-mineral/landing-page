@@ -30,7 +30,7 @@
 }
 
 .video {
-  min-height: 600px;
+  min-height: 200px;
 }
 
 .history {
