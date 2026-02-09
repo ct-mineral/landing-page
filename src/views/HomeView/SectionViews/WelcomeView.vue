@@ -19,11 +19,11 @@ const slides = ref<SlideItem[]>([
       <v-col cols="12" md="6">
         <div class="d-flex flex-column">
           <img
-            src="/images/logo.png"
+            src="/images/logos/logo_ctm.svg"
             alt="CT Mineral Logo"
-            class="mb-2 logo"
-            width="80"
-            height="80"
+            class="mb-2"
+            width="45"
+            height="45"
             decoding="async"
             fetchpriority="high"
           />
@@ -78,10 +78,6 @@ const slides = ref<SlideItem[]>([
 </template>
 
 <style scoped>
-.logo {
-  width: 80px;
-}
-
 .button-about {
   background-color: #e48020;
 }

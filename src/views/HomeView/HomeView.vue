@@ -7,11 +7,49 @@
 </script>
 
 <template>
-  <WelcomeView />
-  <MembersView />
-  <ServicesView />
-  <LocationView />
-  <CompaniesView />
+  <section class="section welcome">
+    <WelcomeView />
+  </section>
+
+  <section class="section members">
+    <MembersView />
+  </section>
+
+  <section class="section services">
+    <ServicesView />
+  </section>
+
+  <section class="section location">
+    <LocationView />
+  </section>
+
+  <section class="section companies">
+    <CompaniesView />
+  </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+.section {
+  width: 100%;
+}
+
+.welcome {
+  min-height: calc(100vh - 256px);
+}
+
+.members {
+  min-height: 600px;
+}
+
+.services {
+  min-height: 700px;
+}
+
+.location {
+  min-height: 500px;
+}
+
+.companies {
+  min-height: 400px;
+}
+</style>

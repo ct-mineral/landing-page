@@ -7,7 +7,7 @@ import FooterComponent from './components/FooterComponent.vue'
   <v-app>
     <HeaderComponent />
 
-    <v-main>
+    <v-main class="main-layout">
       <RouterView />
     </v-main>
 
@@ -15,4 +15,8 @@ import FooterComponent from './components/FooterComponent.vue'
   </v-app>
 </template>
 
-<style scoped></style>
+<style scoped>
+.main-layout {
+  min-height: calc(100vh - 140px - 320px);
+}
+</style>

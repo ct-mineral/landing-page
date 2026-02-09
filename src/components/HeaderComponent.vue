@@ -38,7 +38,7 @@ const servicos = [
           >
         </li>
         <li class="pa-0">
-          <v-menu v-model="servicosMenu" offset-y>
+          <v-menu v-model="servicosMenu" offset-y activator="parent" location-strategy="connected">
             <template v-slot:activator="{ props }">
               <a
                 v-bind="props"
@@ -71,10 +71,12 @@ const servicos = [
 <style scoped>
 .polo {
   background-color: #e48020;
+  min-height: 72px;
 }
 
 .nav-bar {
   background-color: #0e544a;
+  min-height: 36px;
 }
 
 li,
