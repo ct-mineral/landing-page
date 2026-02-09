@@ -43,8 +43,4 @@ defineProps({
   </v-card>
 </template>
 
-<style scoped>
-.color-button {
-  color: #e48020;
-}
-</style>
+<style scoped></style>

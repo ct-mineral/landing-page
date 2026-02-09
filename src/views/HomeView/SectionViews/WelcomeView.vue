@@ -52,9 +52,11 @@ const slides = ref<SlideItem[]>([
           </v-btn>
 
           <img
-            class="mt-2 parceiras"
+            class="mt-2"
             src="/images/main-images.svg"
             alt="Empresas parceiras"
+            width="80%"
+            height="100"
             loading="lazy"
             decoding="async"
           />
@@ -85,9 +87,5 @@ const slides = ref<SlideItem[]>([
 .button-about:hover {
   background-color: #0e544a;
   transition: 0.3s ease;
-}
-
-.parceiras {
-  width: 80%;
 }
 </style>
