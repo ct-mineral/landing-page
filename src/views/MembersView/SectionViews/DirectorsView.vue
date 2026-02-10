@@ -4,12 +4,12 @@
   const directors = [
     {
       id: 1,
-      name: 'Diretores',
-      position: 'Cargo do Diretor',
+      name: 'Elias Nunes',
+      position: 'Diretor de Planejamento e Negócios',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique mi nec leo elementum laoreet. Aenean condimentum libero dui, id feugiat elit euismod eget.',
-      image: 'https://via.placeholder.com/180',
-      linkedin: '#',
+        'Diretor responsável pelo planejamento estratégico e desenvolvimento de novos negócios na empresa. Com vasta experiência no setor, lidera iniciativas que impulsionam o crescimento sustentável e a inovação.',
+      image: '/images/members/directors/elias.avif',
+      linkedin: 'https://www.linkedin.com/in/elias-nunes/',
       lattes: '#'
     }
   ]

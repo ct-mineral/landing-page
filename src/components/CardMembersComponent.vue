@@ -12,7 +12,7 @@
 <template>
   <v-card variant="outlined" class="pa-4 mb-4 border-sm rounded-lg">
     <div class="d-flex flex-no-wrap flex-column flex-sm-row">
-      <v-avatar size="180" rounded="0" color="grey-lighten-1" class="ma-3" :image="imageMember" :alt="nameMember" />
+      <v-avatar size="180" color="grey-lighten-1" class="ma-3 rounded-lg" :image="imageMember" :alt="nameMember" />
 
       <div>
         <v-card-title class="text-teal-darken-3 font-weight-bold text-wrap">
@@ -30,8 +30,8 @@
         <v-divider class="mx-4 mb-4"></v-divider>
 
         <v-card-actions class="px-4">
-          <v-btn icon="mdi-linkedin" class="color-button mr-2" :to="linkedinMember"/>
-          <v-btn icon="mdi-circle" class="color-button" :to="lattesMember"></v-btn>
+          <v-btn icon="mdi-linkedin" class="color-button mr-2" :href="linkedinMember" target="_blank"/>
+          <v-btn icon="mdi-circle" class="color-button" :href="lattesMember" target="_blank"></v-btn>
         </v-card-actions>
       </div>
     </div>
