@@ -8,7 +8,7 @@ const projects = [
     name: 'Brazilian Rare Earths & Borborema',
     description:
       'Desenvolvimento de uma nova rota de processo para o beneficiamento dos minerais portadores de terras raras em argilas iônicas.',
-    image: '/images/projects/terras_raras_argilas_ionicas.png',
+    image: '/images/projects/terras_raras_argilas_ionicas.avif',
     location: 'Currais Novos, RN',
   },
   {
@@ -16,7 +16,7 @@ const projects = [
     name: 'Kit Máquinas LTDA.',
     description:
       'Projeto executivo de sonda rotativa diamantada (com wire line) modular e portátil.',
-    image: '/images/projects/sonda_rotativa.png',
+    image: '/images/projects/sonda_rotativa.avif',
     location: 'Pedro Leopoldo, MG',
   },
   {
@@ -24,7 +24,7 @@ const projects = [
     name: 'Mineração Tomaz Salustino S/A',
     description:
       'Recuperação de scheelita através da aplicação de novas tecnologias nos resíduos finos provenientes do beneficiamento mineral.',
-    image: '/images/projects/recuperacao_scheelita.png',
+    image: '/images/projects/recuperacao_scheelita.avif',
     location: 'Currais Novos, RN',
   },
   {
@@ -32,14 +32,14 @@ const projects = [
     name: 'IMC Rare Earths LTD',
     description:
       'Desenvolvimento de rota hidrometalúrgica para produção de carbonato de terras raras.',
-    image: '/images/projects/terras_raras_carbonato.png',
+    image: '/images/projects/terras_raras_carbonato.avif',
     location: 'São Paulo, SP',
   },
   {
     id: 5,
     name: 'FMG & Fortescue',
     description: 'Processo inovador de extração e recuperação de elementos terras raras.',
-    image: '/images/projects/extracao_terras_raras.png',
+    image: '/images/projects/extracao_terras_raras.avif',
     location: 'Ceará, CE',
   },
   {
@@ -47,7 +47,7 @@ const projects = [
     name: 'REX Soluções para Mineração',
     description:
       'Aperfeiçoamento do controle e de manejo de explosivos por meio dos detonadores T-REX e T-REX Remote.',
-    image: '/images/projects/detonadores_trex.png',
+    image: '/images/projects/detonadores_trex.avif',
     location: 'Pernambuco, PE',
   },
 ]

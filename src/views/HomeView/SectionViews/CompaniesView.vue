@@ -2,9 +2,9 @@
 import TitleSectionComponent from '@/components/TitleSectionComponent.vue'
 
 const empresas = [
-  { nome: 'IFRN', logo: '/images/logo_campus_cn.png' },
-  { nome: 'IFRN', logo: '/images/logo_campus_cn.png' },
-  { nome: 'IFRN', logo: '/images/logo_campus_cn.png' },
+  { nome: 'IFRN', logo: '/images/logo_campus_cn.avif' },
+  { nome: 'IFRN', logo: '/images/logo_campus_cn.avif' },
+  { nome: 'IFRN', logo: '/images/logo_campus_cn.avif' },
 ]
 </script>
 
