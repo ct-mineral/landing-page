@@ -34,7 +34,7 @@
 }
 
 .welcome {
-  min-height: calc(100vh - 256px);
+  min-height: calc(100vh - 384px);
 }
 
 .members {
@@ -50,6 +50,6 @@
 }
 
 .companies {
-  min-height: 400px;
+  min-height: 200px;
 }
 </style>

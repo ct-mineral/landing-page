@@ -5,11 +5,11 @@ import CardProjectsComponent from '@/components/CardProjectsComponent.vue'
 const projects = [
   {
     id: 1,
-    name: 'Brazilian Rare Earths & Borborema',
+    name: 'Borborema',
     description:
       'Desenvolvimento de uma nova rota de processo para o beneficiamento dos minerais portadores de terras raras em argilas iônicas.',
     image: '/images/projects/terras_raras_argilas_ionicas.avif',
-    location: 'Currais Novos, RN',
+    location: 'Jaguaquara, BA',
   },
   {
     id: 2,

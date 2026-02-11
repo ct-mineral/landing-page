@@ -26,7 +26,7 @@
 }
 
 .polo {
-  min-height: calc(100vh - 256px);
+  min-height: calc(100vh - 384px);
 }
 
 .video {

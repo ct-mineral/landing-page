@@ -35,10 +35,7 @@ const slides = ref<SlideItem[]>([
               Centro de Referência em Tecnologia Mineral do IFRN
             </h3>
             <p class="text-caption text-md-body-2">
-              Lorem ipsum dolor sit amet. Aut eaque mollitia et earum vero qui maiores voluptas et
-              quisquam facilis. Aut facere dolores sit suscipit reprehenderit sit asperiores ipsa
-              qui similique ducimus aut sapiente aliquid. Sit expedita quod est quas soluta et nihil
-              facilis aut fuga ullam et quia laudantium.
+              Somos uma Unidade EMBRAPII credenciada para atuar na área de Tecnologias em Mineração, com foco nas áreas de Exploração Mineral especializada em Minerais Portadores do Futuro e Soluções Tecnológicas Inovadoras em Geometalurgia.
             </p>
           </div>
 
@@ -51,15 +48,26 @@ const slides = ref<SlideItem[]>([
             Conheça mais sobre o CT Mineral
           </v-btn>
 
-          <img
-            class="mt-2"
-            src="/images/main-images.svg"
-            alt="Empresas parceiras"
-            width="80%"
-            height="100"
-            loading="lazy"
-            decoding="async"
-          />
+          <div class="d-flex ga-12 align-center mt-6">
+            <a href="https://www.ifrn.edu.br" target="_blank" rel="noopener">
+              <img
+                src="/images/logo_ifrn.svg"
+                alt="IFRN"
+                class="responsive-logo"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <a href="https://www.embrapii.org.br" target="_blank" rel="noopener">
+              <img
+                src="/images/embrapii.svg"
+                alt="EMBRAPII"
+                class="responsive-logo"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </div>
         </div>
       </v-col>
 
@@ -87,5 +95,15 @@ const slides = ref<SlideItem[]>([
 .button-about:hover {
   background-color: #0e544a;
   transition: 0.3s ease;
+}
+
+.responsive-logo {
+  height: 50px;
+}
+
+@media (max-width: 960px) {
+  .responsive-logo {
+    height: 40px;
+  }
 }
 </style>
