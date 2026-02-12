@@ -10,7 +10,7 @@
         'Diretor responsável pelo planejamento estratégico e desenvolvimento de novos negócios na empresa. Com vasta experiência no setor, lidera iniciativas que impulsionam o crescimento sustentável e a inovação.',
       image: '/images/members/directors/elias.avif',
       linkedin: 'https://www.linkedin.com/in/elias-nunes/',
-      lattes: '#'
+      lattes: 'http://lattes.cnpq.br/2948896778001838'
     }
   ]
 </script>

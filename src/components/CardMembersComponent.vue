@@ -1,18 +1,18 @@
 <script lang="ts" setup>
-  defineProps({
-    nameMember: String,
-    positionMember: String,
-    descriptionMember: String,
-    imageMember: String,
-    linkedinMember: String,
-    lattesMember: String,
-  })
+defineProps({
+  nameMember: String,
+  positionMember: String,
+  descriptionMember: String,
+  imageMember: String,
+  linkedinMember: String,
+  lattesMember: String,
+})
 </script>
 
 <template>
   <v-card variant="outlined" class="pa-4 mb-4 border-sm rounded-lg">
     <div class="d-flex flex-no-wrap flex-column flex-sm-row">
-      <v-avatar size="180" color="grey-lighten-1" class="ma-3 rounded-lg" :image="imageMember" :alt="nameMember" />
+      <v-avatar size="180" class="ma-3 rounded-lg" :image="imageMember" :alt="nameMember" />
 
       <div>
         <v-card-title class="text-teal-darken-3 font-weight-bold text-wrap">
@@ -30,8 +30,17 @@
         <v-divider class="mx-4 mb-4"></v-divider>
 
         <v-card-actions class="px-4">
-          <v-btn icon="mdi-linkedin" class="color-button mr-2" :href="linkedinMember" target="_blank"/>
-          <v-btn icon="mdi-circle" class="color-button" :href="lattesMember" target="_blank"></v-btn>
+          <v-btn
+            icon="mdi-linkedin"
+            class="color-button mr-2"
+            :href="linkedinMember"
+            target="_blank"
+          />
+          <v-btn icon class="color-button" :href="lattesMember" target="_blank" rounded="circle">
+            <v-icon>
+              <img src="/images/logos/lattes.svg" alt="Lattes" width="24" height="24" />
+            </v-icon>
+          </v-btn>
         </v-card-actions>
       </div>
     </div>
@@ -40,6 +49,6 @@
 
 <style scoped>
 .color-button {
-  color: #E48020;
+  color: #e48020;
 }
 </style>

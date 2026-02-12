@@ -7,7 +7,7 @@ const informationsCards = [
     id: 1,
     title: 'Administração de Amostras',
     description: 'Administração inteligente de amostras assegurando controle, qualidade e confiabilidade analítica.',
-    image: '/images/cards/services/pesagem_amostra.avif',
+    image: '/images/cards/services/pesagem_amostras.avif',
     link: '/servicos/administracao-de-amostras',
   },
   {
@@ -21,14 +21,14 @@ const informationsCards = [
     id: 3,
     title: 'Preparação de Amostras',
     description: 'Preparação de amostras eficiente e confiável para garantir resultados analíticos precisos e de alta qualidade.',
-    image: '/images/diretores.avif',
+    image: '/images/cards/services/preparacao_amostra.avif',
     link: '/servicos/preparacao-de-amostras',
   },
   {
     id: 4,
     title: 'Testes Físicos',
     description: 'Testes físicos para avaliar propriedades e desempenho de materiais, garantindo qualidade e conformidade.',
-    image: '/images/diretores.avif',
+    image: '/images/cards/services/teste_fisico.avif',
     link: '/servicos/testes-fisicos',
   },
 ]
