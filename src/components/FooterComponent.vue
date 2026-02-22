@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const currentYear = new Date().getFullYear()
+</script>
 
 <template>
   <div class="container-footer">
@@ -59,8 +61,8 @@
             <!-- Links -->
             <v-col cols="12" md="auto" class="d-flex flex-column flex-md-row ga-6 ga-md-12">
               <!-- IFRN -->
-              <div class="d-flex flex-column ga-4">
-                <span class="text-subtitle-2 text-white font-weight-bold">IFRN</span>
+              <div class="d-flex flex-column ga-2">
+                <span class="text-body-2 text-white font-weight-bold">IFRN</span>
                 <a
                   href="https://portal.ifrn.edu.br/"
                   class="text-body-2 text-white"
@@ -70,8 +72,8 @@
                 >
               </div>
               <!-- CT Mineral -->
-              <div class="d-flex flex-column ga-4">
-                <span class="text-subtitle-2 text-white font-weight-bold">CT Mineral</span>
+              <div class="d-flex flex-column ga-2">
+                <span class="text-body-2 text-white font-weight-bold">CT MINERAL</span>
                 <router-link to="/sobre" class="text-body-2 text-white">Sobre</router-link>
                 <router-link to="/integrantes" class="text-body-2 text-white"
                   >Integrantes</router-link
@@ -89,13 +91,13 @@
             <!-- Contatos -->
             <v-col cols="12" md="auto" class="d-flex flex-column ga-6 ga-md-8 mt-6 mt-md-0">
               <!-- E-mail -->
-              <div class="d-flex flex-column ga-4">
-                <span class="text-subtitle-2 text-white font-weight-bold">E-mail:</span>
+              <div class="d-flex flex-column ga-2">
+                <span class="text-body-2 text-white font-weight-bold">E-MAIL:</span>
                 <a href="#" class="text-body-2 text-white">ctmineral@email.com</a>
               </div>
               <!-- Telefone -->
-              <div class="d-flex flex-column ga-4">
-                <span class="text-subtitle-2 text-white font-weight-bold">Telefone:</span>
+              <div class="d-flex flex-column ga-2">
+                <span class="text-body-2 text-white font-weight-bold">TELEFONE:</span>
                 <a href="#" class="text-body-2 text-white">+55 (84) 9 9999-9999</a>
               </div>
             </v-col>
@@ -104,6 +106,15 @@
       </v-row>
     </v-container>
   </div>
+  <v-container fluid class="container-copy">
+    <v-row>
+      <v-col cols="12" class="d-flex flex-column text-center py-2">
+        <hr class="text-white h-50 border-none">
+        <span class="text-caption text-white">&copy; {{ currentYear }} Centro de Tecnologia Mineral. Todos os direitos reservados.</span>
+        <span class="text-caption text-white">Feito por Jardson Alan Vieira da Silva</span>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <style scoped>
@@ -122,5 +133,9 @@
 
 a {
   text-decoration: none;
+}
+
+.container-copy {
+  background-color: #0e544a;
 }
 </style>
