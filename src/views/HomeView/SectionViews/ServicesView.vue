@@ -64,5 +64,3 @@ const informationsCards = [
     </v-row>
   </v-container>
 </template>
-
-<style scoped></style>

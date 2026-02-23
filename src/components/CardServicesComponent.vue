@@ -35,5 +35,3 @@ const hasImage = computed(() => !!props.imageService && props.imageService !== '
     </div>
   </v-card>
 </template>
-
-<style scoped></style>

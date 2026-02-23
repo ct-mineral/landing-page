@@ -4,7 +4,7 @@
   <v-container>
     <v-row>
       <v-col cols="12">
-        <h5 class="text-h5 font-weight-bold text-color">Histórico</h5>
+        <h5 class="text-h5 font-weight-bold text-orange-darken-3">Histórico</h5>
         <p class="text-body-1">
           No ano de 2008, o engenheiro de minas e professor do Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte (IFRN), José Yvan Pereira Leite, que estava à frente da Pró-Reitoria de Pesquisa e Inovação (Propi) do instituto, identificou a necessidade de um Centro de Tecnologia Mineral (CT Mineral) no estado do Rio Grande do Norte, para solucionar os gargalos existentes na região e estrategicamente, atuar com foco nas micros, pequenas e médias empresas assumindo um importante papel de desenvolvimento de Arranjos Produtivos Locais (APL) de Base Mineral no Estado. Servindo também como estimulador para as práticas de projetos de Projetos de Pesquisa, Desenvolvimento e Inovação (PD&I), prestação de serviços e capacitação de mão de obra da indústria do setor mineral.
         </p>
@@ -29,10 +29,6 @@
 </template>
 
 <style scoped>
-.text-color {
-  color: #E48020;
-}
-
 p {
   text-align: justify;
   padding: 8px 0;

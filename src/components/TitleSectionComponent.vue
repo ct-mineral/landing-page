@@ -13,5 +13,3 @@
   </div>
   <span class="text-subtitle-2 text-md-subtitle-1">{{ subtitleProps }}</span>
 </template>
-
-<style scoped></style>

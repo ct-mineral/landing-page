@@ -32,13 +32,13 @@ defineProps({
         <v-card-actions class="px-4">
           <v-btn
             icon="mdi-linkedin"
-            class="color-button mr-2"
+            class="text-orange-darken-3 mr-2"
             :href="linkedinMember"
             target="_blank"
           />
-          <v-btn icon class="color-button" :href="lattesMember" target="_blank" rounded="circle">
+          <v-btn icon :href="lattesMember" target="_blank" rounded="circle">
             <v-icon>
-              <img src="/images/logos/lattes.svg" alt="Lattes" width="24" height="24" />
+              <img src="/images/logos/lattes.svg" alt="Lattes" width="18" height="24" />
             </v-icon>
           </v-btn>
         </v-card-actions>
@@ -46,9 +46,3 @@ defineProps({
     </div>
   </v-card>
 </template>
-
-<style scoped>
-.color-button {
-  color: #e48020;
-}
-</style>

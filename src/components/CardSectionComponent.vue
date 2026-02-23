@@ -25,13 +25,7 @@ defineProps({
       descriptionProps
     }}</v-card-title>
     <v-card-actions class="pa-0">
-      <v-btn text class="text-white button text-subtitle-1" :to="linkProps">Saiba mais</v-btn>
+      <v-btn text class="text-white bg-orange-darken-3 text-subtitle-1" :to="linkProps">Saiba mais</v-btn>
     </v-card-actions>
   </v-card>
 </template>
-
-<style scoped>
-.button {
-  background-color: #e48020;
-}
-</style>

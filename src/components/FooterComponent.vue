@@ -3,7 +3,7 @@ const currentYear = new Date().getFullYear()
 </script>
 
 <template>
-  <div class="container-footer">
+  <div class="bg-orange-darken-3">
     <v-container>
       <v-row class="d-flex align-center py-4">
         <v-col cols="12" md="auto" class="d-flex flex-column align-center ga-8 px-md-8">
@@ -20,7 +20,7 @@ const currentYear = new Date().getFullYear()
             <div class="d-flex align-center ga-8 ga-md-4">
               <v-btn
                 icon="mdi-instagram"
-                class="btn-color"
+                class="text-orange-darken-3"
                 density="comfortable"
                 href="https://www.instagram.com/ctmineral.ifrn/"
                 target="_blank"
@@ -29,14 +29,14 @@ const currentYear = new Date().getFullYear()
               />
               <v-btn
                 icon="mdi-facebook"
-                class="btn-color"
+                class="text-orange-darken-3"
                 density="comfortable"
                 href="#"
                 aria-label="Facebook"
               />
               <v-btn
                 icon="mdi-linkedin"
-                class="btn-color"
+                class="text-orange-darken-3"
                 density="comfortable"
                 href="#"
                 aria-label="LinkedIn"
@@ -106,7 +106,7 @@ const currentYear = new Date().getFullYear()
       </v-row>
     </v-container>
   </div>
-  <v-container fluid class="container-copy">
+  <v-container fluid class="bg-teal-darken-3">
     <v-row>
       <v-col cols="12" class="d-flex flex-column text-center py-2">
         <hr class="text-white h-50 border-none">
@@ -118,14 +118,6 @@ const currentYear = new Date().getFullYear()
 </template>
 
 <style scoped>
-.container-footer {
-  background: #e48020;
-}
-
-.btn-color {
-  color: #e48020;
-}
-
 .divider {
   border-color: white;
   opacity: 1;
@@ -133,9 +125,5 @@ const currentYear = new Date().getFullYear()
 
 a {
   text-decoration: none;
-}
-
-.container-copy {
-  background-color: #0e544a;
 }
 </style>

@@ -13,7 +13,7 @@ const servicos = [
 </script>
 
 <template>
-  <div class="d-flex flex-column px-5 py-3 polo">
+  <div class="d-flex flex-column px-5 py-3 bg-orange-darken-3">
     <span class="text-white text-body-2 text-md-body-1 font-weight-regular mb-2">
       Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte
     </span>
@@ -24,12 +24,12 @@ const servicos = [
     v-show="$vuetify.display.smAndDown"
     @click="mobileMenu = !mobileMenu"
     :icon="mobileMenu ? 'mdi-close' : 'mdi-menu'"
-    class="nav-bar text-white w-100"
+    class="bg-teal-darken-3 text-white w-100"
     flat
     rounded="0"
   />
 
-  <div class="nav-bar d-flex justify-center align-center">
+  <div class="bg-teal-darken-3 d-flex justify-center align-center">
     <nav v-show="!$vuetify.display.smAndDown || mobileMenu" class="w-100 w-md-auto">
       <ul class="d-flex flex-column flex-md-row w-100 w-md-auto align-center pa-0 ma-0">
         <li class="pa-2 pa-md-0 w-100 w-md-auto">
@@ -79,15 +79,6 @@ const servicos = [
 </template>
 
 <style scoped>
-.polo {
-  background-color: #e48020;
-  min-height: 72px;
-}
-
-.nav-bar {
-  background-color: #0e544a;
-}
-
 li,
 a {
   list-style: none;

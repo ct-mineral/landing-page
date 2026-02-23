@@ -13,7 +13,7 @@ const services = [
   <v-container>
     <v-row>
       <v-col cols="12">
-        <h2 class="text-h5 font-weight-bold mb-2 text-color">Preparação de Amostras</h2>
+        <h2 class="text-h5 font-weight-bold mb-2 text-orange-darken-3">Preparação de Amostras</h2>
         <p class="text-subtitle-2 text-md-subtitle-1 text-justify">A preparação de amostras envolve processos de redução de tamanho de partículas para a execução de confiáveis análises químicas.</p>
         <p class="text-subtitle-2 text-md-subtitle-1 text-justify">A qualidade da amostragem, homogeneização e quarteamento é essencial para a preparação de alíquotas representativas da amostra total. Britagem, moagem e pulverização são os serviços disponíveis. As especificações da execução e dos produtos de cada um dependerá dos diferentes tipos de amostra e minerais.</p>
       </v-col>
@@ -23,9 +23,3 @@ const services = [
     </v-row>
   </v-container>
 </template>
-
-<style scoped>
-.text-color {
-  color: #E48020;
-}
-</style>

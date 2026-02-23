@@ -42,5 +42,3 @@ defineProps({
     </div>
   </v-card>
 </template>
-
-<style scoped></style>

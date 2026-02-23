@@ -4,7 +4,7 @@
   <v-container>
     <v-row>
       <v-col cols="12">
-        <h5 class="text-h5 font-weight-bold text-color">Estrutura</h5>
+        <h5 class="text-h5 font-weight-bold text-orange-darken-3">Estrutura</h5>
         <p class="text-body-1">
           Fazem parte de sua infraestrutura:
         </p>
@@ -37,10 +37,6 @@
 </template>
 
 <style scoped>
-.text-color {
-  color: #E48020;
-}
-
 p {
   text-align: justify;
   padding: 8px 0;

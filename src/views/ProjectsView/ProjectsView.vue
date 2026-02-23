@@ -70,7 +70,7 @@ const paginatedProjects = computed(() => {
   <v-container>
     <v-row>
       <v-col cols="12">
-        <h2 class="text-h5 font-weight-bold mb-2 text-color">Projetos</h2>
+        <h2 class="text-h5 font-weight-bold mb-2 text-orange-darken-3">Projetos</h2>
         <p class="text-subtitle-2 text-md-subtitle-1 text-justify">
           Abaixo, apresentamos todos os projetos em andamento ou já concluídos pelo
           <strong>Centro de Tecnologia Mineral do IFRN</strong>. Os projetos estão listados sem
@@ -100,9 +100,3 @@ const paginatedProjects = computed(() => {
     </v-row>
   </v-container>
 </template>
-
-<style scoped>
-.text-color {
-  color: #e48020;
-}
-</style>

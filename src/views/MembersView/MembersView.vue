@@ -18,7 +18,7 @@ onMounted(() => {
 
 <template>
   <v-container>
-    <h2 class="text-h5 font-weight-bold mb-4 text-color">Integrantes</h2>
+    <h2 class="text-h5 font-weight-bold mb-4 text-orange-darken-3">Integrantes</h2>
 
     <v-tabs v-model="tab" color="teal-darken-3" align-tabs="start" show-arrows center-active>
       <v-tab value="diretores">Diretores</v-tab>
@@ -35,9 +35,3 @@ onMounted(() => {
     </v-window>
   </v-container>
 </template>
-
-<style scoped>
-.text-color {
-  color: #e48020;
-}
-</style>

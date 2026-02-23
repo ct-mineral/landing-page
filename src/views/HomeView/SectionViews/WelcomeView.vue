@@ -39,14 +39,20 @@ const slides = ref<SlideItem[]>([
             </p>
           </div>
 
-          <v-btn
-            class="text-caption text-md-subtitle-1 text-white mt-4 button-about w-75"
-            to="/sobre"
-            large
-            rounded
-          >
-            Conheça mais sobre o CT Mineral
-          </v-btn>
+          <v-hover>
+            <template v-slot:default="{ isHovering, props }">
+              <v-btn
+                v-bind="props"
+                :class="isHovering ? 'bg-teal-darken-3' : 'bg-orange-darken-3'"
+                class="text-caption text-md-subtitle-1 text-white mt-4 w-75"
+                to="/sobre"
+                large
+                rounded
+              >
+                Conheça mais sobre o CT Mineral
+              </v-btn>
+            </template>
+          </v-hover>
 
           <div class="d-flex ga-12 align-center mt-6">
             <a href="https://www.ifrn.edu.br" target="_blank" rel="noopener">
@@ -88,15 +94,6 @@ const slides = ref<SlideItem[]>([
 </template>
 
 <style scoped>
-.button-about {
-  background-color: #e48020;
-}
-
-.button-about:hover {
-  background-color: #0e544a;
-  transition: 0.3s ease;
-}
-
 .responsive-logo {
   height: 50px;
 }

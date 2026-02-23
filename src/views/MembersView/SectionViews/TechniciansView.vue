@@ -31,5 +31,3 @@
     </v-row>
   </v-window-item>
 </template>
-
-<style scoped></style>
