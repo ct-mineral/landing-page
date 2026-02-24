@@ -21,5 +21,16 @@ export default defineConfig({
     headers: {
       'X-Frame-Options': 'DENY',
     }
-  }
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vue: ['vue', 'vue-router', 'pinia'],
+          vuetify: ['vuetify'],
+          leaflet: ['leaflet'],
+        },
+      },
+    },
+  },
 })
