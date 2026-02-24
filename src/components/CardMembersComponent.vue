@@ -23,7 +23,7 @@ defineProps({
           {{ positionMember }}
         </v-card-subtitle>
 
-        <v-card-text class="text-body-1 text-justify">
+        <v-card-text class="text-body-1 text-justify card-title">
           {{ descriptionMember }}
         </v-card-text>
 
@@ -46,3 +46,9 @@ defineProps({
     </div>
   </v-card>
 </template>
+
+<style scoped>
+.card-title {
+  min-height: 56px;
+}
+</style>

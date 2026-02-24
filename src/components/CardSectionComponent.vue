@@ -14,6 +14,7 @@ defineProps({
       :alt="titleProps"
       cover
       rounded
+      aspect-ratio="16/9"
       height="300"
       loading="lazy"
       decoding="async"
@@ -21,7 +22,7 @@ defineProps({
     <v-card-title class="text-h6 text-wrap font-weight-bold px-0 py-2">{{
       titleProps
     }}</v-card-title>
-    <v-card-title class="text-subtitle-2 text-wrap px-0">{{
+    <v-card-title class="text-subtitle-2 text-wrap px-0 card-title">{{
       descriptionProps
     }}</v-card-title>
     <v-card-actions class="pa-0">
@@ -29,3 +30,9 @@ defineProps({
     </v-card-actions>
   </v-card>
 </template>
+
+<style scoped>
+.card-title {
+  min-height: 56px;
+}
+</style>

@@ -13,6 +13,7 @@ defineProps({
       <v-img
         :src="imageProject"
         :alt="nameCompanie"
+        aspect-ratio="16/9"
         height="200"
         class="rounded-lg"
         cover
@@ -21,7 +22,7 @@ defineProps({
       />
 
       <div>
-        <v-card-text class="text-body-1 text-wrap">
+        <v-card-text class="text-body-1 text-wrap card-title">
           {{ descriptionProject }}
         </v-card-text>
 
@@ -42,3 +43,9 @@ defineProps({
     </div>
   </v-card>
 </template>
+
+<style scoped>
+.card-title {
+  min-height: 56px;
+}
+</style>

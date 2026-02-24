@@ -28,10 +28,16 @@ const hasImage = computed(() => !!props.imageService && props.imageService !== '
           {{ nameService }}
         </v-card-title>
 
-        <v-card-text class="text-body-1 text-justify">
+        <v-card-text class="text-body-1 text-justify card-title">
           {{ descriptionService }}
         </v-card-text>
       </div>
     </div>
   </v-card>
 </template>
+
+<style scoped>
+.card-title {
+  min-height: 56px;
+}
+</style>
