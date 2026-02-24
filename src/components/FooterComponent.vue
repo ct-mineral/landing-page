@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { mdiLinkedin, mdiFacebook, mdiInstagram } from '@mdi/js'
+
 const currentYear = new Date().getFullYear()
 </script>
 
@@ -19,7 +21,7 @@ const currentYear = new Date().getFullYear()
             <span class="text-h6 text-white font-weight-bold">Nos siga:</span>
             <div class="d-flex align-center ga-8 ga-md-4">
               <v-btn
-                icon="mdi-instagram"
+                :icon="mdiInstagram"
                 class="text-orange-darken-3"
                 density="comfortable"
                 href="https://www.instagram.com/ctmineral.ifrn/"
@@ -28,14 +30,14 @@ const currentYear = new Date().getFullYear()
                 aria-label="Instagram"
               />
               <v-btn
-                icon="mdi-facebook"
+                :icon="mdiFacebook"
                 class="text-orange-darken-3"
                 density="comfortable"
                 href="#"
                 aria-label="Facebook"
               />
               <v-btn
-                icon="mdi-linkedin"
+                :icon="mdiLinkedin"
                 class="text-orange-darken-3"
                 density="comfortable"
                 href="#"

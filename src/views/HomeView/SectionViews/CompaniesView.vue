@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { mdiHomeCity } from '@mdi/js'
 import TitleSectionComponent from '@/components/TitleSectionComponent.vue'
 
 const empresas = [
@@ -12,7 +13,7 @@ const empresas = [
     <v-row>
       <v-col cols="12" class="d-flex flex-column ga-2">
         <TitleSectionComponent
-          icon-props="mdi-home-city"
+          :icon-props="mdiHomeCity"
           title-props="Empresas Contratantes"
           subtitle-props="Algumas das empresas que confiam no nosso trabalho"
         />

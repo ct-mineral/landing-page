@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { mdiMapMarker } from '@mdi/js'
 import TitleSectionComponent from '@/components/TitleSectionComponent.vue'
 
 import { onBeforeUnmount, onMounted, ref } from 'vue'
@@ -74,7 +75,7 @@ onBeforeUnmount(() => {
       <v-row>
         <v-col cols="12" class="d-flex flex-column ga-2 text-white">
           <TitleSectionComponent
-            icon-props="mdi-map-marker"
+            :icon-props="mdiMapMarker"
             title-props="Localização"
             subtitle-props="Veja onde estamos localizados"
           />

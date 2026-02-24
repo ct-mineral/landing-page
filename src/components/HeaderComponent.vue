@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { mdiClose, mdiMenu, mdiMenuDown } from '@mdi/js'
 
 const servicosMenu = ref(false)
 const mobileMenu = ref(false)
@@ -23,7 +24,7 @@ const servicos = [
   <v-btn
     v-show="$vuetify.display.smAndDown"
     @click="mobileMenu = !mobileMenu"
-    :icon="mobileMenu ? 'mdi-close' : 'mdi-menu'"
+    :icon="mobileMenu ? mdiClose : mdiMenu"
     class="bg-teal-darken-3 text-white w-100"
     flat
     rounded="0"
@@ -55,7 +56,7 @@ const servicos = [
                 class="d-flex justify-center align-center d-md-block w-100 h-100 py-2 px-5 text-body-2 text-md-body-1"
               >
                 Nossos serviços
-                <v-icon icon="mdi-menu-down" />
+                <v-icon :icon="mdiMenuDown" />
               </a>
             </template>
             <v-list class="pa-0 rounded-0">

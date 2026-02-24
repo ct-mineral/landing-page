@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { mdiBriefcase } from '@mdi/js'
 import TitleSectionComponent from '@/components/TitleSectionComponent.vue'
 import CardSectionComponent from '@/components/CardSectionComponent.vue'
 
@@ -39,7 +40,7 @@ const informationsCards = [
     <v-row>
       <v-col cols="12" class="d-flex flex-column ga-2">
         <TitleSectionComponent
-          icon-props="mdi-briefcase"
+          :icon-props="mdiBriefcase"
           title-props="Nossos serviços"
           subtitle-props="Alguns dos serviços que ofertamos no nosso Polo de Inovação"
         />

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { mdiMenuRight } from '@mdi/js'
 import CardSectionComponent from '@/components/CardSectionComponent.vue'
 import TitleSectionComponent from '@/components/TitleSectionComponent.vue'
 
@@ -33,7 +34,7 @@ const informationsCards = [
       <v-row>
         <v-col cols="12" class="d-flex flex-column ga-2 text-white">
           <TitleSectionComponent
-            icon-props="mdi-menu-right"
+            :icon-props="mdiMenuRight"
             title-props="Integrantes"
             subtitle-props="Descubra quem compõe o CT Mineral e leva a inovação até você"
           />

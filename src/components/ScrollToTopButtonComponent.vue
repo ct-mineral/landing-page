@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue'
+import { mdiChevronUp } from '@mdi/js'
 
 const showButton = ref(false)
 const scrollThreshold = 250
@@ -28,7 +29,7 @@ onUnmounted(() => {
 <template>
   <v-btn
     v-if="showButton"
-    icon="mdi-chevron-up"
+    :icon="mdiChevronUp"
     color="teal-darken-3"
     elevation="6"
     class="scroll-to-top position-fixed"

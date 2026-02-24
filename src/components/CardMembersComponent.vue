@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { mdiLinkedin } from '@mdi/js'
+
 defineProps({
   nameMember: String,
   positionMember: String,
@@ -31,7 +33,7 @@ defineProps({
 
         <v-card-actions class="px-4">
           <v-btn
-            icon="mdi-linkedin"
+            :icon="mdiLinkedin"
             class="text-orange-darken-3 mr-2"
             :href="linkedinMember"
             target="_blank"
