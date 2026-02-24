@@ -1,9 +1,39 @@
 <script setup lang="ts">
+  import { ref, defineAsyncComponent } from 'vue';
   import WelcomeView from './SectionViews/WelcomeView.vue';
-  import MembersView from './SectionViews/MembersView.vue';
-  import ServicesView from './SectionViews/ServicesView.vue';
-  import LocationView from './SectionViews/LocationView.vue';
-  import CompaniesView from './SectionViews/CompaniesView.vue';
+  const MembersView = defineAsyncComponent(() => import('./SectionViews/MembersView.vue'));
+  const ServicesView = defineAsyncComponent(() => import('./SectionViews/ServicesView.vue'));
+  const LocationView = defineAsyncComponent(() => import('./SectionViews/LocationView.vue'));
+  const CompaniesView = defineAsyncComponent(() => import('./SectionViews/CompaniesView.vue'));
+
+  const showMembers = ref(false)
+  const showServices = ref(false)
+  const showLocation = ref(false)
+  const showCompanies = ref(false)
+
+  function onIntersectMembers(isIntersecting: boolean) {
+    if (isIntersecting) {
+      showMembers.value = true
+    }
+  }
+
+  function onIntersectServices(isIntersecting: boolean) {
+    if (isIntersecting) {
+      showServices.value = true
+    }
+  }
+
+  function onIntersectLocation(isIntersecting: boolean) {
+    if (isIntersecting) {
+      showLocation.value = true
+    }
+  }
+
+  function onIntersectCompanies(isIntersecting: boolean) {
+    if (isIntersecting) {
+      showCompanies.value = true
+    }
+  }
 </script>
 
 <template>
@@ -11,20 +41,20 @@
     <WelcomeView />
   </section>
 
-  <section class="section members">
-    <MembersView />
+  <section class="section members" v-intersect="onIntersectMembers">
+    <MembersView v-if="showMembers" />
   </section>
 
-  <section class="section services">
-    <ServicesView />
+  <section class="section services" v-intersect="onIntersectServices">
+    <ServicesView v-if="showServices" />
   </section>
 
-  <section class="section location">
-    <LocationView />
+  <section class="section location" v-intersect="onIntersectLocation">
+    <LocationView v-if="showLocation" />
   </section>
 
-  <section class="section companies">
-    <CompaniesView />
+  <section class="section companies" v-intersect="onIntersectCompanies">
+    <CompaniesView v-if="showCompanies" />
   </section>
 </template>
 

@@ -25,7 +25,6 @@ const slides = ref<SlideItem[]>([
             width="45"
             height="45"
             decoding="async"
-            fetchpriority="high"
           />
 
           <div class="d-flex flex-column ga-2">
