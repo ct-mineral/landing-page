@@ -48,23 +48,72 @@ const servicos = [
             >Integrantes</router-link
           >
         </li>
-        <li class="pa-2 pa-md-0 w-100 w-md-auto">
-          <v-menu v-model="servicosMenu" offset-y activator="parent" location-strategy="connected" transition="scroll-y-transition">
-            <template v-slot:activator="{ props }">
-              <a
-                v-bind="props"
-                class="d-flex justify-center align-center d-md-block w-100 h-100 py-2 px-5 text-body-2 text-md-body-1"
-              >
-                Nossos serviços
-                <v-icon :icon="mdiMenuDown" />
-              </a>
-            </template>
-            <v-list class="pa-0 rounded-0">
-              <v-list-item v-for="servico in servicos" :key="servico.id" @click="servicosMenu = false" class="pa-0">
-                <router-link :to="servico.link" class="dropdown-link d-flex px-3 py-2" @click="mobileMenu = false">{{ servico.name }}</router-link>
-              </v-list-item>
-            </v-list>
-          </v-menu>
+        <li class="pa-0 w-100 w-md-auto d-flex flex-column">
+          <template v-if="$vuetify.display.smAndDown">
+            <a
+              class="d-flex justify-center align-center w-100 h-100 py-4 px-5 text-body-2"
+              @click="servicosMenu = !servicosMenu"
+            >
+              Nossos serviços
+              <v-icon :icon="mdiMenuDown" />
+            </a>
+
+            <v-expand-transition>
+              <div v-show="servicosMenu" class="w-100 bg-teal-darken-3">
+                <ul class="pa-0 ma-0">
+                  <li
+                    v-for="servico in servicos"
+                    :key="servico.id"
+                    @click="servicosMenu = false; mobileMenu = false"
+                    class="pa-2"
+                  >
+                    <router-link
+                      :to="servico.link"
+                      class="dropdown-link d-flex align-center justify-center py-2 text-white"
+                    >
+                      {{ servico.name }}
+                    </router-link>
+                  </li>
+                </ul>
+              </div>
+            </v-expand-transition>
+          </template>
+
+          <template v-else>
+            <v-menu
+              v-model="servicosMenu"
+              offset-y
+              activator="parent"
+              location-strategy="connected"
+              transition="scroll-y-transition"
+            >
+              <template v-slot:activator="{ props }">
+                <a
+                  v-bind="props"
+                  class="d-flex justify-center align-center d-md-block w-100 h-100 py-2 px-5 text-body-2 text-md-body-1"
+                >
+                  Nossos serviços
+                  <v-icon :icon="mdiMenuDown" />
+                </a>
+              </template>
+
+              <v-list class="pa-0 rounded-0">
+                <v-list-item
+                  v-for="servico in servicos"
+                  :key="servico.id"
+                  @click="servicosMenu = false"
+                  class="pa-0 bg-teal-darken-3"
+                >
+                  <router-link
+                    :to="servico.link"
+                    class="dropdown-link d-flex pa-2 text-white"
+                  >
+                    {{ servico.name }}
+                  </router-link>
+                </v-list-item>
+              </v-list>
+            </v-menu>
+          </template>
         </li>
         <li class="pa-2 pa-md-0 w-100 w-md-auto">
           <router-link to="/projetos" class="d-flex justify-center d-md-block w-100 h-100 py-2 px-5 text-body-2 text-md-body-1" @click="mobileMenu = false"
@@ -87,13 +136,13 @@ a {
   color: white;
 }
 
-li:hover {
+li:hover,
+.dropdown-link:hover {
   background-color: #107465;
   transition: 0.3s ease;
 }
 
 .dropdown-link {
-  color: #0e544a;
   text-decoration: none;
 }
 </style>
