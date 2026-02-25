@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { mdiClose, mdiMenu, mdiMenuDown } from '@mdi/js'
+import { mdiClose, mdiMenu, mdiMenuDown, mdiMenuUp } from '@mdi/js'
 
 const servicosMenu = ref(false)
 const mobileMenu = ref(false)
@@ -55,7 +55,7 @@ const servicos = [
               @click="servicosMenu = !servicosMenu"
             >
               Nossos serviços
-              <v-icon :icon="mdiMenuDown" />
+              <v-icon :icon="servicosMenu ? mdiMenuUp : mdiMenuDown" />
             </a>
 
             <v-expand-transition>
@@ -93,7 +93,7 @@ const servicos = [
                   class="d-flex justify-center align-center d-md-block w-100 h-100 py-2 px-5 text-body-1"
                 >
                   Nossos serviços
-                  <v-icon :icon="mdiMenuDown" />
+                  <v-icon :icon="servicosMenu ? mdiMenuUp : mdiMenuDown" />
                 </a>
               </template>
 
