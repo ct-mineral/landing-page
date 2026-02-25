@@ -14,7 +14,7 @@ const empresas = [
       <v-col cols="12" class="d-flex flex-column ga-2">
         <TitleSectionComponent
           :icon-props="mdiHomeCity"
-          title-props="Empresas Contratantes"
+          title-props="Empresas contratantes"
           subtitle-props="Algumas das empresas que confiam no nosso trabalho"
         />
         <hr />
@@ -26,7 +26,7 @@ const empresas = [
             :src="empresa.logo"
             :alt="empresa.nome"
             contain
-            max-width="80%"
+            max-width="75%"
             class="logo-img"
             loading="lazy"
             decoding="async"
