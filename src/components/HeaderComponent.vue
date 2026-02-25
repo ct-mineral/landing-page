@@ -69,7 +69,7 @@ const servicos = [
                   >
                     <router-link
                       :to="servico.link"
-                      class="dropdown-link d-flex align-center justify-center py-2 text-white"
+                      class="dropdown-link d-flex align-center justify-center py-2 text-body-2 text-white"
                     >
                       {{ servico.name }}
                     </router-link>
@@ -90,7 +90,7 @@ const servicos = [
               <template v-slot:activator="{ props }">
                 <a
                   v-bind="props"
-                  class="d-flex justify-center align-center d-md-block w-100 h-100 py-2 px-5 text-body-2 text-md-body-1"
+                  class="d-flex justify-center align-center d-md-block w-100 h-100 py-2 px-5 text-body-1"
                 >
                   Nossos serviços
                   <v-icon :icon="mdiMenuDown" />
@@ -106,7 +106,7 @@ const servicos = [
                 >
                   <router-link
                     :to="servico.link"
-                    class="dropdown-link d-flex pa-2 text-white"
+                    class="dropdown-link d-flex pa-2 text-white text-body-2"
                   >
                     {{ servico.name }}
                   </router-link>
