@@ -56,7 +56,7 @@ const slides = ref<SlideItem[]>([
           <div class="d-flex ga-12 align-center mt-6">
             <a href="https://www.ifrn.edu.br" target="_blank" rel="noopener">
               <img
-                src="/images/logo_ifrn.svg"
+                src="/images/logos/empresas/logo_ifrn.svg"
                 alt="IFRN"
                 class="responsive-logo"
                 loading="lazy"
@@ -65,7 +65,7 @@ const slides = ref<SlideItem[]>([
             </a>
             <a href="https://www.embrapii.org.br" target="_blank" rel="noopener">
               <img
-                src="/images/embrapii.svg"
+                src="/images/logos/empresas/embrapii.svg"
                 alt="EMBRAPII"
                 class="responsive-logo"
                 loading="lazy"

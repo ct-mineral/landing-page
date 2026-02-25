@@ -3,8 +3,13 @@ import { mdiHomeCity } from '@mdi/js'
 import TitleSectionComponent from '@/components/TitleSectionComponent.vue'
 
 const empresas = [
-  { nome: 'IFRN', logo: '/images/logo_ifrn.svg' },
-  { nome: 'EMBRAPII', logo: '/images/embrapii.svg' },
+  { nome: 'Borborema', logo: '/images/logos/empresas/borborema.svg', width: '75%' },
+  { nome: 'EMBRAPII', logo: '/images/logos/empresas/embrapii.svg', width: '75%' },
+  { nome: 'Fortescue', logo: '/images/logos/empresas/fortescue.svg', width: '65%' },
+  { nome: 'IFRN', logo: '/images/logos/empresas/logo_ifrn.svg', width: '75%' },
+  { nome: 'IMC Rare', logo: '/images/logos/empresas/imc_rare.svg', width: '75%' },
+  { nome: 'KIT Máquinas', logo: '/images/logos/empresas/kit_maquinas.svg', width: '75%' },
+  { nome: 'REX', logo: '/images/logos/empresas/rex.svg', width: '30%' },
 ]
 </script>
 
@@ -26,7 +31,7 @@ const empresas = [
             :src="empresa.logo"
             :alt="empresa.nome"
             contain
-            max-width="75%"
+            :max-width="empresa.width"
             class="logo-img"
             loading="lazy"
             decoding="async"
