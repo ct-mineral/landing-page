@@ -37,49 +37,30 @@
 </script>
 
 <template>
-  <section class="section welcome">
+  <section>
     <WelcomeView />
   </section>
 
-  <section class="section members" v-intersect="onIntersectMembers">
+  <section v-intersect="onIntersectMembers">
     <MembersView v-if="showMembers" />
   </section>
 
-  <section class="section services" v-intersect="onIntersectServices">
+  <section v-intersect="onIntersectServices">
     <ServicesView v-if="showServices" />
   </section>
 
-  <section class="section location" v-intersect="onIntersectLocation">
+  <section v-intersect="onIntersectLocation">
     <LocationView v-if="showLocation" />
   </section>
 
-  <section class="section companies" v-intersect="onIntersectCompanies">
+  <section v-intersect="onIntersectCompanies">
     <CompaniesView v-if="showCompanies" />
   </section>
 </template>
 
 <style scoped>
-.section {
+section {
   width: 100%;
-}
-
-.welcome {
-  min-height: calc(100vh - 384px);
-}
-
-.members {
-  min-height: 600px;
-}
-
-.services {
-  min-height: 700px;
-}
-
-.location {
-  min-height: 500px;
-}
-
-.companies {
-  min-height: 200px;
+  min-height: 120px;
 }
 </style>

@@ -6,38 +6,23 @@
 </script>
 
 <template>
-  <section class="section polo">
+  <section>
     <PoloView />
   </section>
-  <section class="section video">
+  <section>
     <VideoView />
   </section>
-  <section class="section history">
+  <section>
     <HistoryView />
   </section>
-  <section class="section structure">
+  <section>
     <StructureView />
   </section>
 </template>
 
 <style scoped>
-.section {
+section {
   width: 100%;
-}
-
-.polo {
-  min-height: calc(100vh - 384px);
-}
-
-.video {
-  min-height: 200px;
-}
-
-.history {
-  min-height: 700px;
-}
-
-.structure {
-  min-height: 500px;
+  min-height: 120px;
 }
 </style>

@@ -3,13 +3,13 @@ import { mdiHomeCity } from '@mdi/js'
 import TitleSectionComponent from '@/components/TitleSectionComponent.vue'
 
 const empresas = [
-  { nome: 'Borborema', logo: '/images/logos/empresas/borborema.svg', width: '75%' },
-  { nome: 'EMBRAPII', logo: '/images/logos/empresas/embrapii.svg', width: '75%' },
-  { nome: 'Fortescue', logo: '/images/logos/empresas/fortescue.svg', width: '65%' },
-  { nome: 'IFRN', logo: '/images/logos/empresas/logo_ifrn.svg', width: '75%' },
-  { nome: 'IMC Rare', logo: '/images/logos/empresas/imc_rare.svg', width: '75%' },
-  { nome: 'KIT Máquinas', logo: '/images/logos/empresas/kit_maquinas.svg', width: '75%' },
-  { nome: 'REX', logo: '/images/logos/empresas/rex.svg', width: '25%' },
+  { nome: 'Borborema', logo: '/images/logos/empresas/borborema.svg', width: '200px' },
+  { nome: 'EMBRAPII', logo: '/images/logos/empresas/embrapii.svg', width: '200px' },
+  { nome: 'Fortescue', logo: '/images/logos/empresas/fortescue.svg', width: '200px' },
+  { nome: 'IFRN', logo: '/images/logos/empresas/logo_ifrn.svg', width: '200px' },
+  { nome: 'IMC Rare', logo: '/images/logos/empresas/imc_rare.svg', width: '200px' },
+  { nome: 'KIT Máquinas', logo: '/images/logos/empresas/kit_maquinas.svg', width: '200px' },
+  { nome: 'REX', logo: '/images/logos/empresas/rex.svg', width: '80px' },
 ]
 </script>
 
