@@ -9,7 +9,7 @@ const empresas = [
   { nome: 'IFRN', logo: '/images/logos/empresas/logo_ifrn.svg', width: '75%' },
   { nome: 'IMC Rare', logo: '/images/logos/empresas/imc_rare.svg', width: '75%' },
   { nome: 'KIT Máquinas', logo: '/images/logos/empresas/kit_maquinas.svg', width: '75%' },
-  { nome: 'REX', logo: '/images/logos/empresas/rex.svg', width: '30%' },
+  { nome: 'REX', logo: '/images/logos/empresas/rex.svg', width: '25%' },
 ]
 </script>
 
