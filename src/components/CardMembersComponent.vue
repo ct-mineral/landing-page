@@ -1,13 +1,24 @@
 <script lang="ts" setup>
+import { computed } from 'vue'
 import { mdiLinkedin } from '@mdi/js'
 
-defineProps({
-  nameMember: String,
-  positionMember: String,
-  descriptionMember: String,
-  imageMember: String,
-  linkedinMember: String,
-  lattesMember: String,
+const props = defineProps<{
+  nameMember?: string
+  positionMember?: string
+  descriptionMember?: string
+  imageMember?: string
+  linkedinMember?: string
+  lattesMember?: string
+}>()
+
+const showLinkedin = computed(() => {
+  const linkedin = props.linkedinMember
+  return !!linkedin && linkedin.trim() !== '' && linkedin !== '#'
+})
+
+const showLattes = computed(() => {
+  const lattes = props.lattesMember
+  return !!lattes && lattes.trim() !== '' && lattes !== '#'
 })
 </script>
 
@@ -31,14 +42,15 @@ defineProps({
 
         <v-divider class="mx-4 mb-4"></v-divider>
 
-        <v-card-actions class="px-4">
+        <v-card-actions class="px-4" v-if="showLinkedin || showLattes">
           <v-btn
+            v-if="showLinkedin"
             :icon="mdiLinkedin"
             class="text-orange-darken-3 mr-2"
             :href="linkedinMember"
             target="_blank"
           />
-          <v-btn icon :href="lattesMember" target="_blank" rounded="circle">
+          <v-btn icon :href="lattesMember" target="_blank" rounded="circle" v-if="showLattes">
             <v-icon>
               <img src="/images/logos/lattes.svg" alt="Lattes" width="18" height="24" />
             </v-icon>
