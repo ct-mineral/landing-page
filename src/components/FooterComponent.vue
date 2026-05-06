@@ -33,14 +33,18 @@ const currentYear = new Date().getFullYear()
                 :icon="mdiFacebook"
                 class="text-orange-darken-3"
                 density="comfortable"
-                href="#"
+                href="https://www.facebook.com/people/Polo-de-Inova%C3%A7%C3%A3o-do-IFRN/100069147612114/"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Facebook"
               />
               <v-btn
                 :icon="mdiLinkedin"
                 class="text-orange-darken-3"
                 density="comfortable"
-                href="#"
+                href="https://www.linkedin.com/company/polodeinovacaoifrn/"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="LinkedIn"
               />
             </div>
