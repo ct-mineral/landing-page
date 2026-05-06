@@ -95,12 +95,12 @@ const currentYear = new Date().getFullYear()
               <!-- E-mail -->
               <div class="d-flex flex-column ga-2">
                 <span class="text-body-2 text-white font-weight-bold">E-MAIL:</span>
-                <a href="#" class="text-body-2 text-white">ctmineral@email.com</a>
+                <a href="mailto:ctmineral@ifrn.edu.br" target="_blank" rel="noopener noreferrer" class="text-body-2 text-white">ctmineral@ifrn.edu.br</a>
               </div>
               <!-- Telefone -->
               <div class="d-flex flex-column ga-2">
                 <span class="text-body-2 text-white font-weight-bold">TELEFONE:</span>
-                <a href="#" class="text-body-2 text-white">+55 (84) 9 9999-9999</a>
+                <a href="https://wa.me/558440054117" target="_blank" rel="noopener noreferrer" class="text-body-2 text-white">+55 (84) 4005-4117</a>
               </div>
             </v-col>
           </v-row>
