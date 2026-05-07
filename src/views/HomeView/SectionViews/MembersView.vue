@@ -7,7 +7,7 @@ const informationsCards = [
   {
     id: 1,
     title: 'Diretores(as)',
-    description: 'Conheça os líderes visionários que guiam o CT Mineral rumo à inovação e excelência',
+    description: 'Conheça os líderes visionários que guiam o CT Mineral rumo à inovação e excelência.',
     image: '/images/diretores.avif',
     link: '/integrantes?tab=diretores',
   },
@@ -15,14 +15,14 @@ const informationsCards = [
     id: 2,
     title: 'Pesquisadores(as)',
     description: 'Conheça os pesquisadores(as) que impulsionam a inovação e a excelência.',
-    image: '/images/diretores.avif',
+    image: '/images/pesquisadores.avif',
     link: '/integrantes?tab=pesquisadores',
   },
   {
     id: 3,
     title: 'Equipe Técnica',
     description: 'Conheça a equipe técnica que garante o funcionamento eficiente e inovador.',
-    image: '/images/diretores.avif',
+    image: '/images/tecnicos.avif',
     link: '/integrantes?tab=tecnicos',
   },
 ]
