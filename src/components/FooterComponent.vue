@@ -33,14 +33,18 @@ const currentYear = new Date().getFullYear()
                 :icon="mdiFacebook"
                 class="text-orange-darken-3"
                 density="comfortable"
-                href="#"
+                href="https://www.facebook.com/people/Polo-de-Inova%C3%A7%C3%A3o-do-IFRN/100069147612114/"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Facebook"
               />
               <v-btn
                 :icon="mdiLinkedin"
                 class="text-orange-darken-3"
                 density="comfortable"
-                href="#"
+                href="https://www.linkedin.com/company/polodeinovacaoifrn/"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="LinkedIn"
               />
             </div>
@@ -95,12 +99,12 @@ const currentYear = new Date().getFullYear()
               <!-- E-mail -->
               <div class="d-flex flex-column ga-2">
                 <span class="text-body-2 text-white font-weight-bold">E-MAIL:</span>
-                <a href="#" class="text-body-2 text-white">ctmineral@email.com</a>
+                <a href="mailto:ctmineral@ifrn.edu.br" target="_blank" rel="noopener noreferrer" class="text-body-2 text-white">ctmineral@ifrn.edu.br</a>
               </div>
               <!-- Telefone -->
               <div class="d-flex flex-column ga-2">
                 <span class="text-body-2 text-white font-weight-bold">TELEFONE:</span>
-                <a href="#" class="text-body-2 text-white">+55 (84) 9 9999-9999</a>
+                <a href="https://wa.me/558440054117" target="_blank" rel="noopener noreferrer" class="text-body-2 text-white">+55 (84) 4005-4117</a>
               </div>
             </v-col>
           </v-row>
