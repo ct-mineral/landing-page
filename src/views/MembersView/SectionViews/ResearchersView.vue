@@ -48,7 +48,7 @@
       position: 'Pesquisador Acadêmico',
       description:
         'Graduado em Química (UFRN), especialista em Docência no Ensino Superior (UnP), Mestre e Doutor em Ciências e Engenharia de Materiais (UFRN). Realizou doutorado sanduíche nos EUA (PSDE/CAPES) na Case Western Reserve University e pós-doutorado em Química Inorgânica na UNICAMP (FINEP). Atuou como docente em instituições públicas e privadas e como laboratorista no IINN-ELS. Professor permanente de Processos Químicos no IFRN (Campus Natal Central) desde 2010, em Dedicação Exclusiva. Pesquisador em tratamento de minérios e hidrometalurgia, com atuação no CTI Renato Archer e no Instituto de Química da UNICAMP (CINE/FAPESP).',
-      image: '#',
+      image: '/images/members/researchers/mafra.avif',
       linkedin: 'https://www.linkedin.com/in/cleonilson-mafra-b6bb22bb/',
       lattes: 'http://lattes.cnpq.br/3946223809924016'
     },
@@ -58,7 +58,7 @@
       position: 'Pesquisador Acadêmico',
       description:
         'Doutor em Engenharia de Processos (2024), Mestre em Exploração Mineral (2022), graduado em Engenharia de Minas e especialista em Legislação Mineral e Ambiental. Professor de Magistério Superior na UFCG (Engenharia de Minas) e ex-professor substituto no IFRN (2022–2024) e efetivo no IFBA (2024–2025). Foi servidor do IFPB (2017–2024), responsável pelos Laboratórios de Beneficiamento Mineral. Técnico em Mineração pelo IFPB (2016). Experiência no DNPM/PB (2016–2017) e no CETEM/RJ (2021), em fiscalização, outorga, caracterização tecnológica e usina piloto de processamento mineral.',
-      image: '#',
+      image: '/images/members/researchers/defsson.avif',
       linkedin: 'https://www.linkedin.com/in/defsson-douglas-aa608b129/',
       lattes: 'http://lattes.cnpq.br/9154863126644403'
     },
