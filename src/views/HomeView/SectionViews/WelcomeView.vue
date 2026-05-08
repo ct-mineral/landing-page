@@ -3,13 +3,13 @@ import { ref } from 'vue'
 
 interface SlideItem {
   title: string
-  color: string
+  image: string
 }
 
 const slides = ref<SlideItem[]>([
-  { title: 'Dashboard', color: 'blue darken-2' },
-  { title: 'Usuários', color: 'green darken-2' },
-  { title: 'Relatórios', color: 'purple darken-2' },
+  { title: 'CT Mineral', image: '/images/slides/ct-mineral.avif' },
+  { title: 'Usuários', image: '/images/slides/laboratorio-1.avif' },
+  { title: 'Relatórios', image: '/images/slides/laboratorio-2.avif' },
 ])
 </script>
 
@@ -79,13 +79,11 @@ const slides = ref<SlideItem[]>([
       <!-- Imagens -->
       <v-col cols="12" md="6" class="d-none d-md-flex justify-center align-center">
         <v-carousel height="400" show-arrows="hover" cycle hide-delimiters class="rounded-lg">
-          <v-carousel-item v-for="(slide, i) in slides" :key="i">
-            <v-sheet :color="slide.color" height="100%">
-              <div class="d-flex fill-height justify-center align-center">
-                <div class="text-h2">{{ slide.title }} Slide</div>
-              </div>
-            </v-sheet>
-          </v-carousel-item>
+          <v-carousel-item
+            v-for="(slide, i) in slides"
+            :key="i"
+            :src="slide.image"
+          />
         </v-carousel>
       </v-col>
     </v-row>
