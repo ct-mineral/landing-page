@@ -1,10 +1,36 @@
-<!DOCTYPE html>
-<html lang="">
+<!doctype html>
+<html lang="pt-BR">
   <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CT Mineral</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <meta
+      http-equiv="Permissions-Policy"
+      content="geolocation=(), camera=(), microphone=(), payment=()"
+    />
+
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        script-src 'self';
+        style-src 'self' 'unsafe-inline';
+        img-src 'self' data: https://tile.openstreetmap.org https://i.ytimg.com;
+        connect-src 'self';
+        font-src 'self';
+        frame-src https://www.youtube.com https://www.youtube-nocookie.com;
+      "
+    />
+    
+    <meta
+      name="description"
+      content="Centro de Tecnologia Mineral do IFRN - Especializado em pesquisa, desenvolvimento e inovação em mineração, beneficiamento mineral e análises tecnológicas."
+    />
+    
+    <title>Centro de Tecnologia Mineral - IFRN</title>
   </head>
   <body>
     <div id="app"></div>
