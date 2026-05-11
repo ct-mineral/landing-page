@@ -23,7 +23,7 @@ onMounted(() => {
     <v-tabs v-model="tab" color="teal-darken-3" align-tabs="start" show-arrows center-active>
       <v-tab value="diretores">Diretores</v-tab>
       <v-tab value="pesquisadores">Pesquisadores</v-tab>
-      <v-tab value="tecnicos">Equipe Técnica</v-tab>
+      <!-- <v-tab value="tecnicos">Equipe Técnica</v-tab> -->
     </v-tabs>
 
     <v-divider class="mb-6"></v-divider>
