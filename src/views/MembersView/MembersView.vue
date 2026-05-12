@@ -21,7 +21,7 @@ onMounted(() => {
     <h2 class="text-h5 font-weight-bold mb-4 text-orange-darken-3">Integrantes</h2>
 
     <v-tabs v-model="tab" color="teal-darken-3" align-tabs="start" show-arrows center-active>
-      <v-tab value="diretores">Diretores</v-tab>
+      <v-tab value="diretores">Gestão</v-tab>
       <v-tab value="pesquisadores">Pesquisadores</v-tab>
       <!-- <v-tab value="tecnicos">Equipe Técnica</v-tab> -->
     </v-tabs>
