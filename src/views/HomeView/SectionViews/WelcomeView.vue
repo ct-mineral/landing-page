@@ -30,9 +30,14 @@ const slides = ref<SlideItem[]>([
           <div class="d-flex flex-column ga-2">
             <h1 class="text-body-1 text-md-h6">Bem-vindos ao</h1>
             <h2 class="text-h4 text-md-h3 font-weight-bold">CT Mineral</h2>
-            <h3 class="text-body-1 text-md-h6">
-              Centro de Referência em Tecnologia Mineral do IFRN
-            </h3>
+            <div class="d-flex flex-column">
+              <span class="text-body-1 text-md-h6">
+                Centro de Tecnologia Mineral do IFRN
+              </span>
+              <span class="text-subtitle-2 text-md-subtitle-1">
+                Prof. José Yvan Pereira Leite
+              </span>
+            </div>
             <p class="text-caption text-md-body-2">
               Somos uma Unidade EMBRAPII credenciada para atuar na área de Tecnologias em Mineração, com foco nas áreas de Exploração Mineral especializada em Minerais Portadores do Futuro e Soluções Tecnológicas Inovadoras em Geometalurgia.
             </p>
