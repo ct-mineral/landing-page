@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 2,
+  "dockerfilePath": "./Dockerfile",
+  "displayName": "Centro de Tecnologia Mineral Landing Page",
+  "isWebOnly": true,
+  "containerHttpPort": 80
+}
