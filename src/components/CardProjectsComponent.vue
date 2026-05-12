@@ -31,13 +31,13 @@ defineProps({
         <v-divider class="mx-4"></v-divider>
 
         <v-card-title
-          class="d-flex align-center ga-2 text-teal-darken-3 font-weight-bold text-body-1 text-wrap"
+          class="d-flex align-center ga-2 text-teal-darken-3 font-weight-bold text-body-2 text-md-body-1 text-wrap"
         >
           <v-icon :icon="mdiHomeCity" size="x-small" />
           {{ nameCompanie }}
         </v-card-title>
 
-        <v-card-subtitle class="d-flex align-center ga-2 text-body-1 text-color">
+        <v-card-subtitle class="d-flex align-center ga-2 text-body-2 text-md-body-1 text-color">
           <v-icon :icon="mdiMapMarker" size="x-small" />
           {{ locationCompanie }}
         </v-card-subtitle>

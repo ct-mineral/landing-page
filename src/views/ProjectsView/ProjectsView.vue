@@ -5,7 +5,7 @@ import CardProjectsComponent from '@/components/CardProjectsComponent.vue'
 const projects = [
   {
     id: 1,
-    name: 'Borborema',
+    name: 'Borborema Recursos Estratégicos',
     description:
       'Desenvolvimento de uma nova rota de processo para o beneficiamento dos minerais portadores de terras raras em argilas iônicas.',
     image: '/images/projects/terras_raras_argilas_ionicas.avif',
@@ -37,7 +37,7 @@ const projects = [
   },
   {
     id: 5,
-    name: 'FMG & Fortescue',
+    name: 'Fortescue do Brasil',
     description: 'Processo inovador de extração e recuperação de elementos terras raras.',
     image: '/images/projects/extracao_terras_raras.avif',
     location: 'Ceará, CE',
