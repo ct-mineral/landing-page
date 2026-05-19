@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+  import { ref, computed } from 'vue'
   import CardMembersComponent from '@/components/CardMembersComponent.vue';
 
   const researchers = [
@@ -62,13 +63,46 @@
       linkedin: 'https://www.linkedin.com/in/defsson-douglas-aa608b129/',
       lattes: 'http://lattes.cnpq.br/9154863126644403'
     },
+    {
+      id: 7,
+      name: 'Rita de Cassia Pedrosa Santos',
+      position: 'Pesquisadora Acadêmica',
+      description:
+        'Doutora em Tecnologia Mineral pela UFMG, Mestre em Engenharia de Minas pela UFOP, graduada em Administração e Engenharia de Minas. Professora da UFOP e consultora na área de mineração, com atuação em treinamentos pela ABM. Atua em ensino, pesquisa e extensão nas áreas de lavra subterrânea, ventilação em minas, condicionamento das minas, tecnologia mineral, lítio, patrimônio histórico e inclusão social. Participa de comitês técnicos e científicos e coordenou o IV Simpósio de Ventilação em Minas Subterrânea da Ibero-América (2024). Coordena projetos financiados pela FAPEMIG e participa da RedeAPL Mineral, com experiência em mineração desde 1996.',
+      image: '/images/members/researchers/rita-pedrosa.avif',
+      linkedin: 'https://www.linkedin.com/in/rita-pedrosa-38880625/',
+      lattes: 'http://lattes.cnpq.br/7409927901278863'
+    },
+    {
+      id: 8,
+      name: 'Arivonaldo Bezerra da Silva',
+      position: 'Pesquisador Acadêmico',
+      description:
+        'Mestre em Química pela UFRN, especialista em Ciência de Dados e IA, Gestão por Processos e Projetos e Ensino de Matemática. Graduado em Licenciatura em Química e Matemática pela UFRN e Técnico em Alimentos pelo IFRN. Experiência como professor de Química, Física e Matemática entre 2004 e 2013 e tutor do curso de Química EaD da UFRN em 2016. Servidor efetivo do IFRN desde 2013, atualmente Coordenador de Laboratórios de Inovação e responsável técnico dos laboratórios do CT Mineral. Atua em análise de dados, aprendizado de máquinas aplicados a dados químicos e análises químicas de alimentos e minerais.',
+      image: '/images/members/researchers/arivonaldo.avif',
+      linkedin: 'https://www.linkedin.com/in/arivonaldo-bezerra-da-silva-2848a5150/',
+      lattes: 'http://lattes.cnpq.br/8652856826234500'
+    },
   ]
+
+  const currentPage = ref(1)
+  const itemsPerPage = 5
+
+  const totalPages = computed(() => {
+    return Math.ceil(researchers.length / itemsPerPage)
+  })
+
+  const paginatedResearchers = computed(() => {
+    const startIndex = (currentPage.value - 1) * itemsPerPage
+    const endIndex = startIndex + itemsPerPage
+    return researchers.slice(startIndex, endIndex)
+  })
 </script>
 
 <template>
   <v-window-item value="pesquisadores">
     <v-row>
-      <v-col v-for="researcher in researchers" :key="researcher.id" cols="12">
+      <v-col v-for="researcher in paginatedResearchers" :key="researcher.id" cols="12">
         <CardMembersComponent
           :nameMember="researcher.name"
           :positionMember="researcher.position"
@@ -77,6 +111,9 @@
           :linkedinMember="researcher.linkedin"
           :lattesMember="researcher.lattes"
         />
+      </v-col>
+      <v-col cols="12" class="d-flex justify-center mt-4">
+        <v-pagination v-model="currentPage" :length="totalPages" rounded="circle" />
       </v-col>
     </v-row>
   </v-window-item>

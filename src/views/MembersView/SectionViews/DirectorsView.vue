@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+  import { ref, computed } from 'vue'
   import CardMembersComponent from '@/components/CardMembersComponent.vue';
 
   const directors = [
@@ -23,12 +24,25 @@
       lattes: 'http://lattes.cnpq.br/2948896778001838'
     },
   ]
+
+  const currentPage = ref(1)
+  const itemsPerPage = 5
+
+  const totalPages = computed(() => {
+    return Math.ceil(directors.length / itemsPerPage)
+  })
+
+  const paginatedDirectors = computed(() => {
+    const startIndex = (currentPage.value - 1) * itemsPerPage
+    const endIndex = startIndex + itemsPerPage
+    return directors.slice(startIndex, endIndex)
+  })
 </script>
 
 <template>
   <v-window-item value="diretores">
     <v-row>
-      <v-col v-for="director in directors" :key="director.id" cols="12">
+      <v-col v-for="director in paginatedDirectors" :key="director.id" cols="12">
         <CardMembersComponent
           :nameMember="director.name"
           :positionMember="director.position"
@@ -37,6 +51,9 @@
           :linkedinMember="director.linkedin"
           :lattesMember="director.lattes"
         />
+      </v-col>
+      <v-col cols="12" class="d-flex justify-center mt-4">
+        <v-pagination v-model="currentPage" :length="totalPages" rounded="circle" />
       </v-col>
     </v-row>
   </v-window-item>
