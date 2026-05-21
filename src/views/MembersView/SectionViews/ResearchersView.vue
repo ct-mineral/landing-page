@@ -73,16 +73,6 @@
       linkedin: 'https://www.linkedin.com/in/rita-pedrosa-38880625/',
       lattes: 'http://lattes.cnpq.br/7409927901278863'
     },
-    {
-      id: 8,
-      name: 'Arivonaldo Bezerra da Silva',
-      position: 'Pesquisador Acadêmico',
-      description:
-        'Mestre em Química pela UFRN, especialista em Ciência de Dados e IA, Gestão por Processos e Projetos e Ensino de Matemática. Graduado em Licenciatura em Química e Matemática pela UFRN e Técnico em Alimentos pelo IFRN. Experiência como professor de Química, Física e Matemática entre 2004 e 2013 e tutor do curso de Química EaD da UFRN em 2016. Servidor efetivo do IFRN desde 2013, atualmente Coordenador de Laboratórios de Inovação e responsável técnico dos laboratórios do CT Mineral. Atua em análise de dados, aprendizado de máquinas aplicados a dados químicos e análises químicas de alimentos e minerais.',
-      image: '/images/members/researchers/arivonaldo.avif',
-      linkedin: 'https://www.linkedin.com/in/arivonaldo-bezerra-da-silva-2848a5150/',
-      lattes: 'http://lattes.cnpq.br/8652856826234500'
-    },
   ]
 
   const currentPage = ref(1)

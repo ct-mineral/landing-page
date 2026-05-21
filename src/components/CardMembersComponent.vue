@@ -32,7 +32,7 @@ const showLattes = computed(() => {
           {{ nameMember }}
         </v-card-title>
 
-        <v-card-subtitle class="text-subtitle-2 mt-n2">
+        <v-card-subtitle class="text-subtitle-2 text-wrap mt-n2">
           {{ positionMember }}
         </v-card-subtitle>
 
