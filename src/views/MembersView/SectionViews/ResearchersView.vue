@@ -73,6 +73,26 @@
       linkedin: 'https://www.linkedin.com/in/rita-pedrosa-38880625/',
       lattes: 'http://lattes.cnpq.br/7409927901278863'
     },
+    {
+      id: 8,
+      name: 'Belarmino Barbosa Lira',
+      position: 'Pesquisador Acadêmico',
+      description:
+        'Graduado em Engenharia de Minas pela UFPE, Mestre em Engenharia Metalúrgica e de Minas pela UFMG e Doutor em Processamento Mineral pela The University of Queensland. Atualmente é professor titular da Universidade Federal da Paraíba. Tem experiência na área de Engenharia de Minas, com ênfase em Tratamento de Minérios. Atua principalmente em cominuição, classificação e processamento de minerais industriais.',
+      image: '/images/members/researchers/belarmino-barbosa.avif',
+      linkedin: '',
+      lattes: 'http://lattes.cnpq.br/6149451328203213'
+    },
+    {
+      id: 9,
+      name: 'Mauro Fróes Meyer',
+      position: 'Pesquisador Acadêmico',
+      description:
+        'Pesquisador e Professor Titular do IFRN/CNAT nos cursos de Mineração, Geologia e Segurança do Trabalho, além de coordenador do Laboratório de Tecnologia Mineral e Materiais (LT2M). Mestre em Engenharia Mineral (UFOP), especialista em Engenharia de Segurança do Trabalho e graduado em Engenharia de Minas (UFOP). Atua nos grupos de pesquisa NEPM e NESST/CNPq, além da CISSP e Brigada de Incêndio do IFRN/CNAT. Experiência em lavra a céu aberto, tratamento de minérios, caracterização de minerais, meio ambiente, segurança do trabalho e uso de explosivos. Participa do Projeto de Recuperação de Rejeitos da Mina Brejuí, em Currais Novos/RN, como pesquisador e coordenador do projeto.',
+      image: '/images/members/researchers/mauro.avif',
+      linkedin: '',
+      lattes: 'http://lattes.cnpq.br/2040770138072645'
+    },
   ]
 
   const currentPage = ref(1)
