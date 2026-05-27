@@ -29,9 +29,19 @@
       position: 'Coordenador de Laboratório de Inovação e Gestor de Projetos',
       description:
         'Mestre em Química pela UFRN, especialista em Ciência de Dados e IA, Gestão por Processos e Projetos e Ensino de Matemática. Graduado em Licenciatura em Química e Matemática pela UFRN e Técnico em Alimentos pelo IFRN. Experiência como professor de Química, Física e Matemática entre 2004 e 2013 e tutor do curso de Química EaD da UFRN em 2016. Servidor efetivo do IFRN desde 2013, atualmente Coordenador de Laboratórios de Inovação e responsável técnico dos laboratórios do CT Mineral. Atua em análise de dados, aprendizado de máquinas aplicados a dados químicos e análises químicas de alimentos e minerais.',
-      image: '/images/members/researchers/arivonaldo.avif',
+      image: '/images/members/directors/arivonaldo.avif',
       linkedin: 'https://www.linkedin.com/in/arivonaldo-bezerra-da-silva-2848a5150/',
       lattes: 'http://lattes.cnpq.br/8652856826234500'
+    },
+    {
+      id: 4,
+      name: 'Ana Katia de Andrade Cortez',
+      position: 'Coordenadora Administrativa',
+      description:
+        'Possui graduação em Ciências Contábeis pela Universidade Federal do Rio Grande do Norte (1986–1990) e especialização em Educação Profissional e Tecnológica pelo Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte (2006–2007). Servidora pública com mais de 30 anos de atuação, acumulou ampla experiência em gestão e administração pública, tendo exercido cargos de direção administrativa e coordenação na área de gestão de contratos no instituto, contribuindo para o fortalecimento dos processos administrativos e da gestão institucional da unidade.',
+      image: '/images/members/directors/ana-katia.avif',
+      linkedin: '',
+      lattes: 'http://lattes.cnpq.br/3986390368760022'
     },
   ]
 
