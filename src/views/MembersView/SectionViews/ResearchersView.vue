@@ -93,6 +93,16 @@
       linkedin: '',
       lattes: 'http://lattes.cnpq.br/2040770138072645'
     },
+    {
+      id: 10,
+      name: 'João Adauto de Souza Neto',
+      position: 'Pesquisador Acadêmico',
+      description:
+        'Professor Titular do Departamento de Geologia e do Programa de Pós-Graduação em Geociências da UFPE. Técnico em Mineração (ETFRN), graduado em Geologia (UFRN), Mestre em Geologia Regional (UNESP), Doutor em Ciências (UCL/Bélgica) e pós-doutor em Geocronologia (Canadá). Atua em ensino e pesquisa nas áreas de geoquímica multi-elementar, isotópica, geocronologia, metalogênese e geologia sedimentar e ambiental. Participou da modernização de laboratórios multiusuários da UFPE e atualmente coordena os laboratórios LGAPE e MEV-WDS, além de atuar na startup REMINERA e no PRH 47.1. Exerceu diversos cargos de coordenação e gestão acadêmica na UFPE e em programas nacionais ligados à ANP e Petrobras.',
+      image: '/images/members/researchers/joao-adauto.avif',
+      linkedin: '',
+      lattes: 'http://lattes.cnpq.br/6448417938573779'
+    },
   ]
 
   const currentPage = ref(1)
