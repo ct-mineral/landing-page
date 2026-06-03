@@ -4,24 +4,59 @@
   <v-container>
     <v-row>
       <v-col cols="12">
-        <h5 class="text-h5 font-weight-bold text-orange-darken-3">Histórico</h5>
+        <h5 class="text-h5 font-weight-bold text-orange-darken-3">A Origem</h5>
         <p class="text-body-1">
-          No ano de 2008, o engenheiro de minas e professor do Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte (IFRN), José Yvan Pereira Leite, que estava à frente da Pró-Reitoria de Pesquisa e Inovação (Propi) do instituto, identificou a necessidade de um Centro de Tecnologia Mineral (CT Mineral) no estado do Rio Grande do Norte, para solucionar os gargalos existentes na região e estrategicamente, atuar com foco nas micros, pequenas e médias empresas assumindo um importante papel de desenvolvimento de Arranjos Produtivos Locais (APL) de Base Mineral no Estado. Servindo também como estimulador para as práticas de projetos de Projetos de Pesquisa, Desenvolvimento e Inovação (PD&I), prestação de serviços e capacitação de mão de obra da indústria do setor mineral.
+          A idealização do Centro de Tecnologia Mineral teve início em 2008, a partir da visão
+          estratégica do engenheiro de minas, professor e pesquisador José Yvan Pereira Leite, então
+          Pró-Reitor de Pesquisa e Inovação do IFRN.
+        </p>
+        <div class="my-4">
+          <v-img
+            src="/images/members/directors/jose-yvan.avif"
+            height="300"
+            alt="José Yvan Pereira Leite - Professor e Pesquisador"
+            title="José Yvan Pereira Leite - Professor e Pesquisador"
+            class="mx-auto"
+            contain
+          />
+          <p class="text-caption text-center">José Yvan Pereira Leite - Professor e Pesquisador</p>
+        </div>
+        <p class="text-body-1">
+          José Yvan identificou a necessidade de criação de um centro tecnológico especializado em
+          mineração no Rio Grande do Norte, capaz de atender às demandas da indústria mineral
+          regional, apoiar micro, pequenas e médias empresas e impulsionar o desenvolvimento dos
+          Arranjos Produtivos Locais (APLs) de base mineral do estado.
         </p>
         <p class="text-body-1">
-          Dessa forma, fruto de uma iniciativa entre o Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte (IFRN), a Universidade Federal do Rio Grande do Norte (UFRN), a Universidade Federal Rural do Semiárido (Ufersa) e a Universidade do Estado do Rio Grande do Norte (Uern), o projeto foi realizado em parceria com a Fundação de Apoio ao IFRN (Funcern), com a Fundação de Apoio à Pesquisa do Rio Grande do Norte (Fapern), além da Fundação Gorceix, da Universidade Federal de Ouro Preto.
+          Sua proposta buscava criar uma estrutura voltada à pesquisa aplicada, inovação
+          tecnológica, prestação de serviços especializados e formação de mão de obra qualificada
+          para o setor mineral brasileiro.
         </p>
         <p class="text-body-1">
-          Em 2012, o IFRN iniciou o projeto de construção do CT Mineral através de Edital com fomento da FINEP que tinha o objetivo de criar um espaço para o desenvolvimento de P,D&I, prestação de serviços tecnológicos e formação de mão de obra especializada com a finalidade de fortalecer os Arranjos Produtivos Locais de base mineral da região. Mas, somente em 02 de setembro de 2019, após uma reforma em sua infraestrutura, aconteceu a inauguração do CT Mineral. E em homenagem à pessoa que o idealizou, o prédio recebeu o nome “José Yvan Pereira Leite”, falecido em 10 de junho daquele ano. Em uma área de, aproximadamente, 800m², o CT Mineral está situado na cidade de Currais Novos, a qual está localizada na Mesorregião Central Potiguar, microrregião Seridó Oriental cujo acesso rodoviário é facilitado pela proximidade da rodovia BR – 226, a qual compõe com o porto de Natal, um modal logístico para o acesso ao centro.
+          A partir dessa iniciativa, foi construída uma ampla articulação institucional envolvendo o
+          IFRN, a Universidade Federal do Rio Grande do Norte (UFRN), a Universidade Federal Rural
+          do Semiárido (Ufersa), a Universidade do Estado do Rio Grande do Norte (Uern), a Fundação
+          de Apoio ao IFRN (Funcern), a Fundação de Apoio à Pesquisa do Estado do Rio Grande do
+          Norte (Fapern) e a Fundação Gorceix, vinculada à Universidade Federal de Ouro Preto
+          (UFOP).
         </p>
         <p class="text-body-1">
-          A localização geográfica do Centro permite o rápido acesso às empresas da Paraíba e do Ceará, assim como às empresas localizadas na região norte, as quais buscam os serviços de laboratórios instalados no Sudeste. A instalação do centro possibilitou às mineradoras locais, dos estados circunvizinhos e algumas da região norte do país, o acesso às tecnologias disponibilizadas pela instituição. Atualmente, o Centro é o 21º Centro deste tipo no Brasil, sendo o 2º da rede de Institutos Federais (IFRN e IFES), e, também, o 2º em toda a região Nordeste.
+          Em 2012, o IFRN por meio do Governo do estado iniciou oficialmente o projeto de construção
+          do CT Mineral com recursos da Financiadora de Estudos e Projetos (Finep), visando
+          implantar um ambiente tecnológico moderno voltado ao desenvolvimento de Pesquisa,
+          Desenvolvimento e Inovação (PD&I), prestação de serviços tecnológicos e apoio à indústria
+          mineral.
         </p>
         <p class="text-body-1">
-          O Centro, presta serviços tecnológicos na área de processamento mineral para mais de diversas micro e pequenas empresas do sistema produtivo mineral dos estados do Rio Grande do Norte e Paraíba, como também, para representantes do setor industrial localizados no Pará, Minas Gerais, Goiás, Bahia, Pernambuco, Ceará e Amapá; contribuindo para o crescimento e disseminação de tecnologia e inovação mineral no País.
+          Após melhorias estruturais e consolidação de sua infraestrutura laboratorial, o Centro foi
+          oficialmente inaugurado em 02 de setembro de 2019. Em homenagem ao seu idealizador,
+          falecido em 10 de junho daquele mesmo ano, o prédio recebeu o nome de “José Yvan Pereira
+          Leite”.
         </p>
         <p class="text-body-1">
-          Dessa forma, nos últimos anos, o IFRN vem apresentando uma ascensão na atuação em Pesquisa, Desenvolvimento e Inovação Tecnológica, com grande ênfase no desenvolvimento e aplicação de novas soluções tecnológicas para a cadeia produtiva mineral - Tecnologias em Mineração, associada às políticas estratégicas de Geologia, Mineração e Transformação Mineral do programa do Ministério de Minas e Energia, evidenciadas através do Plano Nacional de Mineração 2030 (PNM 2030).
+          Hoje, o CT Mineral representa a concretização do legado deixado por José Yvan: um ambiente
+          de inovação tecnológica, integração entre academia e indústria e desenvolvimento regional
+          sustentável por meio da mineração.
         </p>
       </v-col>
     </v-row>
