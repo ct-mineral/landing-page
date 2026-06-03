@@ -13,7 +13,7 @@ const services = [
   <v-container>
     <v-row>
       <v-col cols="12">
-        <h2 class="text-h5 font-weight-bold mb-2 text-orange-darken-3">Análises</h2>
+        <h2 class="text-h5 font-weight-bold mb-2 text-orange-darken-3">Análise Mineral</h2>
       </v-col>
       <v-col cols="12" v-for="service in services" :key="service.id">
         <CardServicesComponent :name-service="service.nome" :machine="service.machine" :description-service="service.descricao" :image-service="service.imagem" />

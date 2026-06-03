@@ -11,7 +11,7 @@ const playVideo = () => {
 <template>
   <v-container>
     <v-row>
-      <v-col cols="12">
+      <v-col cols="12" class="d-flex justify-center">
         <div class="video-container d-flex justify-center align-center" @click="playVideo">
           <template v-if="!showVideo">
             <img
@@ -39,9 +39,15 @@ const playVideo = () => {
 <style scoped>
 .video-container {
   position: relative;
-  width: 100%;
+  width: 60%;
   aspect-ratio: 16 / 9;
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .video-container {
+    width: 100%;
+  }
 }
 
 .video-container iframe,

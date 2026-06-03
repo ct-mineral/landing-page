@@ -1,8 +1,10 @@
 <script lang="ts" setup>
-  import PoloView from './SectionViews/PoloView.vue';
-  import VideoView from './SectionViews/VideoView.vue';
-  import HistoryView from './SectionViews/HistoryView.vue';
-  import StructureView from './SectionViews/StructureView.vue';
+import PoloView from './SectionViews/PoloView.vue'
+import VideoView from './SectionViews/VideoView.vue'
+import HistoryView from './SectionViews/HistoryView.vue'
+import StructureView from './SectionViews/StructureView.vue'
+import InfrastructureView from './SectionViews/InfrastructureView.vue'
+import PerformanceView from './SectionViews/PerformanceView.vue'
 </script>
 
 <template>
@@ -17,6 +19,12 @@
   </section>
   <section>
     <StructureView />
+  </section>
+  <section>
+    <InfrastructureView />
+  </section>
+  <section>
+    <PerformanceView />
   </section>
 </template>
 
