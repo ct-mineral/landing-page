@@ -92,6 +92,7 @@ const currentYear = new Date().getFullYear()
                   >Notícias</a
                 >
                 <router-link to="/projetos" class="text-body-2 text-white">Projetos</router-link>
+                <router-link to="/contato" class="text-body-2 text-white">Contato</router-link>
               </div>
             </v-col>
             <!-- Contatos -->

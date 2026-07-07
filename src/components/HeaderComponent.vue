@@ -126,6 +126,9 @@ const servicos = [
         <li class="pa-2 pa-md-0 w-100 w-md-auto">
           <router-link to="/oportunidades" class="d-flex justify-center d-md-block w-100 h-100 py-2 px-5 text-body-2 text-md-body-1" @click="mobileMenu = false">Oportunidades</router-link>
         </li>
+        <li class="pa-2 pa-md-0 w-100 w-md-auto">
+          <router-link to="/contato" class="d-flex justify-center d-md-block w-100 h-100 py-2 px-5 text-body-2 text-md-body-1" @click="mobileMenu = false">Contato</router-link>
+        </li>
       </ul>
     </nav>
   </div>

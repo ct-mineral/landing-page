@@ -48,6 +48,11 @@ const router = createRouter({
       path: '/oportunidades',
       name: 'opportunities',
       component: () => import('@/views/OpportunitiesView/OpportunitiesView.vue'),
+    },
+    {
+      path: '/contato',
+      name: 'contact',
+      component: () => import('@/views/ContatoView/ContatoView.vue'),
     }
   ],
 })
