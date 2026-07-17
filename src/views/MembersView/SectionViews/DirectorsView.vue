@@ -72,8 +72,13 @@
           :lattesMember="director.lattes"
         />
       </v-col>
-      <v-col cols="12" class="d-flex justify-center mt-4">
-        <v-pagination v-model="currentPage" :length="totalPages" rounded="circle" />
+      <v-col v-if="totalPages > 1" cols="12" class="d-flex justify-center mt-4">
+        <v-pagination
+          v-model="currentPage"
+          :length="totalPages"
+          color="teal-darken-3"
+          rounded="circle"
+        />
       </v-col>
     </v-row>
   </v-window-item>
