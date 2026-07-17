@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { mdiMapMarker } from '@mdi/js'
-import TitleSectionComponent from '@/components/TitleSectionComponent.vue'
-
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 
 const mapContainer = ref<HTMLDivElement | null>(null)
@@ -21,7 +18,7 @@ const loadMap = async () => {
   ])
 
   const myIcon = leaflet.icon({
-    iconUrl: 'images/logos/logo_ctm.svg',
+    iconUrl: '/images/logos/logo_ctm.svg',
     iconSize: [43, 40],
     iconAnchor: [15, 20],
   })
@@ -69,47 +66,53 @@ onBeforeUnmount(() => {
   }
 })
 </script>
+
 <template>
-  <div class="location-container">
-    <v-container>
-      <v-row>
-        <v-col cols="12" class="d-flex flex-column ga-2 text-white">
-          <TitleSectionComponent
-            :icon-props="mdiMapMarker"
-            title-props="Localização"
-            subtitle-props="Veja onde estamos localizados"
-          />
-          <hr class="text-white" />
-        </v-col>
-        <v-col cols="12">
-          <v-container fluid>
-            <div ref="mapContainer" class="map rounded-lg">
-              <div v-if="!isMapReady" class="map-placeholder">Carregando mapa...</div>
-            </div>
-          </v-container>
-        </v-col>
-      </v-row>
-    </v-container>
-  </div>
+  <section class="section location-section">
+    <div class="page-container">
+      <div class="section-heading">
+        <span class="section-tag">Localização</span>
+        <h2>Veja onde estamos</h2>
+        <p>O CT Mineral fica em Currais Novos/RN, no coração do Seridó Potiguar.</p>
+      </div>
+
+      <div ref="mapContainer" class="map">
+        <div v-if="!isMapReady" class="map-placeholder">Carregando mapa...</div>
+      </div>
+    </div>
+  </section>
 </template>
+
 <style scoped>
-.location-container {
-  background: linear-gradient(135deg, rgba(14, 84, 74, 1) 0%, rgba(13, 141, 123, 1) 75%);
+.location-section {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
 }
 
 .map {
-  height: 400px;
+  overflow: hidden;
+  height: 420px;
   width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: #ffffff;
+  box-shadow: 0 12px 35px rgba(25, 64, 57, 0.06);
 }
 
 .map-placeholder {
-  height: 100%;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  height: 100%;
+  width: 100%;
+  color: var(--muted);
   font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+  .map {
+    height: 320px;
+  }
 }
 </style>

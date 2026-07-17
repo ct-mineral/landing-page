@@ -1,5 +1,6 @@
-<script lang="ts" setup>
+<script setup lang="ts">
 import CardServicesComponent from '@/components/CardServicesComponent.vue'
+import ServicesPageLayoutComponent from '@/components/ServicesPageLayoutComponent.vue'
 
 const services = [
   { id: 1, imagem: '#', nome: 'Amostragem', descricao: 'O CT Mineral auxiliará empresas de mineração de pequeno e médio porte na execução de uma correta amostragem das matérias-primas, úmidas ou secas, a serem analisadas nos processos subsequentes. O centro disponibilizará um método de amostragem a ser seguido de acordo com o material e as necessidades do contratante.' },
@@ -8,14 +9,18 @@ const services = [
 </script>
 
 <template>
-  <v-container>
-    <v-row>
-      <v-col cols="12">
-        <h2 class="text-h5 font-weight-bold mb-2 text-orange-darken-3">Cominuição de Amostras</h2>
-      </v-col>
-      <v-col cols="12" v-for="service in services" :key="service.id">
-        <CardServicesComponent :name-service="service.nome" :description-service="service.descricao" :image-service="service.imagem" />
-      </v-col>
-    </v-row>
-  </v-container>
+  <ServicesPageLayoutComponent
+    title="Cominuição de Amostras"
+    description="Amostragem, pesagem e controle de materiais minerais com procedimentos definidos conforme as características de cada projeto."
+    :service-count="services.length"
+  >
+    <CardServicesComponent
+      v-for="(service, index) in services"
+      :key="service.id"
+      :index-service="String(index + 1).padStart(2, '0')"
+      :name-service="service.nome"
+      :description-service="service.descricao"
+      :image-service="service.imagem"
+    />
+  </ServicesPageLayoutComponent>
 </template>

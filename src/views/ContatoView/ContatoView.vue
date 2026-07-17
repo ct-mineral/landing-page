@@ -122,72 +122,84 @@ onMounted(() => {
 </script>
 
 <template>
-  <v-container class="py-12 py-md-16">
-    <v-row justify="center">
-      <v-col cols="12" lg="10" xl="9">
-        <div class="contact-shell pa-6 pa-md-10 rounded-lg">
-          <div class="mb-6">
-            <p class="text-overline text-teal-darken-2 font-weight-bold mb-2">Contato</p>
-            <h1 class="text-h4 text-md-h3 font-weight-bold text-teal-darken-4 mb-4">
-              Solicite sua visita ao CT Mineral
-            </h1>
-            <p class="text-body-1 text-grey-darken-2">
-              Preencha o formulário abaixo com as informações da visita pretendida.
-            </p>
+  <main class="contact-page">
+    <section class="contact-hero">
+      <div class="page-container hero-grid">
+        <div>
+          <span class="eyebrow">
+            <span class="status-dot" aria-hidden="true"></span>
+            Fale com o CT Mineral
+          </span>
+          <h1>Conecte sua instituição ao nosso <em>ecossistema de inovação.</em></h1>
+          <p>
+            Entre em contato com nossa equipe ou solicite uma visita técnica para conhecer a
+            infraestrutura, os laboratórios e os projetos do Polo de Inovação.
+          </p>
+        </div>
+
+        <div class="contact-details">
+          <a href="mailto:ctmineral@ifrn.edu.br">
+            <small>E-mail</small>
+            <strong>ctmineral@ifrn.edu.br</strong>
+          </a>
+          <a href="https://wa.me/558440054117" target="_blank" rel="noopener noreferrer">
+            <small>Telefone / WhatsApp</small>
+            <strong>+55 (84) 4005-4117</strong>
+          </a>
+          <div>
+            <small>Localização</small>
+            <strong>Currais Novos · Rio Grande do Norte</strong>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <v-card flat class="mb-6 pa-6">
-            <div class="d-flex flex-column ga-4">
-              <div>
-                <p class="text-body-1 text-grey-darken-3 mb-2">
-                  O <strong>CT Mineral</strong> recebe instituições de ensino, empresas e demais
-                  organizações interessadas em conhecer sua infraestrutura, laboratórios e projetos
-                  desenvolvidos. Para solicitar uma visita técnica, o responsável deverá preencher o
-                  formulário abaixo com as informações solicitadas.
-                </p>
-                <p class="text-body-1 text-teal-darken-2 font-weight-bold mb-0">
-                  Para possibilitar o adequado planejamento da visita, as solicitações devem ser
-                  realizadas com <strong>antecedência mínima de 30 dias</strong> em relação à data
-                  pretendida.
-                </p>
-              </div>
+    <section class="visit-section">
+      <div class="page-container">
+        <div class="section-heading">
+          <span class="section-tag">Visita técnica</span>
+          <h2>Solicite sua visita ao CT Mineral</h2>
+          <p>
+            Preencha o formulário com as informações necessárias para que nossa equipe possa
+            planejar e avaliar a visita pretendida.
+          </p>
+        </div>
 
-              <div>
-                <p class="text-subtitle-2 text-grey-darken-4 font-weight-bold mb-3">
-                  Informações importantes:
-                </p>
-                <ul class="text-body-2 text-grey-darken-3 pl-4">
-                  <li class="mb-2">
-                    O agendamento da visita está sujeito à disponibilidade da equipe e dos
-                    laboratórios na data solicitada.
-                  </li>
-                  <li class="mb-2">
-                    Para garantir a segurança e a organização das atividades, grupos com grande
-                    número de participantes poderão ser divididos em subgrupos durante a visita.
-                  </li>
-                  <li class="mb-2">
-                    Todos os visitantes deverão utilizar
-                    <strong>calças compridas e calçados fechados</strong>
-                    para acesso aos laboratórios.
-                  </li>
-                  <li class="mb-2">
-                    Caso a visita seja destinada a uma instituição de ensino, informe a escolaridade
-                    dos participantes para que a programação possa ser adequada ao público.
-                  </li>
-                  <li>
-                    Solicitamos que os visitantes levem apenas os pertences essenciais, uma vez que
-                    o CT Mineral não dispõe de guarda-volumes.
-                  </li>
-                </ul>
-              </div>
+        <div class="visit-grid">
+          <aside class="visit-guidelines">
+            <span class="guidelines-tag">Antes de solicitar</span>
+            <h3>Planeje sua visita com antecedência</h3>
+            <p>
+              Recebemos instituições de ensino, empresas e organizações interessadas em conhecer
+              nossa estrutura e nossos projetos.
+            </p>
 
-              <p class="text-body-2 text-grey-darken-3 mb-0">
-                Após o envio do formulário, nossa equipe analisará a solicitação e entrará em
-                contato pelos meios informados para confirmar o agendamento ou fornecer orientações
-                adicionais.
-              </p>
+            <div class="deadline">
+              <strong>30 dias</strong>
+              <span>de antecedência mínima</span>
             </div>
-          </v-card>
+
+            <h4>Informações importantes</h4>
+            <ul>
+              <li>O agendamento depende da disponibilidade da equipe e dos laboratórios.</li>
+              <li>Grupos numerosos poderão ser divididos em subgrupos.</li>
+              <li>É obrigatório utilizar calças compridas e calçados fechados.</li>
+              <li>Instituições de ensino devem informar a escolaridade dos participantes.</li>
+              <li>Leve apenas pertences essenciais, pois não há guarda-volumes.</li>
+            </ul>
+
+            <p class="guidelines-footnote">
+              Após o envio, nossa equipe entrará em contato para confirmar o agendamento ou fornecer
+              orientações adicionais.
+            </p>
+          </aside>
+
+          <div class="form-shell">
+            <div class="form-heading">
+              <span>Dados da solicitação</span>
+              <h3>Conte-nos sobre a visita</h3>
+              <p>Todos os campos obrigatórios devem ser preenchidos.</p>
+            </div>
 
           <v-alert v-if="submitMessage" type="success" variant="tonal" class="mb-6">
             {{ submitMessage }}
@@ -371,22 +383,387 @@ onMounted(() => {
             </v-row>
           </v-form>
         </div>
-      </v-col>
-    </v-row>
-  </v-container>
+        </div>
+      </div>
+    </section>
+  </main>
 </template>
 
 <style scoped>
-.contact-shell {
+.contact-page {
+  --green: #0e544a;
+  --green-hover: #107465;
+  --green-soft: #eaf4f2;
+  --orange: #e65100;
+  --orange-soft: #fff3eb;
+  --ink: #1d2927;
+  --muted: #5f6d6a;
+  --line: #dce5e2;
+  --surface: #f6f9f8;
+  color: var(--ink);
+  overflow: hidden;
+}
+
+.page-container {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.contact-hero {
+  position: relative;
+  padding: 88px 0 76px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(244, 250, 248, 0.96) 100%),
-    radial-gradient(circle at top left, rgba(16, 116, 101, 0.1), transparent 28%),
-    radial-gradient(circle at bottom right, rgba(245, 124, 0, 0.09), transparent 25%);
-  border: 1px solid rgba(16, 116, 101, 0.12);
-  box-shadow: 0 24px 60px rgba(18, 40, 38, 0.08);
+    radial-gradient(circle at 92% 5%, rgba(14, 84, 74, 0.12), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #f8fbfa 100%);
+}
+
+.contact-hero::before {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(14, 84, 74, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.28;
+  content: '';
+  pointer-events: none;
+  mask-image: linear-gradient(to right, black, transparent 55%);
+}
+
+.hero-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(340px, 0.82fr);
+  gap: 76px;
+  align-items: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  gap: 9px;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 7px 12px;
+  border: 1px solid rgba(14, 84, 74, 0.24);
+  border-radius: 4px;
+  background: var(--green-soft);
+  color: var(--green);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 0 4px rgba(14, 84, 74, 0.1);
+}
+
+.contact-hero h1 {
+  max-width: 790px;
+  margin: 0 0 24px;
+  font-size: clamp(2.35rem, 4.3vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.06;
+}
+
+.contact-hero h1 em {
+  display: block;
+  color: var(--green);
+  font-style: normal;
+}
+
+.contact-hero p {
+  max-width: 700px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+.contact-details {
+  display: grid;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 20px 50px rgba(20, 58, 51, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+.contact-details > a,
+.contact-details > div {
+  min-height: 88px;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--line);
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact-details > div:last-child {
+  border-bottom: 0;
+}
+
+.contact-details small,
+.contact-details strong {
+  display: block;
+}
+
+.contact-details small {
+  margin-bottom: 5px;
+  color: var(--orange);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.contact-details strong {
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.contact-details a:hover strong {
+  color: var(--green);
+}
+
+.visit-section {
+  padding: 92px 0;
+  background: var(--surface);
+}
+
+.section-heading {
+  max-width: 720px;
+  margin-bottom: 48px;
+}
+
+.section-tag {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--orange);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section-heading h2 {
+  margin: 0 0 14px;
+  font-size: clamp(1.9rem, 3.2vw, 2.65rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+.section-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.visit-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.7fr) minmax(0, 1.3fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.visit-guidelines {
+  padding: 30px 28px;
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--green);
+  border-radius: 7px;
+  background: #ffffff;
+  box-shadow: 0 12px 35px rgba(25, 64, 57, 0.06);
+}
+
+.guidelines-tag {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--orange);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.visit-guidelines h3 {
+  margin: 0 0 14px;
+  font-size: 1.35rem;
+  line-height: 1.3;
+}
+
+.visit-guidelines > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.87rem;
+  line-height: 1.7;
+}
+
+.deadline {
+  margin: 25px 0;
+  padding: 18px;
+  border-radius: 5px;
+  background: var(--orange-soft);
+}
+
+.deadline strong,
+.deadline span {
+  display: block;
+}
+
+.deadline strong {
+  margin-bottom: 3px;
+  color: var(--orange);
+  font-size: 1.45rem;
+}
+
+.deadline span {
+  color: #744526;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.visit-guidelines h4 {
+  margin: 0 0 14px;
+  font-size: 0.87rem;
+}
+
+.visit-guidelines ul {
+  display: grid;
+  gap: 11px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.visit-guidelines li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.visit-guidelines li::before {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+  content: '';
+}
+
+.visit-guidelines .guidelines-footnote {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-size: 0.74rem;
+}
+
+.form-shell {
+  padding: 34px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: #ffffff;
+  box-shadow: 0 12px 35px rgba(25, 64, 57, 0.06);
+}
+
+.form-heading {
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.form-heading > span {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--orange);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.form-heading h3 {
+  margin: 0 0 6px;
+  font-size: 1.4rem;
+}
+
+.form-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.form-shell :deep(.v-field) {
+  border-radius: 5px;
+}
+
+.form-shell :deep(.v-label) {
+  color: var(--muted);
+}
+
+.form-shell :deep(.v-btn) {
+  min-height: 48px;
+  border-radius: 5px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.form-shell :deep(.v-card) {
+  border-color: var(--line);
+  border-radius: 5px;
+  box-shadow: none;
 }
 
 .shift-error-card {
   border-color: rgb(var(--v-theme-error)) !important;
+}
+
+@media (max-width: 960px) {
+  .hero-grid,
+  .visit-grid {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .contact-details {
+    max-width: 560px;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-container {
+    width: min(100% - 32px, 1180px);
+  }
+
+  .contact-hero {
+    padding: 52px 0;
+  }
+
+  .contact-hero::before {
+    display: none;
+  }
+
+  .contact-hero h1 {
+    font-size: 2.25rem;
+  }
+
+  .visit-section {
+    padding: 68px 0;
+  }
+
+  .visit-guidelines,
+  .form-shell {
+    padding: 26px 22px;
+  }
 }
 </style>
