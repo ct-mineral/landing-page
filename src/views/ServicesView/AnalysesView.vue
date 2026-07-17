@@ -1,5 +1,6 @@
-<script lang="ts" setup>
+<script setup lang="ts">
 import CardServicesComponent from '@/components/CardServicesComponent.vue'
+import ServicesPageLayoutComponent from '@/components/ServicesPageLayoutComponent.vue'
 
 const services = [
   { id: 1, imagem: '/images/services/frx.avif', nome: 'Fluorescência de Raios-X (FRX)', machine: 'ARL QUANT\'X EDXRF da Thermo Scientific', descricao: 'É uma ferramenta analítica versátil e econômica, projetada para quantificar elementos principais, secundários e traços em uma ampla variedade de amostras, incluindo sólidos em massa, grânulos, pós soltos ou compactados, pastilhas fundidas, filmes finos, pastas e líquidos. Com capacidade para analisar elementos desde o flúor F) até o amerício Am, o instrumento oferece desempenho superior tanto para elementos leves quanto pesados, garantindo rapidez e flexibilidade em um formato compacto de bancada. Além disso, o ARL QUANT\'X minimiza a necessidade de preparação de amostras, tornando-o ideal para laboratórios centrais e contratados que buscam eficiência e precisão em suas análises elementares.' },
@@ -10,14 +11,19 @@ const services = [
 </script>
 
 <template>
-  <v-container>
-    <v-row>
-      <v-col cols="12">
-        <h2 class="text-h5 font-weight-bold mb-2 text-orange-darken-3">Análise Mineral</h2>
-      </v-col>
-      <v-col cols="12" v-for="service in services" :key="service.id">
-        <CardServicesComponent :name-service="service.nome" :machine="service.machine" :description-service="service.descricao" :image-service="service.imagem" />
-      </v-col>
-    </v-row>
-  </v-container>
+  <ServicesPageLayoutComponent
+    title="Análise Mineral"
+    description="Caracterização química e mineralógica com equipamentos de alta precisão para identificar elementos, fases cristalinas e composição de diferentes materiais."
+    :service-count="services.length"
+  >
+    <CardServicesComponent
+      v-for="(service, index) in services"
+      :key="service.id"
+      :index-service="String(index + 1).padStart(2, '0')"
+      :name-service="service.nome"
+      :machine="service.machine"
+      :description-service="service.descricao"
+      :image-service="service.imagem"
+    />
+  </ServicesPageLayoutComponent>
 </template>
