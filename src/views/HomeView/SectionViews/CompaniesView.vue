@@ -1,57 +1,64 @@
 <script setup lang="ts">
-import { mdiHomeCity } from '@mdi/js'
-import TitleSectionComponent from '@/components/TitleSectionComponent.vue'
-
-const empresas = [
-  { nome: 'Borborema', logo: '/images/logos/empresas/borborema.svg', width: '200px' },
-  { nome: 'Fortescue', logo: '/images/logos/empresas/fortescue.svg', width: '200px' },
-  { nome: 'IMC Rare', logo: '/images/logos/empresas/imc_rare.svg', width: '200px' },
-  { nome: 'KIT Máquinas', logo: '/images/logos/empresas/kit_maquinas.svg', width: '200px' },
-  { nome: 'REX', logo: '/images/logos/empresas/rex.svg', width: '160px' },
-]
+const partners = ['IFRN', 'EMBRAPII', 'IBRAM', 'UFRN', 'UFERSA', 'UERN', 'FUNCERN', 'FAPERN']
 </script>
 
 <template>
-  <v-container>
-    <v-row>
-      <v-col cols="12" class="d-flex flex-column ga-2">
-        <TitleSectionComponent
-          :icon-props="mdiHomeCity"
-          title-props="Empresas contratantes"
-          subtitle-props="Algumas das empresas que confiam no nosso trabalho"
-        />
-        <hr />
-      </v-col>
-
-      <v-col v-for="(empresa, index) in empresas" :key="index" cols="12" sm="6" md="4" lg="3">
-        <v-card class="logo-card d-flex align-center justify-center rounded-lg" height="120">
-          <v-img
-            :src="empresa.logo"
-            :alt="empresa.nome"
-            contain
-            :max-width="empresa.width"
-            class="logo-img"
-            loading="lazy"
-            decoding="async"
-          ></v-img>
-        </v-card>
-      </v-col>
-    </v-row>
-  </v-container>
+  <section class="network-section">
+    <div class="page-container network-content">
+      <div>
+        <span class="section-tag">Rede institucional</span>
+        <h2>Conhecimento construído em parceria</h2>
+      </div>
+      <div class="partners" aria-label="Instituições parceiras">
+        <span v-for="partner in partners" :key="partner">{{ partner }}</span>
+      </div>
+    </div>
+  </section>
 </template>
 
 <style scoped>
-.logo-img {
-  filter: grayscale(100%) opacity(0.6);
-  transition: all 0.4s ease-in-out;
+.network-section {
+  padding: 54px 0;
+  border-top: 1px solid var(--line);
+  background: var(--orange-soft);
 }
 
-.logo-card:hover {
-  cursor: pointer;
+.network-content {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.75fr) 1.25fr;
+  gap: 70px;
+  align-items: center;
 }
 
-.logo-card:hover .logo-img {
-  filter: grayscale(0%) opacity(1);
-  transform: scale(1.05);
+.network-content h2 {
+  margin: 0;
+  font-size: clamp(1.65rem, 2.6vw, 2.15rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+.partners {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.partners span {
+  padding: 10px 16px;
+  border: 1px solid rgba(230, 81, 0, 0.18);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.65);
+  color: #773611;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 960px) {
+  .network-content {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
 }
 </style>

@@ -1,0 +1,1127 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CT Mineral IFRN — Da amostra ao laudo técnico validado</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+      :root {
+        --bg: #14171a;
+        --surface: #1b1f22;
+        --surface-2: #22272b;
+        --line: #33393e;
+        --cyan: #0e5448;
+        --cyan-text: #2faf95;
+        --cyan-dim: rgba(14, 84, 72, 0.2);
+        --rust: #ed6116;
+        --rust-dim: rgba(237, 97, 22, 0.16);
+        --text: #eceeef;
+        --muted: #9aa3a8;
+        --muted-2: #6e777c;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Inter", sans-serif;
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+      }
+      .mono {
+        font-family: "Inter", sans-serif;
+        letter-spacing: 0.02em;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Inter", sans-serif;
+        letter-spacing: -0.01em;
+      }
+      a {
+        color: inherit;
+      }
+      .wrap {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0 32px;
+      }
+      img,
+      svg {
+        display: block;
+        max-width: 100%;
+      }
+
+      /* subtle topographic background texture */
+      .topo {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        opacity: 0.05;
+        background-image:
+          repeating-radial-gradient(
+            circle at 20% 30%,
+            transparent 0 40px,
+            var(--muted) 41px,
+            transparent 42px 90px
+          ),
+          repeating-radial-gradient(
+            circle at 80% 70%,
+            transparent 0 60px,
+            var(--muted) 61px,
+            transparent 62px 120px
+          );
+      }
+
+      /* ---------- Header ---------- */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(20, 23, 26, 0.85);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--line);
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 32px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: "Archivo";
+        font-weight: 800;
+        font-size: 17px;
+        letter-spacing: 0.02em;
+      }
+      .brand .dot {
+        width: 9px;
+        height: 9px;
+        background: var(--cyan);
+        border-radius: 1px;
+        box-shadow: 0 0 10px var(--cyan);
+      }
+      .brand small {
+        display: block;
+        font-family: "Inter";
+        font-weight: 400;
+        font-size: 10px;
+        color: var(--muted);
+        letter-spacing: 0.08em;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 32px;
+      }
+      nav ul a {
+        font-size: 14px;
+        color: var(--muted);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      nav ul a:hover {
+        color: var(--text);
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 11px 20px;
+        border-radius: 3px;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        border: 1px solid transparent;
+        white-space: nowrap;
+      }
+      .btn-primary {
+        background: var(--cyan);
+        color: #f4fbf9;
+      }
+      .btn-primary:hover {
+        background: #136d5d;
+      }
+      .btn-ghost {
+        border-color: var(--line);
+        color: var(--text);
+      }
+      .btn-ghost:hover {
+        border-color: var(--muted-2);
+      }
+
+      /* ---------- Hero ---------- */
+      .hero {
+        position: relative;
+        padding: 88px 0 60px;
+        overflow: hidden;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 60px;
+        align-items: center;
+      }
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: "Inter";
+        font-size: 12px;
+        color: var(--cyan-text);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 22px;
+        border: 1px solid rgba(20, 140, 120, 0.45);
+        padding: 6px 12px;
+        border-radius: 2px;
+        background: var(--cyan-dim);
+      }
+      .hero h1 {
+        font-size: clamp(34px, 4.4vw, 54px);
+        font-weight: 800;
+        line-height: 1.08;
+        margin-bottom: 22px;
+      }
+      .hero h1 em {
+        font-style: normal;
+        color: var(--cyan-text);
+      }
+      .hero p.lead {
+        font-size: 17px;
+        color: var(--muted);
+        max-width: 520px;
+        margin-bottom: 34px;
+      }
+      .hero-ctas {
+        display: flex;
+        gap: 14px;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+      }
+      .hero-stats {
+        display: flex;
+        gap: 34px;
+        flex-wrap: wrap;
+      }
+      .hstat b {
+        display: block;
+        font-family: "Archivo";
+        font-size: 22px;
+        font-weight: 800;
+      }
+      .hstat span {
+        font-size: 12px;
+        color: var(--muted-2);
+        font-family: "Inter";
+      }
+
+      /* core sample signature visual */
+      .core-wrap {
+        position: relative;
+        display: flex;
+        justify-content: center;
+      }
+      .core-label-top,
+      .core-label-bottom {
+        font-family: "Inter";
+        font-size: 11px;
+        color: var(--muted-2);
+        text-align: center;
+      }
+      .core-label-top {
+        margin-bottom: 8px;
+      }
+      .core-label-bottom {
+        margin-top: 8px;
+      }
+
+      /* ---------- Section shell ---------- */
+      section {
+        position: relative;
+        z-index: 1;
+        padding: 86px 0;
+      }
+      .section-head {
+        max-width: 640px;
+        margin-bottom: 52px;
+      }
+      .section-tag {
+        font-family: "Inter";
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--rust);
+        margin-bottom: 14px;
+        display: block;
+      }
+      .section-head h2 {
+        font-size: clamp(26px, 3vw, 36px);
+        font-weight: 800;
+        margin-bottom: 14px;
+      }
+      .section-head p {
+        color: var(--muted);
+        font-size: 16px;
+      }
+
+      hr.div {
+        border: none;
+        border-top: 1px solid var(--line);
+        margin: 0;
+      }
+
+      /* credentials bar */
+      .cred-bar {
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        padding: 26px 0;
+        background: var(--surface);
+      }
+      .cred-list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .cred-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 13px;
+        color: var(--muted);
+      }
+      .cred-item b {
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      /* services */
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        background: var(--line);
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        overflow: hidden;
+      }
+      .service-card {
+        background: var(--surface);
+        padding: 30px 26px;
+        transition: background 0.2s;
+      }
+      .service-card:hover {
+        background: var(--surface-2);
+      }
+      .service-num {
+        font-family: "Inter";
+        font-size: 12px;
+        color: var(--rust);
+        margin-bottom: 16px;
+        display: block;
+      }
+      .service-card h3 {
+        font-size: 17px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      .service-card p {
+        font-size: 14px;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      /* process */
+      .process {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+        position: relative;
+      }
+      .process::before {
+        content: "";
+        position: absolute;
+        top: 19px;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: var(--line);
+        z-index: 0;
+      }
+      .p-step {
+        position: relative;
+        z-index: 1;
+        padding-right: 20px;
+      }
+      .p-step .p-dot {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: var(--surface);
+        border: 1px solid var(--cyan-text);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Inter";
+        font-weight: 700;
+        font-size: 13px;
+        color: var(--cyan-text);
+        margin-bottom: 20px;
+      }
+      .p-step h3 {
+        font-size: 15px;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .p-step p {
+        font-size: 13.5px;
+        color: var(--muted);
+      }
+
+      /* labs */
+      .labs-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+      }
+      .lab-card {
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        padding: 26px;
+        background: var(--surface);
+      }
+      .lab-tag {
+        font-family: "Inter";
+        font-weight: 700;
+        font-size: 11px;
+        color: var(--cyan-text);
+        letter-spacing: 0.06em;
+        margin-bottom: 12px;
+        display: block;
+      }
+      .lab-card h3 {
+        font-size: 16.5px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      .lab-card p {
+        font-size: 13.5px;
+        color: var(--muted);
+      }
+
+      /* partners */
+      .partners {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px 30px;
+        align-items: center;
+      }
+      .partner {
+        font-family: "Inter";
+        font-size: 13px;
+        color: var(--muted);
+        border: 1px solid var(--line);
+        padding: 9px 16px;
+        border-radius: 3px;
+      }
+
+      /* CTA / contact */
+      .cta-section {
+        background: linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
+        border-top: 1px solid var(--line);
+      }
+      .cta-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: start;
+      }
+      .cta-grid h2 {
+        font-size: clamp(26px, 3.2vw, 38px);
+        font-weight: 800;
+        margin-bottom: 16px;
+      }
+      .cta-grid > div:first-child p {
+        color: var(--muted);
+        font-size: 16px;
+        margin-bottom: 28px;
+        max-width: 440px;
+      }
+      .contact-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      .contact-list li {
+        display: flex;
+        gap: 12px;
+        font-size: 14px;
+        color: var(--muted);
+        align-items: flex-start;
+      }
+      .contact-list b {
+        color: var(--text);
+        display: block;
+        font-size: 13px;
+        font-family: "Inter";
+        margin-bottom: 2px;
+      }
+
+      form.orcamento {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 30px;
+      }
+      form.orcamento .frow {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        margin-bottom: 14px;
+      }
+      form.orcamento label {
+        display: block;
+        font-size: 12px;
+        color: var(--muted-2);
+        margin-bottom: 6px;
+        font-family: "Inter";
+      }
+      form.orcamento input,
+      form.orcamento select,
+      form.orcamento textarea {
+        width: 100%;
+        background: var(--surface-2);
+        border: 1px solid var(--line);
+        border-radius: 3px;
+        color: var(--text);
+        padding: 11px 12px;
+        font-size: 14px;
+        font-family: "Inter";
+        outline: none;
+      }
+      form.orcamento input:focus,
+      form.orcamento select:focus,
+      form.orcamento textarea:focus {
+        border-color: var(--cyan);
+      }
+      form.orcamento textarea {
+        resize: vertical;
+        min-height: 80px;
+      }
+      form.orcamento .full {
+        margin-bottom: 14px;
+      }
+      form.orcamento button {
+        width: 100%;
+        padding: 14px;
+        font-size: 15px;
+        margin-top: 6px;
+      }
+      .form-note {
+        font-size: 12px;
+        color: var(--muted-2);
+        margin-top: 12px;
+        text-align: center;
+      }
+
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 34px 0;
+      }
+      .footer-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+      .footer-row .brand small {
+        color: var(--muted-2);
+      }
+      .foot-links {
+        display: flex;
+        gap: 22px;
+      }
+      .foot-links a {
+        font-size: 13px;
+        color: var(--muted);
+        text-decoration: none;
+      }
+      .foot-links a:hover {
+        color: var(--text);
+      }
+
+      :focus-visible {
+        outline: 2px solid var(--cyan);
+        outline-offset: 2px;
+      }
+
+      @media (max-width: 880px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
+        }
+        .core-wrap {
+          order: -1;
+          margin-bottom: 20px;
+        }
+        .services-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .labs-grid {
+          grid-template-columns: 1fr;
+        }
+        .process {
+          grid-template-columns: 1fr 1fr;
+          row-gap: 32px;
+        }
+        .process::before {
+          display: none;
+        }
+        .cta-grid {
+          grid-template-columns: 1fr;
+        }
+        nav ul {
+          display: none;
+        }
+        .cred-list {
+          justify-content: flex-start;
+        }
+      }
+      @media (max-width: 560px) {
+        .services-grid {
+          grid-template-columns: 1fr;
+        }
+        form.orcamento .frow {
+          grid-template-columns: 1fr;
+        }
+        .hero-ctas {
+          flex-direction: column;
+        }
+        .hero-ctas .btn {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topo"></div>
+
+    <header>
+      <div class="nav wrap">
+        <div class="brand">
+          <span class="dot"></span>
+          <div>
+            CT MINERAL
+            <small>IFRN · CURRAIS NOVOS/RN</small>
+          </div>
+        </div>
+        <div class="nav-links">
+          <ul>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#processo">Como funciona</a></li>
+            <li><a href="#laboratorios">Laboratórios</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+          <a href="#orcamento" class="btn btn-primary">Solicitar serviço</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div>
+            <span class="eyebrow"
+              >● Unidade EMBRAPII em Tecnologias em Mineração</span
+            >
+            <h1>
+              Sua amostra mineral, transformada em
+              <em>dado técnico validado.</em>
+            </h1>
+            <p class="lead">
+              O CT Mineral do IFRN caracteriza, beneficia e testa minérios em
+              escala laboratorial e piloto — do ensaio de bancada ao laudo que
+              sustenta decisão de investimento, com estrutura própria de P&D e
+              beneficiamento mineral.
+            </p>
+            <div class="hero-ctas">
+              <a href="#orcamento" class="btn btn-primary"
+                >Solicitar orçamento de ensaio</a
+              >
+              <a href="#servicos" class="btn btn-ghost"
+                >Ver serviços laboratoriais</a
+              >
+            </div>
+            <div class="hero-stats">
+              <div class="hstat">
+                <b>800 m²</b><span>DE ESTRUTURA LABORATORIAL</span>
+              </div>
+              <div class="hstat">
+                <b>5+ anos</b><span>DE OPERAÇÃO CONTÍNUA</span>
+              </div>
+              <div class="hstat">
+                <b>3</b><span>LABORATÓRIOS ESPECIALIZADOS</span>
+              </div>
+              <div class="hstat">
+                <b>1º</b><span>POLO EMBRAPII EM MINERAÇÃO NO BRASIL</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="core-wrap">
+            <div>
+              <div class="core-label-top mono">TESTEMUNHO · AMOSTRA CT-001</div>
+              <svg
+                width="150"
+                height="420"
+                viewBox="0 0 150 420"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <linearGradient id="z1" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#3a3f43" />
+                    <stop offset="100%" stop-color="#4a5157" />
+                  </linearGradient>
+                  <linearGradient id="z2" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#0A3830" />
+                    <stop offset="100%" stop-color="#0E5448" />
+                  </linearGradient>
+                  <linearGradient id="z3" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#8A3E10" />
+                    <stop offset="100%" stop-color="#ED6116" />
+                  </linearGradient>
+                  <linearGradient id="z4" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#3a3f43" />
+                    <stop offset="100%" stop-color="#565d63" />
+                  </linearGradient>
+                </defs>
+                <rect
+                  x="35"
+                  y="0"
+                  width="80"
+                  height="420"
+                  rx="6"
+                  fill="#101315"
+                  stroke="#33393E"
+                />
+                <rect x="40" y="6" width="70" height="96" fill="url(#z1)" />
+                <rect x="40" y="102" width="70" height="118" fill="url(#z2)" />
+                <rect x="40" y="220" width="70" height="72" fill="url(#z3)" />
+                <rect x="40" y="292" width="70" height="122" fill="url(#z4)" />
+                <g stroke="#0d1011" stroke-width="1" opacity=".5">
+                  <line x1="40" y1="102" x2="110" y2="102" />
+                  <line x1="40" y1="220" x2="110" y2="220" />
+                  <line x1="40" y1="292" x2="110" y2="292" />
+                </g>
+                <g font-family="Inter" font-size="9" fill="#8B949B">
+                  <line x1="0" y1="6" x2="34" y2="6" stroke="#33393E" />
+                  <text x="0" y="4">0,0 m</text>
+                  <line x1="0" y1="102" x2="34" y2="102" stroke="#33393E" />
+                  <text x="0" y="100">2,4 m</text>
+                  <line x1="0" y1="220" x2="34" y2="220" stroke="#33393E" />
+                  <text x="0" y="218">6,1 m</text>
+                  <line x1="0" y1="292" x2="34" y2="292" stroke="#33393E" />
+                  <text x="0" y="290">8,4 m</text>
+                  <line x1="0" y1="414" x2="34" y2="414" stroke="#33393E" />
+                  <text x="0" y="412">12,0 m</text>
+                </g>
+                <g
+                  font-family="Inter"
+                  font-size="8.5"
+                  fill="#0B1113"
+                  opacity=".85"
+                >
+                  <text x="46" y="58" transform="rotate(90 46 58)">
+                    GNAISSE
+                  </text>
+                  <text
+                    x="46"
+                    y="165"
+                    transform="rotate(90 46 165)"
+                    fill="#0B1113"
+                  >
+                    VEIO SCHEELITA
+                  </text>
+                  <text x="46" y="260" transform="rotate(90 46 260)">
+                    PEGMATITO
+                  </text>
+                  <text x="46" y="360" transform="rotate(90 46 360)">
+                    MICAXISTO
+                  </text>
+                </g>
+              </svg>
+              <div class="core-label-bottom mono">
+                LOG DE SONDAGEM · SERIDÓ/RN
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CREDENTIALS -->
+      <div class="cred-bar">
+        <div class="wrap cred-list">
+          <div class="cred-item">
+            <b>Unidade EMBRAPII</b>&nbsp;credenciada em Tecnologias em Mineração
+          </div>
+          <div class="cred-item">
+            <b>Associado IBRAM</b>&nbsp;Instituto Brasileiro de Mineração
+          </div>
+          <div class="cred-item">
+            <b>Parceria</b>&nbsp;UFRN · UFERSA · UERN · Funcern
+          </div>
+          <div class="cred-item">
+            <b>Localização</b>&nbsp;Currais Novos, no coração do Seridó/RN
+          </div>
+        </div>
+      </div>
+
+      <!-- SERVICES -->
+      <section id="servicos">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="section-tag">O que oferecemos</span>
+            <h2>Ensaios e serviços tecnológicos para toda a cadeia mineral</h2>
+            <p>
+              Da amostra bruta ao fluxograma de beneficiamento validado,
+              cobrimos as etapas que sua equipe de geologia, engenharia de minas
+              ou metalurgia precisa terceirizar com confiança técnica.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <div class="service-card">
+              <span class="service-num mono">01</span>
+              <h3>Análise granulométrica</h3>
+              <p>
+                Determinação do tamanho e distribuição de partículas por
+                peneiramento a seco ou via úmida, com telas ASTM, de frações
+                grossas a finas.
+              </p>
+            </div>
+            <div class="service-card">
+              <span class="service-num mono">02</span>
+              <h3>Work Index (WI)</h3>
+              <p>
+                Cálculo do índice de trabalho em britador de mandíbulas e moinho
+                de bolas padronizados — parâmetro essencial para dimensionar
+                moagem industrial.
+              </p>
+            </div>
+            <div class="service-card">
+              <span class="service-num mono">03</span>
+              <h3>Separação magnética e eletrostática</h3>
+              <p>
+                Separador magnético de tambor de alta intensidade e separador
+                eletrostático de alta tensão para concentração seletiva de
+                minerais.
+              </p>
+            </div>
+            <div class="service-card">
+              <span class="service-num mono">04</span>
+              <h3>Flotação e concentração gravítica</h3>
+              <p>
+                Ensaios de flotação reversa e concentração em espirais de
+                Humphreys para avaliação de rotas de beneficiamento.
+              </p>
+            </div>
+            <div class="service-card">
+              <span class="service-num mono">05</span>
+              <h3>Caracterização mineralógica</h3>
+              <p>
+                Análises físico-químicas, estruturais, microestruturais e
+                tecnológicas de amostras minerais, conduzidas no LABAM.
+              </p>
+            </div>
+            <div class="service-card">
+              <span class="service-num mono">06</span>
+              <h3>Cominuição e planta piloto</h3>
+              <p>
+                Britagem e moagem em escala de bancada no LABCOM, com simulação
+                operacional em planta piloto para validar a rota antes do
+                investimento industrial.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESS -->
+      <section
+        id="processo"
+        style="
+          background: var(--surface);
+          border-top: 1px solid var(--line);
+          border-bottom: 1px solid var(--line);
+        "
+      >
+        <div class="wrap">
+          <div class="section-head">
+            <span class="section-tag">Como funciona</span>
+            <h2>Do envio da amostra ao laudo técnico</h2>
+            <p>
+              Um fluxo direto, pensado para quem precisa de resposta técnica
+              confiável em prazo compatível com decisão de negócio.
+            </p>
+          </div>
+          <div class="process">
+            <div class="p-step">
+              <div class="p-dot">1</div>
+              <h3>Envio da amostra</h3>
+              <p>
+                Você descreve o objetivo do ensaio e envia a amostra ou solicita
+                coleta orientada pela nossa equipe.
+              </p>
+            </div>
+            <div class="p-step">
+              <div class="p-dot">2</div>
+              <h3>Preparação</h3>
+              <p>
+                Britagem, quarteamento e preparação da amostra nas quantidades e
+                granulometrias exigidas pelo ensaio.
+              </p>
+            </div>
+            <div class="p-step">
+              <div class="p-dot">3</div>
+              <h3>Ensaios técnicos</h3>
+              <p>
+                Execução dos testes físicos, metalúrgicos ou mineralógicos
+                solicitados, em laboratório ou planta piloto.
+              </p>
+            </div>
+            <div class="p-step">
+              <div class="p-dot">4</div>
+              <h3>Laudo técnico</h3>
+              <p>
+                Entrega de relatório com resultados, metodologia e leitura
+                técnica para orientar sua próxima decisão.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LABS -->
+      <section id="laboratorios">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="section-tag">Infraestrutura</span>
+            <h2>Três laboratórios, um galpão de processamento</h2>
+            <p>
+              Estrutura própria dividida por especialidade, dentro de uma
+              unidade de referência do IFRN em Currais Novos.
+            </p>
+          </div>
+          <div class="labs-grid">
+            <div class="lab-card">
+              <span class="lab-tag mono">LABCOM</span>
+              <h3>Laboratório de Cominuição Mineral</h3>
+              <p>
+                Etapa inicial de beneficiamento: britagem e moagem de minério
+                para as demais rotas de ensaio.
+              </p>
+            </div>
+            <div class="lab-card">
+              <span class="lab-tag mono">LABAM</span>
+              <h3>Laboratório de Análises Minerais</h3>
+              <p>
+                Caracterização mineral e de materiais: análises físico-químicas,
+                granulométricas, estruturais e microestruturais.
+              </p>
+            </div>
+            <div class="lab-card">
+              <span class="lab-tag mono">GALPÃO</span>
+              <h3>Processamento mineral e planta piloto</h3>
+              <p>
+                Simulação operacional em escala piloto para validar fluxogramas
+                antes da implantação industrial.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PARTNERS -->
+      <section style="padding-top: 0">
+        <div class="wrap">
+          <span class="section-tag">Rede institucional</span>
+          <div class="partners" style="margin-top: 18px">
+            <span class="partner">IFRN</span>
+            <span class="partner">EMBRAPII</span>
+            <span class="partner">IBRAM</span>
+            <span class="partner">UFRN</span>
+            <span class="partner">UFERSA</span>
+            <span class="partner">UERN</span>
+            <span class="partner">FUNCERN</span>
+            <span class="partner">FAPERN</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA / CONTACT -->
+      <section class="cta-section" id="orcamento">
+        <div class="wrap cta-grid">
+          <div>
+            <span class="section-tag">Solicitar serviço</span>
+            <h2>Peça a análise que sua operação precisa</h2>
+            <p>
+              Conte o objetivo do ensaio, o tipo de amostra e o prazo desejado.
+              Nossa equipe técnica retorna com escopo e orçamento.
+            </p>
+            <ul class="contact-list">
+              <li>
+                <div>
+                  <b>E-MAIL</b>
+                  ctmineral@funcern.br
+                </div>
+              </li>
+              <li>
+                <div>
+                  <b>TELEFONE</b>
+                  +55 (84) 4005-0892
+                </div>
+              </li>
+              <li>
+                <div>
+                  <b>ENDEREÇO</b>
+                  Rua Manoel Lopes Filho, 733 — Valfredo Galvão, Currais Novos -
+                  RN, 59380-000
+                </div>
+              </li>
+              <li>
+                <div>
+                  <b>REDES</b>
+                  instagram.com/ctmineral.ifrn
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <form
+            class="orcamento"
+            action="mailto:ctmineral@funcern.br"
+            method="post"
+            enctype="text/plain"
+          >
+            <div class="frow">
+              <div>
+                <label for="nome">Nome</label>
+                <input
+                  id="nome"
+                  name="Nome"
+                  type="text"
+                  placeholder="Seu nome"
+                  required
+                />
+              </div>
+              <div>
+                <label for="empresa">Empresa / Instituição</label>
+                <input
+                  id="empresa"
+                  name="Empresa"
+                  type="text"
+                  placeholder="Opcional"
+                />
+              </div>
+            </div>
+            <div class="frow">
+              <div>
+                <label for="email">E-mail</label>
+                <input
+                  id="email"
+                  name="Email"
+                  type="email"
+                  placeholder="voce@empresa.com"
+                  required
+                />
+              </div>
+              <div>
+                <label for="telefone">Telefone</label>
+                <input
+                  id="telefone"
+                  name="Telefone"
+                  type="tel"
+                  placeholder="(84) 90000-0000"
+                />
+              </div>
+            </div>
+            <div class="full">
+              <label for="servico">Serviço de interesse</label>
+              <select id="servico" name="Servico">
+                <option>Análise granulométrica</option>
+                <option>Work Index (WI)</option>
+                <option>Separação magnética/eletrostática</option>
+                <option>Flotação / concentração gravítica</option>
+                <option>Caracterização mineralógica (LABAM)</option>
+                <option>Cominuição / planta piloto (LABCOM)</option>
+                <option>Ainda não sei — quero orientação</option>
+              </select>
+            </div>
+            <div class="full">
+              <label for="msg">Descreva a amostra e o objetivo do ensaio</label>
+              <textarea
+                id="msg"
+                name="Mensagem"
+                placeholder="Tipo de minério, quantidade disponível, prazo desejado..."
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Enviar solicitação
+            </button>
+            <p class="form-note">
+              Você será direcionado ao seu aplicativo de e-mail com os dados
+              preenchidos.
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap footer-row">
+        <div class="brand">
+          <span class="dot"></span>
+          <div>
+            CT MINERAL
+            <small
+              >Centro de Referência em Tecnologia Mineral — IFRN, Currais
+              Novos/RN</small
+            >
+          </div>
+        </div>
+        <div class="foot-links">
+          <a href="#servicos">Serviços</a>
+          <a href="#laboratorios">Laboratórios</a>
+          <a href="#orcamento">Solicitar serviço</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
