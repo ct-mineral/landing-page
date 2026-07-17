@@ -6,6 +6,7 @@ const CredentialsView = defineAsyncComponent(() => import('./SectionViews/Creden
 const ServicesView = defineAsyncComponent(() => import('./SectionViews/ServicesView.vue'))
 const ProcessView = defineAsyncComponent(() => import('./SectionViews/ProcessView.vue'))
 const LaboratoriesView = defineAsyncComponent(() => import('./SectionViews/LaboratoriesView.vue'))
+const LocationView = defineAsyncComponent(() => import('./SectionViews/LocationView.vue'))
 const CompaniesView = defineAsyncComponent(() => import('./SectionViews/CompaniesView.vue'))
 const ContactCtaView = defineAsyncComponent(() => import('./SectionViews/ContactCtaView.vue'))
 
@@ -13,6 +14,7 @@ const showCredentials = ref(false)
 const showServices = ref(false)
 const showProcess = ref(false)
 const showLaboratories = ref(false)
+const showLocation = ref(false)
 const showCompanies = ref(false)
 const showContactCta = ref(false)
 
@@ -30,6 +32,10 @@ function onIntersectProcess(isIntersecting: boolean) {
 
 function onIntersectLaboratories(isIntersecting: boolean) {
   if (isIntersecting) showLaboratories.value = true
+}
+
+function onIntersectLocation(isIntersecting: boolean) {
+  if (isIntersecting) showLocation.value = true
 }
 
 function onIntersectCompanies(isIntersecting: boolean) {
@@ -61,6 +67,10 @@ function onIntersectContactCta(isIntersecting: boolean) {
 
     <section v-intersect="onIntersectLaboratories">
       <LaboratoriesView v-if="showLaboratories" />
+    </section>
+
+    <section v-intersect="onIntersectLocation">
+      <LocationView v-if="showLocation" />
     </section>
 
     <section v-intersect="onIntersectCompanies">
