@@ -116,6 +116,7 @@
 
   const currentPage = ref(1)
   const itemsPerPage = 5
+  const listRef = ref<HTMLElement | null>(null)
 
   const totalPages = computed(() => {
     return Math.ceil(researchers.length / itemsPerPage)
@@ -126,29 +127,37 @@
     const endIndex = startIndex + itemsPerPage
     return researchers.slice(startIndex, endIndex)
   })
+
+  const onPageChange = () => {
+    listRef.value?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
 </script>
 
 <template>
   <v-window-item value="pesquisadores">
-    <v-row>
-      <v-col v-for="researcher in paginatedResearchers" :key="researcher.id" cols="12">
-        <CardMembersComponent
-          :nameMember="researcher.name"
-          :positionMember="researcher.position"
-          :descriptionMember="researcher.description"
-          :imageMember="researcher.image"
-          :linkedinMember="researcher.linkedin"
-          :lattesMember="researcher.lattes"
-        />
-      </v-col>
-      <v-col cols="12" class="d-flex justify-center mt-4">
-        <v-pagination
-          v-model="currentPage"
-          :length="totalPages"
-          color="teal-darken-3"
-          rounded="circle"
-        />
-      </v-col>
-    </v-row>
+    <div ref="listRef">
+      <v-row>
+        <v-col v-for="researcher in paginatedResearchers" :key="researcher.id" cols="12">
+          <CardMembersComponent
+            :nameMember="researcher.name"
+            :positionMember="researcher.position"
+            :descriptionMember="researcher.description"
+            :imageMember="researcher.image"
+            :linkedinMember="researcher.linkedin"
+            :lattesMember="researcher.lattes"
+          />
+        </v-col>
+        <v-col v-if="totalPages > 1" cols="12" class="d-flex justify-center mt-4">
+          <v-pagination
+            v-model="currentPage"
+            :length="totalPages"
+            :total-visible="totalPages"
+            color="teal-darken-3"
+            rounded="circle"
+            @update:model-value="onPageChange"
+          />
+        </v-col>
+      </v-row>
+    </div>
   </v-window-item>
 </template>
