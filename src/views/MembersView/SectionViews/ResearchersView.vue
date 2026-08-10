@@ -103,10 +103,20 @@
       linkedin: '',
       lattes: 'http://lattes.cnpq.br/6448417938573779'
     },
+    {
+      id: 11,
+      name: 'Djalma Valério Ribeiro Neto',
+      position: 'Pesquisador Acadêmico',
+      description: 'Trabalha com valorização de resíduos de mineração para a indústria da construção civil, com foco na sustentabilidade das indústrias mineral e de construção. Doutorando em Engenharia Civil e Ambiental (PPGECAM/UFPB), Mestre em Ciências Ambientais e graduado em Gestão Ambiental pelo IFRN, além de Técnico em Mineração pelo IFRN. É pesquisador do CTM/IFRN - Unidade Embrapii e membro dos Grupos de Pesquisa de Processamento Mineral (IFRN) e Estruturas e Materiais (UFCG). Atua com materiais de construção, reutilização de resíduos de mineração e RCD, economia circular na mineração e caracterização de minerais e materiais, além de desenvolver projetos de apoio a pequenos mineradores do Rio Grande do Norte.',
+      image: '/images/members/researchers/djalma.avif',
+      linkedin: '',
+      lattes: 'http://lattes.cnpq.br/4029298682824073'
+    },
   ]
 
   const currentPage = ref(1)
   const itemsPerPage = 5
+  const listRef = ref<HTMLElement | null>(null)
 
   const totalPages = computed(() => {
     return Math.ceil(researchers.length / itemsPerPage)
@@ -117,29 +127,37 @@
     const endIndex = startIndex + itemsPerPage
     return researchers.slice(startIndex, endIndex)
   })
+
+  const onPageChange = () => {
+    listRef.value?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
 </script>
 
 <template>
   <v-window-item value="pesquisadores">
-    <v-row>
-      <v-col v-for="researcher in paginatedResearchers" :key="researcher.id" cols="12">
-        <CardMembersComponent
-          :nameMember="researcher.name"
-          :positionMember="researcher.position"
-          :descriptionMember="researcher.description"
-          :imageMember="researcher.image"
-          :linkedinMember="researcher.linkedin"
-          :lattesMember="researcher.lattes"
-        />
-      </v-col>
-      <v-col cols="12" class="d-flex justify-center mt-4">
-        <v-pagination
-          v-model="currentPage"
-          :length="totalPages"
-          color="teal-darken-3"
-          rounded="circle"
-        />
-      </v-col>
-    </v-row>
+    <div ref="listRef">
+      <v-row>
+        <v-col v-for="researcher in paginatedResearchers" :key="researcher.id" cols="12">
+          <CardMembersComponent
+            :nameMember="researcher.name"
+            :positionMember="researcher.position"
+            :descriptionMember="researcher.description"
+            :imageMember="researcher.image"
+            :linkedinMember="researcher.linkedin"
+            :lattesMember="researcher.lattes"
+          />
+        </v-col>
+        <v-col v-if="totalPages > 1" cols="12" class="d-flex justify-center mt-4">
+          <v-pagination
+            v-model="currentPage"
+            :length="totalPages"
+            :total-visible="totalPages"
+            color="teal-darken-3"
+            rounded="circle"
+            @update:model-value="onPageChange"
+          />
+        </v-col>
+      </v-row>
+    </div>
   </v-window-item>
 </template>

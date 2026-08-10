@@ -46,6 +46,7 @@
         <v-pagination
           v-model="currentPage"
           :length="totalPages"
+          :total-visible="totalPages"
           color="teal-darken-3"
           rounded="circle"
         />
