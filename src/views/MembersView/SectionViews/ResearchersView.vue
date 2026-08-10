@@ -103,6 +103,15 @@
       linkedin: '',
       lattes: 'http://lattes.cnpq.br/6448417938573779'
     },
+    {
+      id: 11,
+      name: 'Djalma Valério Ribeiro Neto',
+      position: 'Pesquisador Acadêmico',
+      description: 'Trabalha com valorização de resíduos de mineração para a indústria da construção civil, com foco na sustentabilidade das indústrias mineral e de construção. Doutorando em Engenharia Civil e Ambiental (PPGECAM/UFPB), Mestre em Ciências Ambientais e graduado em Gestão Ambiental pelo IFRN, além de Técnico em Mineração pelo IFRN. É pesquisador do CTM/IFRN - Unidade Embrapii e membro dos Grupos de Pesquisa de Processamento Mineral (IFRN) e Estruturas e Materiais (UFCG). Atua com materiais de construção, reutilização de resíduos de mineração e RCD, economia circular na mineração e caracterização de minerais e materiais, além de desenvolver projetos de apoio a pequenos mineradores do Rio Grande do Norte.',
+      image: '/images/members/researchers/djalma.avif',
+      linkedin: '',
+      lattes: 'http://lattes.cnpq.br/4029298682824073'
+    },
   ]
 
   const currentPage = ref(1)
