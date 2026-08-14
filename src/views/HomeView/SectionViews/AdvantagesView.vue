@@ -62,8 +62,23 @@ const advantages = [
 </template>
 
 <style scoped>
-.advantages-section {
-  background: var(--surface);
+.section.advantages-section {
+  background:
+    linear-gradient(100deg, rgba(255, 255, 255, 0.04), transparent 45%),
+    var(--green);
+  color: #ffffff;
+}
+
+.advantages-section .section-tag {
+  color: #ffb17f;
+}
+
+.advantages-section .section-heading h2 {
+  color: #ffffff;
+}
+
+.advantages-section .section-heading p {
+  color: rgba(255, 255, 255, 0.76);
 }
 
 .advantages-grid {
@@ -76,10 +91,10 @@ const advantages = [
   grid-column: span 2;
   min-height: 215px;
   padding: 28px;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 6px;
-  background: #ffffff;
-  box-shadow: 0 12px 35px rgba(25, 64, 57, 0.06);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 35px rgba(8, 41, 35, 0.18);
   transition:
     border-color 0.2s ease,
     box-shadow 0.2s ease,
@@ -95,8 +110,8 @@ const advantages = [
 }
 
 .advantage-card:hover {
-  border-color: rgba(14, 84, 74, 0.3);
-  box-shadow: 0 16px 40px rgba(25, 64, 57, 0.1);
+  border-color: rgba(255, 255, 255, 0.36);
+  box-shadow: 0 16px 40px rgba(8, 41, 35, 0.24);
   transform: translateY(-2px);
 }
 
@@ -105,21 +120,22 @@ const advantages = [
   width: 44px;
   height: 44px;
   margin-bottom: 22px;
-  border: 2px solid var(--green);
+  border: 2px solid #ffb17f;
   border-radius: 6px;
   place-items: center;
-  color: var(--green);
+  color: #ffb17f;
 }
 
 .advantage-card h3 {
   margin: 0 0 11px;
+  color: #ffffff;
   font-size: 1.08rem;
   line-height: 1.35;
 }
 
 .advantage-card p {
   margin: 0;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.76);
   font-size: 0.88rem;
   line-height: 1.65;
 }
