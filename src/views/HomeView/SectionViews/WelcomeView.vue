@@ -23,9 +23,8 @@
         <div class="hero-actions">
           <RouterLink class="button button-primary" to="/contato">
             Solicitar uma visita
-            <span aria-hidden="true">→</span>
           </RouterLink>
-          <a class="button button-secondary" href="/sobre">Conhecer o CT Mineral</a>
+          <RouterLink class="button button-secondary" to="/sobre">Conhecer o CT Mineral</RouterLink>
         </div>
 
         <div class="hero-stats" aria-label="Números do CT Mineral">
