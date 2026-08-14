@@ -2,41 +2,34 @@
 const services = [
   {
     number: '01',
-    title: 'Cominuição de amostras',
-    description:
-      'Britagem e moagem em escala de bancada para preparar o minério para as próximas etapas de análise.',
-    link: '/servicos/cominuicao-de-amostras',
-  },
-  {
-    number: '02',
     title: 'Preparação de amostras',
     description:
       'Recebimento, secagem, homogeneização e quarteamento com rastreabilidade e controle de qualidade.',
     link: '/servicos/preparacao-de-amostras',
   },
   {
-    number: '03',
+    number: '02',
     title: 'Análise mineral',
     description:
       'Caracterização físico-química, granulométrica, estrutural e microestrutural de materiais minerais.',
     link: '/servicos/analise-mineral',
   },
   {
-    number: '04',
+    number: '03',
     title: 'Classificação granulométrica',
     description:
       'Determinação da distribuição do tamanho de partículas por peneiramento a seco ou via úmida.',
     link: '/servicos/classificacao-e-concentracao-mineral',
   },
   {
-    number: '05',
+    number: '04',
     title: 'Concentração mineral',
     description:
       'Ensaios de separação magnética, eletrostática, gravítica e flotação para rotas de beneficiamento.',
     link: '/servicos/classificacao-e-concentracao-mineral',
   },
   {
-    number: '06',
+    number: '05',
     title: 'Testes físicos e planta piloto',
     description:
       'Validação de processos em escala laboratorial e piloto antes do investimento industrial.',
@@ -81,7 +74,6 @@ const services = [
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 7px;
-  background: var(--line);
   gap: 1px;
 }
 

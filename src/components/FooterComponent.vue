@@ -12,7 +12,6 @@ import {
 const currentYear = new Date().getFullYear()
 
 const services = [
-  { name: 'Cominuição de Amostras', link: '/servicos/cominuicao-de-amostras' },
   { name: 'Preparação de Amostras', link: '/servicos/preparacao-de-amostras' },
   { name: 'Análise Mineral', link: '/servicos/analise-mineral' },
   {
