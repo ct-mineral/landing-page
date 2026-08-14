@@ -38,11 +38,6 @@ const router = createRouter({
       component: () => import('@/views/MembersView/MembersView.vue'),
     },
     {
-      path: '/servicos/cominuicao-de-amostras',
-      name: 'sample-administration',
-      component: () => import('@/views/ServicesView/SampleAdministrationView.vue'),
-    },
-    {
       path: '/servicos/analise-mineral',
       name: 'mineral-analyses',
       component: () => import('@/views/ServicesView/AnalysesView.vue'),

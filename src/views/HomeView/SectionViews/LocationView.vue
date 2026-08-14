@@ -98,6 +98,7 @@ onBeforeUnmount(() => {
   border-radius: 7px;
   background: #ffffff;
   box-shadow: 0 12px 35px rgba(25, 64, 57, 0.06);
+  z-index: 0;
 }
 
 .map-placeholder {

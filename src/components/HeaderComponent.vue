@@ -6,10 +6,9 @@ const servicosMenu = ref(false)
 const mobileMenu = ref(false)
 
 const servicos = [
-  { id: 1, name: 'Cominuição de Amostras', link: '/servicos/cominuicao-de-amostras' },
-  { id: 2, name: 'Preparação de Amostras', link: '/servicos/preparacao-de-amostras' },
-  { id: 3, name: 'Classificação e Concentração Mineral', link: '/servicos/classificacao-e-concentracao-mineral' },
-  { id: 4, name: 'Análise Mineral', link: '/servicos/analise-mineral' },
+  { id: 1, name: 'Preparação de Amostras', link: '/servicos/preparacao-de-amostras' },
+  { id: 2, name: 'Classificação e Concentração Mineral', link: '/servicos/classificacao-e-concentracao-mineral' },
+  { id: 3, name: 'Análise Mineral', link: '/servicos/analise-mineral' },
 ]
 
 function closeMenus() {

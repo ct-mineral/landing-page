@@ -23,18 +23,17 @@
         <div class="hero-actions">
           <RouterLink class="button button-primary" to="/contato">
             Solicitar uma visita
-            <span aria-hidden="true">→</span>
           </RouterLink>
-          <a class="button button-secondary" href="/sobre">Conhecer o CT Mineral</a>
+          <RouterLink class="button button-secondary" to="/sobre">Conhecer o CT Mineral</RouterLink>
         </div>
 
         <div class="hero-stats" aria-label="Números do CT Mineral">
           <div>
-            <strong>800 m²</strong>
+            <strong>1.600 m²</strong>
             <span>de estrutura laboratorial</span>
           </div>
           <div>
-            <strong>5+ anos</strong>
+            <strong>7 anos</strong>
             <span>de operação contínua</span>
           </div>
           <div>

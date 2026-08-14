@@ -11,10 +11,6 @@ const route = useRoute()
 
 const categories = [
   {
-    label: 'Cominuição',
-    path: '/servicos/cominuicao-de-amostras',
-  },
-  {
     label: 'Preparação',
     path: '/servicos/preparacao-de-amostras',
   },
