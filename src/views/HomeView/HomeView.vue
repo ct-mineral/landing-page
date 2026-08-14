@@ -3,6 +3,7 @@ import { ref, defineAsyncComponent } from 'vue'
 import WelcomeView from './SectionViews/WelcomeView.vue'
 
 const CredentialsView = defineAsyncComponent(() => import('./SectionViews/CredentialsView.vue'))
+const AdvantagesView = defineAsyncComponent(() => import('./SectionViews/AdvantagesView.vue'))
 const ServicesView = defineAsyncComponent(() => import('./SectionViews/ServicesView.vue'))
 const ProcessView = defineAsyncComponent(() => import('./SectionViews/ProcessView.vue'))
 const LaboratoriesView = defineAsyncComponent(() => import('./SectionViews/LaboratoriesView.vue'))
@@ -11,6 +12,7 @@ const CompaniesView = defineAsyncComponent(() => import('./SectionViews/Companie
 const ContactCtaView = defineAsyncComponent(() => import('./SectionViews/ContactCtaView.vue'))
 
 const showCredentials = ref(false)
+const showAdvantages = ref(false)
 const showServices = ref(false)
 const showProcess = ref(false)
 const showLaboratories = ref(false)
@@ -20,6 +22,10 @@ const showContactCta = ref(false)
 
 function onIntersectCredentials(isIntersecting: boolean) {
   if (isIntersecting) showCredentials.value = true
+}
+
+function onIntersectAdvantages(isIntersecting: boolean) {
+  if (isIntersecting) showAdvantages.value = true
 }
 
 function onIntersectServices(isIntersecting: boolean) {
@@ -55,6 +61,10 @@ function onIntersectContactCta(isIntersecting: boolean) {
 
     <section v-intersect="onIntersectCredentials">
       <CredentialsView v-if="showCredentials" />
+    </section>
+
+    <section v-intersect="onIntersectAdvantages">
+      <AdvantagesView v-if="showAdvantages" />
     </section>
 
     <section v-intersect="onIntersectServices">
