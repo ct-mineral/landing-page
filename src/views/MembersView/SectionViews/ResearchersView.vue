@@ -112,6 +112,15 @@
       linkedin: '',
       lattes: 'http://lattes.cnpq.br/4029298682824073'
     },
+    {
+      id: 12,
+      name: 'Flanelson Maciel Monteiro',
+      position: 'Pesquisador Acadêmico',
+      description: 'Dedica-se ao avanço tecnológico no processamento de materiais e à aplicação de soluções de engenharia para a mineração e o meio ambiente. Doutor e Mestre em Engenharia Mecânica (UFRN), é Graduado em Fabricação Mecânica (IFRN) e Bacharel em Direito, contando com especializações técnicas em Engenharia de Minas, Barragens de Rejeitos, Gerenciamento de Manutenção, Engenharia Ambiental, Mineração e Meio Ambiente, Petróleo e Gás e Direito Minerário. Professor do IFRN (Campus Natal-Central), lidera o Grupo de Pesquisa de Processamento Mineral (IFRN/CNPq) e integra o Laboratório de Tecnologia Mineral e Materiais (LT2M) e o CT Mineral do IFRN. Desenvolve projetos voltados à caracterização de materiais particulados não-metálicos, eficiência de processos cerâmicos, sustentabilidade minerária e relações do Direito com o planejamento urbano e a gestão pública.',
+      image: '/images/members/researchers/flanelson.avif',
+      linkedin: '',
+      lattes: 'https://lattes.cnpq.br/2694008433207932'
+    }
   ]
 
   const currentPage = ref(1)
