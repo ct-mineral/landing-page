@@ -2,9 +2,7 @@
 import CardServicesComponent from '@/components/CardServicesComponent.vue'
 import ServicesPageLayoutComponent from '@/components/ServicesPageLayoutComponent.vue'
 
-const services = [
-  { id: 1, imagem: '#', nome: 'Perda ao Fogo', descricao: 'Os ensaios de perda ao fogo apresentam, de modo quantitativo e qualitativo, a quantidade de compostos voláteis (água molecular, dióxido de carbono, etc) presentes na amostra de rocha.' },
-]
+const services = []
 </script>
 
 <template>
