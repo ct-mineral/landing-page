@@ -59,17 +59,15 @@
             Fundação Gorceix, vinculada à Universidade Federal de Ouro Preto (UFOP), em uma
             estrutura de pesquisa aplicada, inovação, serviços tecnológicos e formação. José Yvan
             faleceu em 10 de junho de 2019. Em 2 de setembro daquele ano, o CT Mineral foi
-            inaugurado e o prédio recebeu seu nome. Ainda em 2019, foi homenageado no Encontro
-            Nacional de Tratamento de Minérios e Metalurgia Extrativa (ENTMME) e nomeado paraninfo
-            in memoriam da turma do Curso Técnico de Mineração do IFRN.
+            inaugurado e o prédio recebeu seu nome em homenagem.
           </p>
         </div>
       </div>
 
       <div class="timeline">
         <article>
-          <span>2008</span>
-          <div>
+          <div class="timeline-body">
+            <span>2008</span>
             <h3>Idealização</h3>
             <p>
               José Yvan, então Pró-Reitor de Pesquisa e Inovação do IFRN, propõe um centro
@@ -78,8 +76,15 @@
           </div>
         </article>
         <article>
-          <span>2012</span>
-          <div>
+          <figure class="timeline-media">
+            <img
+              src="/images/structure/steps/inicio-construcao-ctm.avif"
+              alt="Início da construção do CT Mineral"
+              loading="lazy"
+            />
+          </figure>
+          <div class="timeline-body">
+            <span>2012</span>
             <h3>Início da construção</h3>
             <p>
               O IFRN, com o Governo do Estado e recursos da Finep, inicia a obra do CT Mineral
@@ -88,8 +93,8 @@
           </div>
         </article>
         <article>
-          <span>2019</span>
-          <div>
+          <div class="timeline-body">
+            <span>2019</span>
             <h3>Inauguração e patrono</h3>
             <p>
               Em 2 de setembro, o Centro é inaugurado. O prédio recebe o nome de José Yvan Pereira
@@ -98,8 +103,8 @@
           </div>
         </article>
         <article class="timeline-current">
-          <span>Hoje</span>
-          <div>
+          <div class="timeline-body">
+            <span>Hoje</span>
             <h3>Legado em movimento</h3>
             <p>
               O CT Mineral concretiza o legado de José Yvan: inovação tecnológica, integração entre
@@ -183,12 +188,32 @@
 }
 
 .timeline article {
+  display: flex;
+  flex-direction: column;
   min-height: 245px;
-  padding: 26px 24px;
+  padding: 0;
   background: #ffffff;
 }
 
-.timeline article > span {
+.timeline-media {
+  overflow: hidden;
+  height: 140px;
+  margin: 0;
+  background: var(--green-soft);
+}
+
+.timeline-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.timeline-body {
+  flex: 1;
+  padding: 26px 24px;
+}
+
+.timeline-body > span {
   display: block;
   margin-bottom: 30px;
   color: var(--orange);
@@ -236,6 +261,10 @@
 
   .timeline article {
     min-height: auto;
+  }
+
+  .timeline-media {
+    height: 120px;
   }
 }
 </style>
