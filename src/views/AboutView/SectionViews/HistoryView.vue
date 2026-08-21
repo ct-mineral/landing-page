@@ -3,10 +3,10 @@
     <div class="page-container">
       <div class="section-heading">
         <span class="section-tag">Nossa história</span>
-        <h2>Uma visão que se tornou referência em tecnologia mineral</h2>
+        <h2>O engenheiro-educador que deu origem ao CT Mineral</h2>
         <p>
-          Da idealização em 2008 à inauguração em 2019, uma trajetória construída por pessoas,
-          instituições e compromisso com o desenvolvimento regional.
+          Nascido em Natal em 1962, José Yvan Pereira Leite dedicou 26 anos ao IFRN e tornou-se
+          patrono do Centro de Tecnologia Mineral em 2019.
         </p>
       </div>
 
@@ -15,42 +15,54 @@
           <div class="founder-image">
             <img
               src="/images/members/directors/jose-yvan.avif"
-              alt="José Yvan Pereira Leite, professor e pesquisador"
+              alt="José Yvan Pereira Leite, engenheiro de minas, professor e pesquisador do IFRN"
               loading="lazy"
             />
           </div>
           <figcaption>
-            <span>Idealizador do CT Mineral</span>
+            <span>Idealizador e patrono do CT Mineral</span>
             <strong>José Yvan Pereira Leite</strong>
-            <small>Professor, engenheiro de minas e pesquisador</small>
+            <small>Engenheiro de minas, professor e pesquisador do IFRN (1962–2019)</small>
           </figcaption>
         </figure>
 
         <div class="prose history-copy">
           <p>
-          A idealização do Centro de Tecnologia Mineral teve início em 2008, a partir da visão
-          estratégica do engenheiro de minas, professor e pesquisador José Yvan Pereira Leite, então
-          Pró-Reitor de Pesquisa e Inovação do IFRN.
-        </p>
+            José Yvan Pereira Leite nasceu em Natal/RN, em 1962, e formou-se em Engenharia de Minas
+            pela Universidade Federal da Paraíba (UFPB) em 1987. Entre 1988 e 1990, iniciou a
+            carreira na Escola de Mineração Gilberto Mestrinho, da Empresa Paranapanema, em
+            Manaus/AM, como formador de técnicos em mineração e chefe do Laboratório de Tratamento
+            de Minérios.
+          </p>
           <p>
-          José Yvan identificou a necessidade de criação de um centro tecnológico especializado em
-          mineração no Rio Grande do Norte, capaz de atender às demandas da indústria mineral
-          regional, apoiar micro, pequenas e médias empresas e impulsionar o desenvolvimento dos
-          Arranjos Produtivos Locais (APLs) de base mineral do estado.
-        </p>
+            Em 1990, retornou ao Rio Grande do Norte para cursar o mestrado em Engenharia Química
+            na Universidade Federal do Rio Grande do Norte (UFRN), concluído em 1992. No ano
+            seguinte, ingressou no Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande
+            do Norte (IFRN) como professor de tecnologia mineral do Curso Técnico de Mineração.
+            Durante 26 anos, atuou em caracterização tecnológica, concentração e separação mineral e
+            processamento mineral com ênfase ambiental.
+          </p>
           <p>
-          Sua proposta buscava criar uma estrutura voltada à pesquisa aplicada, inovação
-          tecnológica, prestação de serviços especializados e formação de mão de obra qualificada
-          para o setor mineral brasileiro.
-        </p>
+            Engenheiro-educador, foi Pró-Reitor de Pesquisa e Inovação do IFRN e editor da revista
+            científica Holos de 2009 a 2019, período em que ampliou a indexação e a visibilidade do
+            periódico. No Laboratório de Tecnologia Mineral, desenvolveu pesquisa aplicada — entre
+            elas o projeto de extração de contaminantes do quartzo de alta pureza, cujo equipamento
+            de separação mineral foi premiado na SECITEX 2017. Em 2008, já como pró-reitor, propôs
+            um centro especializado para atender a indústria mineral do estado, apoiar micro,
+            pequenas e médias empresas e fortalecer os Arranjos Produtivos Locais (APLs) de base
+            mineral.
+          </p>
           <p>
-          A partir dessa iniciativa, foi construída uma ampla articulação institucional envolvendo o
-          IFRN, a Universidade Federal do Rio Grande do Norte (UFRN), a Universidade Federal Rural
-          do Semiárido (Ufersa), a Universidade do Estado do Rio Grande do Norte (Uern), a Fundação
-          de Apoio ao IFRN (Funcern), a Fundação de Apoio à Pesquisa do Estado do Rio Grande do
-          Norte (Fapern) e a Fundação Gorceix, vinculada à Universidade Federal de Ouro Preto
-          (UFOP).
-        </p>
+            A proposta reuniu o IFRN, a UFRN, a Universidade Federal Rural do Semiárido (Ufersa), a
+            Universidade do Estado do Rio Grande do Norte (Uern), a Fundação de Apoio ao IFRN
+            (Funcern), a Fundação de Apoio à Pesquisa do Estado do Rio Grande do Norte (Fapern) e a
+            Fundação Gorceix, vinculada à Universidade Federal de Ouro Preto (UFOP), em uma
+            estrutura de pesquisa aplicada, inovação, serviços tecnológicos e formação. José Yvan
+            faleceu em 10 de junho de 2019. Em 2 de setembro daquele ano, o CT Mineral foi
+            inaugurado e o prédio recebeu seu nome. Ainda em 2019, foi homenageado no Encontro
+            Nacional de Tratamento de Minérios e Metalurgia Extrativa (ENTMME) e nomeado paraninfo
+            in memoriam da turma do Curso Técnico de Mineração do IFRN.
+          </p>
         </div>
       </div>
 
@@ -60,8 +72,8 @@
           <div>
             <h3>Idealização</h3>
             <p>
-              Nasce a proposta de um centro especializado para aproximar pesquisa aplicada e setor
-              mineral.
+              José Yvan, então Pró-Reitor de Pesquisa e Inovação do IFRN, propõe um centro
+              especializado para aproximar pesquisa aplicada e setor mineral.
             </p>
           </div>
         </article>
@@ -70,23 +82,18 @@
           <div>
             <h3>Início da construção</h3>
             <p>
-          Em 2012, o IFRN por meio do Governo do estado iniciou oficialmente o projeto de construção
-          do CT Mineral com recursos da Financiadora de Estudos e Projetos (Finep), visando
-          implantar um ambiente tecnológico moderno voltado ao desenvolvimento de Pesquisa,
-          Desenvolvimento e Inovação (PD&I), prestação de serviços tecnológicos e apoio à indústria
-          mineral.
+              O IFRN, com o Governo do Estado e recursos da Finep, inicia a obra do CT Mineral
+              voltada a PD&amp;I, serviços tecnológicos e apoio à indústria mineral.
             </p>
           </div>
         </article>
         <article>
           <span>2019</span>
           <div>
-            <h3>Inauguração oficial</h3>
+            <h3>Inauguração e patrono</h3>
             <p>
-          Após melhorias estruturais e consolidação de sua infraestrutura laboratorial, o Centro foi
-          oficialmente inaugurado em 02 de setembro de 2019. Em homenagem ao seu idealizador,
-          falecido em 10 de junho daquele mesmo ano, o prédio recebeu o nome de “José Yvan Pereira
-          Leite”.
+              Em 2 de setembro, o Centro é inaugurado. O prédio recebe o nome de José Yvan Pereira
+              Leite, falecido em 10 de junho daquele ano.
             </p>
           </div>
         </article>
@@ -95,9 +102,8 @@
           <div>
             <h3>Legado em movimento</h3>
             <p>
-          Hoje, o CT Mineral representa a concretização do legado deixado por José Yvan: um ambiente
-          de inovação tecnológica, integração entre academia e indústria e desenvolvimento regional
-          sustentável por meio da mineração.
+              O CT Mineral concretiza o legado de José Yvan: inovação tecnológica, integração entre
+              academia e indústria e desenvolvimento regional sustentável.
             </p>
           </div>
         </article>
