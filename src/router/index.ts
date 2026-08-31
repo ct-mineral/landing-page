@@ -47,11 +47,11 @@ const router = createRouter({
       name: 'sample-preparation',
       component: () => import('@/views/ServicesView/SamplePreparationView.vue'),
     },
-    // {
-    //   path: '/servicos/classificacao-e-concentracao-mineral',
-    //   name: 'classification-and-concentration',
-    //   component: () => import('@/views/ServicesView/PhysicalTestsView.vue'),
-    // },
+    {
+      path: '/servicos/classificacao-e-concentracao-mineral',
+      name: 'classification-and-concentration',
+      component: () => import('@/views/ServicesView/PhysicalTestsView.vue'),
+    },
     {
       path: '/projetos',
       name: 'projects',
