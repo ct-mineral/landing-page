@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 import CardServicesComponent from '@/components/CardServicesComponent.vue'
 import ServicesPageLayoutComponent from '@/components/ServicesPageLayoutComponent.vue'
 
@@ -20,4 +20,4 @@ const services = []
       :image-service="service.imagem"
     />
   </ServicesPageLayoutComponent>
-</template>
+</template> -->

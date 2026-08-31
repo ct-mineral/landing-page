@@ -2,7 +2,14 @@
 import CardServicesComponent from '@/components/CardServicesComponent.vue'
 import ServicesPageLayoutComponent from '@/components/ServicesPageLayoutComponent.vue'
 
-const services = [
+interface Service {
+  id: number
+  imagem: string
+  nome: string
+  descricao: string
+}
+
+const services: Service[] = [
   { id: 1, imagem: '#', nome: 'Secagem', descricao: 'Amostras úmidas ou de polpa são secadas em estufas, sob condições de temperatura específicas, ou ao sol. Amostras com presença de vegetação e matérias orgânica são incineradas em fornos tipo mufla.' },
   { id: 2, imagem: '#', nome: 'Britagem e Moagem', descricao: 'Os laboratórios do Centro de Tecnologia Mineral oferecem os serviços de britagem e moagem de minérios, em operações unitárias, os quais permitem realizar simulações de processos industriais. A quantidade de amostras a serem processadas e a granulometria média dos produtos variam de acordo com as necessidades do contratante.' },
   { id: 3, imagem: '#', nome: 'Quarteamento', descricao: 'Quarteamento é o processo de divisão de amostras minerais em duas alíquotas, representativas da amostra total. Uma das partes segue para ser analisada, enquanto a outra é armazenada como amostra reserva para futuras caracterizações, análises e/ou certificações. Este processopermite a execução de análises variadas com maior eficiência.' },

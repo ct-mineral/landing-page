@@ -2,7 +2,15 @@
 import CardServicesComponent from '@/components/CardServicesComponent.vue'
 import ServicesPageLayoutComponent from '@/components/ServicesPageLayoutComponent.vue'
 
-const services = [
+interface Service {
+  id: number
+  imagem: string
+  nome: string
+  machine: string
+  descricao: string
+}
+
+const services: Service[] = [
   { id: 1, imagem: '/images/services/frx.avif', nome: 'Fluorescência de Raios-X (FRX)', machine: 'ARL QUANT\'X EDXRF da Thermo Scientific', descricao: 'É uma ferramenta analítica versátil e econômica, projetada para quantificar elementos principais, secundários e traços em uma ampla variedade de amostras, incluindo sólidos em massa, grânulos, pós soltos ou compactados, pastilhas fundidas, filmes finos, pastas e líquidos. Com capacidade para analisar elementos desde o flúor F) até o amerício Am, o instrumento oferece desempenho superior tanto para elementos leves quanto pesados, garantindo rapidez e flexibilidade em um formato compacto de bancada. Além disso, o ARL QUANT\'X minimiza a necessidade de preparação de amostras, tornando-o ideal para laboratórios centrais e contratados que buscam eficiência e precisão em suas análises elementares.' },
   { id: 2, imagem: '/images/services/drx.avif', nome: 'Difração de Raios-X (DRX)', machine: 'Difratômetro de Raios X de Bancada Aeris– Malvern Panalytical', descricao: 'O Aeris é um difratômetro de raios X de bancada, projetado para oferecer análises rápidas, precisas e confiáveis em um formato compacto. Ideal para identificação de fases cristalinas e análise qualitativa, atende diversas aplicações nos setores de mineração, cimento, cerâmica e pesquisa. Com desempenho comparável a equipamentos de grande porte, possui interface intuitiva e recursos automatizados otimizam o fluxo de trabalho no laboratório. O Aeris analisa uma variedade de amostras, incluindo pós, sólidos compactos e pastilhas. É certificado como equipamento de proteção total, garantindo segurança em sua operação. É uma solução versátil, moderna e eficiente para análises por difração de raios-x.' },
   { id: 3, imagem: '/images/services/icp.webp', nome: 'Espectrometria de Emissão Óptica com Plasma Acoplado Indutivamente (ICP-OES)', machine: 'Emissão Óptica com Plasma da Agilent 5800', descricao: 'O ICPOES Agilent 5800 é um espectrômetro multielementar de alta performance, confiável e automatizado, ideal para análises em geologia, mineração, meio ambiente e indústria. Opera com plasma de argônio a temperaturas superiores a 8.000 °C, permitindo atomização eficiente dos elementos. Possui ampla faixa espectral, analisando desde elementos leves como lítio até pesados como urânio. Utiliza digestão ácida para matrizes simples e fusão alcalina para materiais refratários. Aceita amostras de rochas, solos, águas, rejeitos e resíduos. Oferece resultados rápidos, precisos e com correção automática de interferências. Ideal para determinação de elementos maiores, menores, traços e terras raras. Pode ser customizado conforme os elementos de interesse.' },
