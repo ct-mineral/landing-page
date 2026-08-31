@@ -1,8 +1,14 @@
 <script setup lang="ts">
-import CardServicesComponent from '@/components/CardServicesComponent.vue'
 import ServicesPageLayoutComponent from '@/components/ServicesPageLayoutComponent.vue'
 
-const services = []
+interface Service {
+  id: number
+  imagem: string
+  nome: string
+  descricao: string
+}
+
+const services: Service[] = []
 </script>
 
 <template>
@@ -11,13 +17,35 @@ const services = []
     description="Ensaios e processos para avaliar propriedades dos materiais, classificar partículas e apoiar a definição de rotas de concentração mineral."
     :service-count="services.length"
   >
-    <CardServicesComponent
-      v-for="(service, index) in services"
-      :key="service.id"
-      :index-service="String(index + 1).padStart(2, '0')"
-      :name-service="service.nome"
-      :description-service="service.descricao"
-      :image-service="service.imagem"
-    />
+    <div>
+      <span class="empty-pill">Em breve</span>
+      <p class="coming-soon-message">
+        Estamos preparando os serviços desta categoria. Logo eles estarão disponíveis aqui.
+      </p>
+    </div>
   </ServicesPageLayoutComponent>
 </template>
+
+<style scoped>
+.coming-soon-message {
+  margin: 0;
+  max-width: 760px;
+  padding: clamp(1.2rem, 2vw, 1.8rem) 0;
+  color: #5f6d6a;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.empty-pill {
+  display: inline-flex;
+  padding: 0.42rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(14, 84, 74, 0.09);
+  color: #0e544a;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+</style>

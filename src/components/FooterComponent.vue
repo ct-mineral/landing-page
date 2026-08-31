@@ -11,7 +11,12 @@ import {
 
 const currentYear = new Date().getFullYear()
 
-const services = [
+interface Service {
+  name: string
+  link: string
+}
+
+const services: Service[] = [
   { name: 'Preparação de Amostras', link: '/servicos/preparacao-de-amostras' },
   { name: 'Análise Mineral', link: '/servicos/analise-mineral' },
   {

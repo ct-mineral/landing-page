@@ -1,5 +1,12 @@
 <script setup lang="ts">
-const services = [
+interface Service {
+  number: string
+  title: string
+  description: string
+  link: string
+}
+
+const services: Service[] = [
   {
     number: '01',
     title: 'Preparação de amostras',
