@@ -120,6 +120,15 @@
       image: '/images/members/researchers/flanelson.avif',
       linkedin: '',
       lattes: 'https://lattes.cnpq.br/2694008433207932'
+    },
+    {
+      id: 13,
+      name: 'Andouglas Gonçalves Silva Junior',
+      position: 'Pesquisador Acadêmico',
+      description: "É professor do Instituto Federal do Rio Grande do Norte. Doutor em Engenharia Elétrica e Computação, mestre e graduado em Engenharia Mecatrônica. Pesquisador na Rede de Laboratórios Natalnet (UFRN) e Laboratório de Pesquisa Allyson Amilcar Angelus (LAICA)/IFRN. Atuou em projetos relacionados a sistemas embarcados, veículos autônomos e monitoramento ambiental. Desenvolveu parte do seu doutorado no Institute of Applied Sciences and Intelligent Systems ''Eduardo Caianiello'', Unidade de Lecce/Itália, onde desenvolvou um sistema holográfico para monitoramento e classificação de micropartículas em amostras de água usando Inteligência Artificial. Atualmente trabalha com projetos nas áreas de Internet das Coisas (IoT), Inteligência Artificial, Robótica e Desenvolvimento de Sistemas.",
+      image: '/images/members/researchers/andouglas.avif',
+      linkedin: 'https://www.linkedin.com/in/andouglas-gon%C3%A7alves-silva-junior-74616031/',
+      lattes: 'http://lattes.cnpq.br/2346181034036586'
     }
   ]
 
