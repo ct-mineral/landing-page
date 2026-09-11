@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed, ref } from 'vue'
 import CardServicesComponent from '@/components/CardServicesComponent.vue'
 import ServicesPageLayoutComponent from '@/components/ServicesPageLayoutComponent.vue'
 
@@ -18,6 +19,21 @@ const services: Service[] = [
   { id: 5, imagem: '/images/services/granulometro-laser.webp', nome: 'Granulomêtro a Laser', machine: 'Mastersizer 3000', descricao: 'O Mastersizer 3000+ Pro é um analisador de tamanho e distribuição de partículas que utiliza a técnica de difração a laser para fornecer análises rápidas, precisas e confiáveis. Ideal para caracterização granulométrica de materiais, permite determinar o tamanho das partículas a partir da intensidade da luz espalhada quando um feixe de laser interage com as partículas dispersas da amostra. Os dados obtidos são processados para calcular a distribuição do tamanho das partículas com base no padrão de espalhamento gerado. Com tecnologia avançada e resultados precisos e robustos, o Mastersizer 3000+ Pro atende diversas aplicações em processos industriais e laboratórios de pesquisa. É uma solução moderna, eficiente e confiável para análises de tamanho e distribuição de partículas.' },
   { id: 6, imagem: '/images/services/digestao-micro-ondas.avif', nome: 'Digestão por Micro-ondas', machine: 'Multiwave 5001', descricao: 'O Multiwave 5001 é um sistema de digestão e extração por micro-ondas, desenvolvido para oferecer alto desempenho, precisão e confiabilidade em diferentes aplicações laboratoriais. Ideal para processos que vão desde a digestão ácida até a extração de materiais, proporciona elevado rendimento e capacidade de operação em altas temperaturas. Equipado com a tecnologia SmartTemp 2.0, realiza medições de temperatura precisas e estáveis, contribuindo para maior controle dos processos. Com excelente repetibilidade e qualidade consistente, o Multiwave 5001 é uma solução versátil, moderna e eficiente para aplicações laboratoriais que exigem desempenho e confiabilidade.' },
 ]
+
+const currentPage = ref(1)
+const itemsPerPage = 5
+const listRef = ref<HTMLElement | null>(null)
+
+const totalPages = computed(() => Math.ceil(services.length / itemsPerPage))
+
+const paginatedServices = computed(() => {
+  const startIndex = (currentPage.value - 1) * itemsPerPage
+  return services.slice(startIndex, startIndex + itemsPerPage)
+})
+
+const onPageChange = () => {
+  listRef.value?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+}
 </script>
 
 <template>
@@ -26,14 +42,34 @@ const services: Service[] = [
     description="Caracterização química e mineralógica com equipamentos de alta precisão para identificar elementos, fases cristalinas e composição de diferentes materiais."
     :service-count="services.length"
   >
-    <CardServicesComponent
-      v-for="(service, index) in services"
-      :key="service.id"
-      :index-service="String(index + 1).padStart(2, '0')"
-      :name-service="service.nome"
-      :machine="service.machine"
-      :description-service="service.descricao"
-      :image-service="service.imagem"
-    />
+    <div ref="listRef" class="services-paginated-list">
+      <CardServicesComponent
+        v-for="(service, index) in paginatedServices"
+        :key="service.id"
+        :index-service="String((currentPage - 1) * itemsPerPage + index + 1).padStart(2, '0')"
+        :name-service="service.nome"
+        :machine="service.machine"
+        :description-service="service.descricao"
+        :image-service="service.imagem"
+      />
+
+      <div v-if="totalPages > 1" class="d-flex justify-center mt-4">
+        <v-pagination
+          v-model="currentPage"
+          :length="totalPages"
+          :total-visible="totalPages"
+          color="teal-darken-3"
+          rounded="circle"
+          @update:model-value="onPageChange"
+        />
+      </div>
+    </div>
   </ServicesPageLayoutComponent>
 </template>
+
+<style scoped>
+.services-paginated-list {
+  display: grid;
+  gap: 20px;
+}
+</style>
