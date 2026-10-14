@@ -47,8 +47,8 @@ const services: Service[] = [
           </RouterLink>
 
           <p>
-            Centro de referência em pesquisa aplicada, desenvolvimento tecnológico e inovação para
-            o setor mineral brasileiro.
+            Centro de referência em pesquisa aplicada, desenvolvimento tecnológico e inovação para o
+            setor mineral brasileiro.
           </p>
 
           <div class="social-links" aria-label="Redes sociais do CT Mineral">
@@ -86,6 +86,16 @@ const services: Service[] = [
             <li><RouterLink to="/integrantes">Nossa equipe</RouterLink></li>
             <li><RouterLink to="/projetos">Projetos</RouterLink></li>
             <li><RouterLink to="/oportunidades">Oportunidades</RouterLink></li>
+            <li>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLScA-G-YaeocBhKJI9IFVBQqbZG6RKYvt6kYS_MzZSaob-sQAQ/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Canal de denúncias
+                <v-icon :icon="mdiArrowTopRight" size="14" />
+              </a>
+            </li>
             <li>
               <a
                 href="https://portal.ifrn.edu.br/institucional/polo-de-inovacao-currais-novos/noticias/"
@@ -165,8 +175,7 @@ const services: Service[] = [
 .footer-main {
   padding: 68px 0 62px;
   background:
-    radial-gradient(circle at 8% 12%, rgba(255, 255, 255, 0.05), transparent 24%),
-    #0e544a;
+    radial-gradient(circle at 8% 12%, rgba(255, 255, 255, 0.05), transparent 24%), #0e544a;
 }
 
 .footer-grid {
