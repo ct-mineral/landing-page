@@ -13,8 +13,7 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
     "lint": "eslint . --fix --cache",
-    "format": "prettier --write --experimental-cli src/",
-    "start": "node node_modules/vite/bin/vite.js"
+    "format": "prettier --write --experimental-cli src/"
   },
   "dependencies": {
     "leaflet": "^1.9.4",

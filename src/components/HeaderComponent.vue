@@ -7,7 +7,11 @@ const mobileMenu = ref(false)
 
 const servicos = [
   { id: 1, name: 'Preparação de Amostras', link: '/servicos/preparacao-de-amostras' },
-  { id: 2, name: 'Classificação e Concentração Mineral', link: '/servicos/classificacao-e-concentracao-mineral' },
+  {
+    id: 2,
+    name: 'Classificação e Concentração Mineral',
+    link: '/servicos/classificacao-e-concentracao-mineral',
+  },
   { id: 3, name: 'Análise Mineral', link: '/servicos/analise-mineral' },
 ]
 
@@ -36,14 +40,20 @@ function closeMenus() {
 
     <div class="brand-bar">
       <div class="header-container brand-content">
-        <RouterLink class="brand" to="/" aria-label="Ir para a página inicial">
-          <img src="/images/logos/logo_ctm.svg" alt="" width="52" height="52" />
-          <span class="brand-copy">
-            <small>Polo de Inovação do IFRN</small>
-            <strong>CT Mineral</strong>
-            <span>Centro de Tecnologia Mineral · Currais Novos/RN</span>
-          </span>
-        </RouterLink>
+        <div class="brand-lockup">
+          <RouterLink class="brand" to="/" aria-label="Ir para a página inicial">
+            <img src="/images/logos/polo_inovacao.svg" alt="" width="2747" height="852" />
+          </RouterLink>
+          <a
+            class="mec-logo"
+            href="https://www.gov.br/mec/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Abrir o site do Ministério da Educação em uma nova aba"
+          >
+            <img src="/images/logos/logo_mec.svg" alt="" width="1091" height="259" />
+          </a>
+        </div>
 
         <div class="brand-actions">
           <RouterLink class="contact-button" to="/contato">Fale conosco</RouterLink>
@@ -189,6 +199,13 @@ function closeMenus() {
   justify-content: space-between;
 }
 
+.brand-lockup {
+  display: flex;
+  min-width: 0;
+  gap: 20px;
+  align-items: center;
+}
+
 .brand {
   display: inline-flex;
   min-width: 0;
@@ -198,39 +215,25 @@ function closeMenus() {
   text-decoration: none;
 }
 
-.brand img {
-  flex: 0 0 auto;
+.brand img,
+.mec-logo img {
+  display: block;
+  width: auto;
   object-fit: contain;
 }
 
-.brand-copy,
-.brand-copy small,
-.brand-copy strong,
-.brand-copy > span {
-  display: block;
+.brand img {
+  height: 56px;
 }
 
-.brand-copy small {
-  margin-bottom: 2px;
-  color: #e65100;
-  font-size: 0.65rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+.mec-logo {
+  display: inline-flex;
+  flex: 0 0 auto;
+  line-height: 0;
 }
 
-.brand-copy strong {
-  color: #0e544a;
-  font-size: 1.4rem;
-  letter-spacing: -0.025em;
-  line-height: 1.15;
-  text-transform: uppercase;
-}
-
-.brand-copy > span {
-  margin-top: 3px;
-  color: #5f6d6a;
-  font-size: 0.7rem;
+.mec-logo img {
+  height: 46px;
 }
 
 .brand-actions {
@@ -386,19 +389,6 @@ function closeMenus() {
     min-height: 86px;
   }
 
-  .brand img {
-    width: 44px;
-    height: 44px;
-  }
-
-  .brand-copy strong {
-    font-size: 1.18rem;
-  }
-
-  .brand-copy > span {
-    display: none;
-  }
-
   .contact-button {
     display: none;
   }
@@ -466,12 +456,16 @@ function closeMenus() {
     justify-content: flex-end;
   }
 
-  .brand-copy small {
-    font-size: 0.58rem;
+  .brand-lockup {
+    gap: 12px;
   }
 
-  .brand-copy strong {
-    font-size: 1.05rem;
+  .brand img {
+    height: 42px;
+  }
+
+  .mec-logo img {
+    height: 34px;
   }
 }
 
