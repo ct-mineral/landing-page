@@ -4,10 +4,30 @@
   <section class="hero">
     <div class="page-container hero-grid">
       <div class="hero-content">
-        <span class="eyebrow">
-          <span class="status-dot"></span>
-          Unidade EMBRAPII em Tecnologias em Mineração
-        </span>
+        <div class="unit-mark">
+          <div class="unit-logos">
+            <a
+              class="embrapii-logo"
+              href="https://embrapii.org.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Abrir o site da EMBRAPII em uma nova aba"
+            >
+              <img src="/images/logos/selo_embrapii.svg" alt="EMBRAPII" width="276" height="265" />
+            </a>
+            <img
+              class="ct-logo"
+              src="/images/logos/ct_mineral.svg"
+              alt="CT Mineral"
+              width="3700"
+              height="1079"
+            />
+          </div>
+          <span class="eyebrow">
+            <span class="status-dot"></span>
+            Unidade EMBRAPII em Tecnologias em Mineração
+          </span>
+        </div>
 
         <h1>
           Sua amostra mineral, transformada em
@@ -15,9 +35,8 @@
         </h1>
 
         <p class="hero-lead">
-          O CT Mineral do IFRN caracteriza, beneficia e testa minérios em escala
-          laboratorial e piloto — do ensaio de bancada ao resultado que sustenta
-          decisões de investimento.
+          O CT Mineral do IFRN caracteriza, beneficia e testa minérios em escala laboratorial e
+          piloto — do ensaio de bancada ao resultado que sustenta decisões de investimento.
         </p>
 
         <div class="hero-actions">
@@ -67,7 +86,7 @@
 <style scoped>
 .hero {
   position: relative;
-  padding: 88px 0 72px;
+  padding: 48px 0 72px;
   background:
     radial-gradient(circle at 92% 5%, rgba(14, 84, 74, 0.12), transparent 30%),
     linear-gradient(180deg, #ffffff 0%, #f8fbfa 100%);
@@ -92,11 +111,39 @@
   align-items: center;
 }
 
+.unit-mark {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.unit-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.embrapii-logo {
+  line-height: 0;
+}
+
+.embrapii-logo img {
+  width: auto;
+  height: 86px;
+}
+
+.ct-logo {
+  width: auto;
+  height: 54px;
+}
+
 .eyebrow {
   display: inline-flex;
+  width: fit-content;
   gap: 9px;
-  align-items: center;
-  margin-bottom: 24px;
   padding: 7px 12px;
   border: 1px solid rgba(14, 84, 74, 0.24);
   border-radius: 4px;
@@ -111,6 +158,7 @@
 .status-dot {
   width: 7px;
   height: 7px;
+  align-self: center;
   border-radius: 50%;
   background: var(--green);
   box-shadow: 0 0 0 4px rgba(14, 84, 74, 0.1);
@@ -260,7 +308,7 @@
 
 @media (max-width: 960px) {
   .hero {
-    padding-top: 68px;
+    padding-top: 48px;
   }
 
   .hero-grid {
@@ -279,7 +327,7 @@
 
 @media (max-width: 600px) {
   .hero {
-    padding: 52px 0;
+    padding: 38px 0;
   }
 
   .hero::before {
@@ -312,6 +360,11 @@
   .image-frame img {
     height: 360px;
     min-height: 360px;
+  }
+
+  .embrapii-logo img {
+    width: auto;
+    height: 76px;
   }
 
   .visual-badge {
