@@ -100,7 +100,7 @@ const profiles = [
           <FormLinksButtonComponent
             label="Para estudantes"
             description="Formulário de Inscrição para Estudantes"
-            link="https://docs.google.com/forms/d/e/1FAIpQLScRmPkwwVnBwjBhJaHQmtwvvzri80OhM1kLwk4iIbSj0jugsw/viewform"
+            link="https://docs.google.com/forms/d/e/1FAIpQLSfRld06yrqNW8Lo460M6JTEfqlLsT7Sk2-lg-141u0eKOht-g/viewform"
           />
           <FormLinksButtonComponent
             label="Para pesquisadores"
