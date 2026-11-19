@@ -129,6 +129,33 @@
       image: '/images/members/researchers/andouglas.avif',
       linkedin: 'https://www.linkedin.com/in/andouglas-gon%C3%A7alves-silva-junior-74616031/',
       lattes: 'http://lattes.cnpq.br/2346181034036586'
+    },
+    {
+      id: 14,
+      name: 'Raimison Bezerra de Assis',
+      position: 'Pesquisador Acadêmico',
+      description: "Doutor e Mestre em Ciência e Engenharia de Materiais pela Universidade Federal do Rio Grande do Norte (UFRN). Graduado em Engenharia de Produção (UFRN) e em Tecnologia em Fabricação Mecânica (IFRN). Engenheiro de Segurança do Trabalho pela Universidade Cândido Mendes (UCAM/RJ). Coordenador do Grupo de Pesquisa: Automação, Eficiência Energética e Produção (IFBA), e colaborador dos Grupos de Pesquisa: Processamento e Caracterização de Materiais Particulados (IFBA) e Processamento Mineral (IFRN). Pesquisador membro do Instituto Nacional de Ciências e Tecnologia dos Materiais em Nanotecnologia (INCTMN). É Professor do Instituto Federal de Educação, Ciência e Tecnologia da Bahia (IFBA) - Campus Salvador, na área de Engenharia Mecânica: Projetos Materiais. Atuou no Polo de Inovação Salvador - PIS/ IFBA na função de Chefe do Departamento de Gestão de Projetos e Consultor de Projetos Tecnológicos (PDI).",
+      image: '/images/members/researchers/raimison.avif',
+      linkedin: '',
+      lattes: 'http://lattes.cnpq.br/6505278416505033'
+    },
+    {
+      id: 15,
+      name: 'Tércio Machado',
+      position: 'Pesquisador Acadêmico',
+      description: "Possui graduação em Engenharia Mecânica pela Universidade Federal do Rio Grande do Norte (1991), Mestrado em Engenharia Mecânica pela Universidade Federal do Rio Grande do Norte/PPGEM (1996) e Doutorado em Engenharia de Materiais (2012) na UFRN/PPGCEM. Pesquisador com experiência em Projetos e processamentos de material metálico (metalurgia do pó) e cerâmico. Exerceu a função de Diretor do Polo de Inovação Salvador - PIS e atualmente é Docente do Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte - Campus Natal Central.",
+      image: '/images/members/researchers/tercio.avif',
+      linkedin: '',
+      lattes: ''
+    },
+    {
+      id: 16,
+      name: 'Sheyla Varela Lucena',
+      position: 'Pesquisador Acadêmico',
+      description: "Professora do Instituto Federal de Educação Tecnológica do Rio Grande do Norte (IFRN) em cooperação Técnica no Campus Natal Central, onde atuo como Docente Permanente e Coordenadora do Programa de Pós-Graduação em Mestrado Profissional em Uso Sustentável dos Recursos Naturais (PPgUSRN/IFRN). Doutora em Ciências Biológicas com ênfase em Biologia Molecular pela Universidade Federal de São Paulo (2015), Mestre em Bioquímica pela Universidade Federal do Rio Grande do Norte (2010) e Graduada em Ciências Biológicas pela mesma instituição (2006). Atuou, como Chefe do Departamento de Ensino (2016 - 2017) e Diretora Geral Pró Tempore (2017 - 2018) do IFMT, Campus Avançado Diamantino. Pesquisadora do Núcleo de Estudos de Saneamento Básico (NESB) e vice-líder do Lapern - Laboratório de Inovação e Tecnologia em Recursos Naturais e Economia Circular do IFRN. Atua em diversas áreas de pesquisa incluindo, Bioquímica, Biologia Molecular, reaproveitamento de resíduos sólidos, educação ambiental e tecnologias sociais, onde busca contribuir para soluções sustentáveis e inovadoras.",
+      image: '/images/members/researchers/sheyla.avif',
+      linkedin: '',
+      lattes: 'http://lattes.cnpq.br/2148891529881163'
     }
   ]
 
